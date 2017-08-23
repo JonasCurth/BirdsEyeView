@@ -16,58 +16,63 @@
 <!-- Titlebar-->
         <Grid Background="#078e00"
               MouseDown="OnTitlebarMouseDown"
-              DockPanel.Dock="Top"
-              Height="42">
+              DockPanel.Dock="Top">
             
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="10"/>
-                <ColumnDefinition Width="42"/>
-                <ColumnDefinition Width="42"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="126"/>
-            </Grid.ColumnDefinitions>
+            <Grid Height="42"
+                  Margin="0 5 0 0"
+                  VerticalAlignment="Bottom">
 
-            <Button x:Name="SaveBtn"
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="42"/>
+                    <ColumnDefinition Width="42"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="126"/>
+                    <ColumnDefinition Width="10"/>
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="SaveBtn"
                 Grid.Column="1"
                 Style="{DynamicResource ImageButton}">
-                <Image Source="Images/Icons_White_32/Save_32_W.png"/>
-            </Button>
+                    <Image Source="Images/Icons_White_32/Save_32_W.png"/>
+                </Button>
 
-            <Button x:Name="GoBackBtn"
+                <Button x:Name="GoBackBtn"
                 Grid.Column="2"
                 Style="{DynamicResource ImageButton}">
-                <Image Source="Images/Icons_White_32/Back_32_W.png"/>
-            </Button>
+                    <Image Source="Images/Icons_White_32/Back_32_W.png"/>
+                </Button>
 
-            <StackPanel x:Name="WindowButtonPanel"
+                <StackPanel x:Name="WindowButtonPanel"
                     Grid.Column="4"
                     Orientation="Horizontal">
 
-                <Button x:Name="MinimizeBtn"
+                    <Button x:Name="MinimizeBtn"
                     Click="OnWindowMinimizeClick"
                     Style="{DynamicResource ImageButton}">
-                    <Image Source="Images/Icons_White_32/Minimize_32_W.png" RenderTransformOrigin="0.5,0.5"/>
-                </Button>
-                <Button x:Name="MaximizeBtn"
+                        <Image Source="Images/Icons_White_32/Minimize_32_W.png" RenderTransformOrigin="0.5,0.5"/>
+                    </Button>
+                    <Button x:Name="MaximizeBtn"
                     Click="OnWindowMaximizeClick"
                     Style="{DynamicResource ImageButton}">
-                    <Image Source="Images/Icons_White_32/Maximize_32_W.png"/>
-                </Button>
-                <Button x:Name="CloseBtn"
+                        <Image Source="Images/Icons_White_32/Maximize_32_W.png"/>
+                    </Button>
+                    <Button x:Name="CloseBtn"
                     Click="OnWindowCloseClick" 
                     Style="{DynamicResource ImageButton}">
-                    <Image Source="Images/Icons_White_32/Close_32_W.png"/>
-                </Button>
+                        <Image Source="Images/Icons_White_32/Close_32_W.png"/>
+                    </Button>
 
-            </StackPanel>
+                </StackPanel>
 
-            <StackPanel x:Name="MenuPanel"
+                <StackPanel x:Name="MenuPanel"
                         Orientation="Horizontal"
                         Grid.Column="3"
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Center">
+                        HorizontalAlignment="Center">
 
-            </StackPanel>
+                </StackPanel>
+            </Grid>
+            
         </Grid>
 
 <!-- Left panel with calendar and upload plan-->
