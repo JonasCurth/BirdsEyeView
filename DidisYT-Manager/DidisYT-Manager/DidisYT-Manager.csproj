@@ -112,7 +112,32 @@
     <Resource Include="Images\maximize.png" />
     <Resource Include="Images\minimize.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\Icons_Black_128\Back_128_B.png" />
+    <Resource Include="Images\Icons_Black_128\Close_128_B.png" />
+    <Resource Include="Images\Icons_Black_128\Maximize_128_B.png" />
+    <Resource Include="Images\Icons_Black_128\Minimize_128_B.png" />
+    <Resource Include="Images\Icons_Black_128\Save_128_B.png" />
+    <Resource Include="Images\Icons_Black_128\Update_128_B.png" />
+    <Resource Include="Images\Icons_Black_32\Back_32_B.png" />
+    <Resource Include="Images\Icons_Black_32\Close_32_B.png" />
+    <Resource Include="Images\Icons_Black_32\Maximize_32_B.png" />
+    <Resource Include="Images\Icons_Black_32\Minimize_32_B.png" />
+    <Resource Include="Images\Icons_Black_32\Save_32_B.png" />
+    <Resource Include="Images\Icons_Black_32\Update_32_B.png" />
+    <Resource Include="Images\Icons_White_128\Back_128_W.png" />
+    <Resource Include="Images\Icons_White_128\Close_128_W.png" />
+    <Resource Include="Images\Icons_White_128\Maximize_128_W.png" />
+    <Resource Include="Images\Icons_White_128\Minimize_128_W.png" />
+    <Resource Include="Images\Icons_White_128\Save_128_W.png" />
+    <Resource Include="Images\Icons_White_128\Update_128_W.png" />
+    <Resource Include="Images\Icons_White_32\Back_32_W.png" />
+    <Resource Include="Images\Icons_White_32\Close_32_W.png" />
+    <Resource Include="Images\Icons_White_32\Maximize_32_W.png" />
+    <Resource Include="Images\Icons_White_32\Minimize_32_W.png" />
+    <Resource Include="Images\Icons_White_32\Save_32_W.png" />
+    <Resource Include="Images\Icons_White_32\Update_32_W.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\save.png" />
   </ItemGroup>

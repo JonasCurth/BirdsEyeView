@@ -30,13 +30,13 @@
             <Button x:Name="SaveBtn"
                 Grid.Column="1"
                 Style="{DynamicResource ImageButton}">
-                <Image Source="Images/save.png"/>
+                <Image Source="Images/Icons_White_32/Save_32_W.png"/>
             </Button>
 
             <Button x:Name="GoBackBtn"
                 Grid.Column="2"
                 Style="{DynamicResource ImageButton}">
-                <Image Source="Images/goback.png"/>
+                <Image Source="Images/Icons_White_32/Back_32_W.png"/>
             </Button>
 
             <StackPanel x:Name="WindowButtonPanel"
@@ -46,17 +46,17 @@
                 <Button x:Name="MinimizeBtn"
                     Click="OnWindowMinimizeClick"
                     Style="{DynamicResource ImageButton}">
-                    <Image Source="/DidisYT-Manager;component/Images/minimize.png" RenderTransformOrigin="0.5,0.5"/>
+                    <Image Source="Images/Icons_White_32/Minimize_32_W.png" RenderTransformOrigin="0.5,0.5"/>
                 </Button>
                 <Button x:Name="MaximizeBtn"
                     Click="OnWindowMaximizeClick"
                     Style="{DynamicResource ImageButton}">
-                    <Image Source="/DidisYT-Manager;component/Images/maximize.png"/>
+                    <Image Source="Images/Icons_White_32/Maximize_32_W.png"/>
                 </Button>
                 <Button x:Name="CloseBtn"
                     Click="OnWindowCloseClick" 
                     Style="{DynamicResource ImageButton}">
-                    <Image Source="/DidisYT-Manager;component/Images/close.png"/>
+                    <Image Source="Images/Icons_White_32/Close_32_W.png"/>
                 </Button>
 
             </StackPanel>
