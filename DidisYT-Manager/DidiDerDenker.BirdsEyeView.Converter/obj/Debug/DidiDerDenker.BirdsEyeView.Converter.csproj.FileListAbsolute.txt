@@ -1,0 +1,4 @@
+C:\Users\curth\Source\Repos\DidisYT-Manager\DidisYT-Manager\DidiDerDenker.BirdsEyeView.Converter\bin\Debug\DidiDerDenker.BirdsEyeView.Converter.dll
+C:\Users\curth\Source\Repos\DidisYT-Manager\DidisYT-Manager\DidiDerDenker.BirdsEyeView.Converter\bin\Debug\DidiDerDenker.BirdsEyeView.Converter.pdb
+C:\Users\curth\Source\Repos\DidisYT-Manager\DidisYT-Manager\DidiDerDenker.BirdsEyeView.Converter\obj\Debug\DidiDerDenker.BirdsEyeView.Converter.dll
+C:\Users\curth\Source\Repos\DidisYT-Manager\DidisYT-Manager\DidiDerDenker.BirdsEyeView.Converter\obj\Debug\DidiDerDenker.BirdsEyeView.Converter.pdb

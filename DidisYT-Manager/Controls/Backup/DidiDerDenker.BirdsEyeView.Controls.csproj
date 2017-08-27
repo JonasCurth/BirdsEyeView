@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2A18DCA5-45A5-4070-8F4D-37747DE1A730}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>DidiDerDenker.BirdsEyeView.Controls</RootNamespace>
+    <AssemblyName>DidiDerDenker.BirdsEyeView.Controls</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ReachFramework" />
+    <Reference Include="Syncfusion.Schedule.WPF, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.SfRadialMenu.WPF, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.SfSchedule.WPF, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Shared.MVVM.WPF, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Shared.WPF, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Tools.WPF, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SmallCalenderControl.xaml.cs">
+      <DependentUpon>SmallCalenderControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UploadPlanControl.xaml.cs">
+      <DependentUpon>UploadPlanControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VideoListControl.xaml.cs">
+      <DependentUpon>VideoListControl.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\Icons_Disabled_128\Thumbs.db" />
+    <None Include="Resources\Icons_Disabled_32\Thumbs.db" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="SmallCalenderControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UploadPlanControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="VideoListControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons_White_32\Back_32_W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons_White_32\Close_32_W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons_White_32\Maximize_32_W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons_White_32\Minimize_32_W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons_White_32\Save_32_W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons_White_32\Update_32_W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons_Black_128\Back_128_B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons_Black_128\Close_128_B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons_Black_128\Maximize_128_B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons_Black_128\Minimize_128_B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons_Black_128\Save_128_B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons_Black_128\Update_128_B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons_Black_32\Back_32_B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons_Black_32\Close_32_B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons_Black_32\Maximize_32_B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons_Black_32\Minimize_32_B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons_Black_32\Save_32_B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons_Black_32\Update_32_B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons_Disabled_128\Back_128_G.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons_Disabled_128\Close_128_G.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons_Disabled_128\Maximize_128_G.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons_Disabled_128\Minimize_128_G.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons_Disabled_128\Save_128_G.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons_Disabled_128\Update_128_G.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons_Disabled_32\Back_32_Disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons_Disabled_32\Close_32_Disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons_Disabled_32\Maximize_32_Disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons_Disabled_32\Minimize_32_Disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons_Disabled_32\Save_32_Disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons_Disabled_32\Update_32_G.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons_White_128\Back_128_W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons_White_128\Close_128_W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons_White_128\Maximize_128_W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons_White_128\Minimize_128_W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons_White_128\Save_128_W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons_White_128\Update_128_W.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

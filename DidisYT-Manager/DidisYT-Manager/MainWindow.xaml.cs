@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DidiDerDenker.BirdsEyeView.Controls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -59,6 +60,16 @@ namespace DidisYT_Manager
                 {
                     this.WindowState = WindowState.Normal;
                 }
+            }
+        }
+
+        private void OnSelectedDateChanged(object sender, EventArgs e)
+        {
+            SelectedDateChangedEventArgs args = e as SelectedDateChangedEventArgs;
+
+            if(null != args.SelectedDate)
+            {
+                this.Schedule.MoveToDate(args.SelectedDate.GetValueOrDefault());
             }
         }
     }

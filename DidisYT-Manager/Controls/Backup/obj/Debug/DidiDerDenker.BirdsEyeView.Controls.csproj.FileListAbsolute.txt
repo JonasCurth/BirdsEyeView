@@ -1,0 +1,5 @@
+C:\Users\curth\Source\Repos\DidisYT-Manager\DidisYT-Manager\Controls\obj\Debug\UploadPlanControl.g.cs
+C:\Users\curth\Source\Repos\DidisYT-Manager\DidisYT-Manager\Controls\obj\Debug\VideoListControl.g.cs
+C:\Users\curth\Source\Repos\DidisYT-Manager\DidisYT-Manager\Controls\obj\Debug\DidiDerDenker.BirdsEyeView.Controls_MarkupCompile.cache
+C:\Users\curth\Source\Repos\DidisYT-Manager\DidisYT-Manager\Controls\obj\Debug\DidiDerDenker.BirdsEyeView.Controls_MarkupCompile.lref
+C:\Users\curth\Source\Repos\DidisYT-Manager\DidisYT-Manager\Controls\obj\Debug\DidiDerDenker.BirdsEyeView.Controls.csprojResolveAssemblyReference.cache

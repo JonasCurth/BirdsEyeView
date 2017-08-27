@@ -4,8 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DidisYT_Manager"
-        xmlns:controls="clr-namespace:DidisYT_Manager.Controls"
-        xmlns:syncfusion="http://schemas.syncfusion.com/wpf" 
+        xmlns:controls="clr-namespace:DidiDerDenker.BirdsEyeView.Controls;assembly=DidiDerDenker.BirdsEyeView.Controls"
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
         x:Class="DidisYT_Manager.MainWindow"
         mc:Ignorable="d"
         Title="MainWindow" 
@@ -52,7 +52,7 @@
                     <Button x:Name="MinimizeBtn"
                     Click="OnWindowMinimizeClick"
                     Style="{DynamicResource ImageButton}">
-                        <Image Source="Images/Icons_White_32/Minimize_32_W.png" RenderTransformOrigin="0.5,0.5"/>
+                        <Image Source="Images/Icons_White_32/Minimize_32_W.png"/>
                     </Button>
                     <Button x:Name="MaximizeBtn"
                     Click="OnWindowMaximizeClick"
@@ -84,8 +84,11 @@
             </Grid.RowDefinitions>
 
             <Rectangle Grid.Row="1" Fill="#333333"/>
-
-            <controls:SmallCalenderControl Grid.Row="0"/>
+            
+<!-- Small calendar-->
+            <controls:SmallCalenderControl Grid.Row="0"
+                                           SelectedDateChanged="OnSelectedDateChanged"/>
+            
             <controls:UploadPlanControl Grid.Row="2"
                                         Margin="10"/>
         </Grid>
@@ -94,20 +97,27 @@
 
         <Grid DockPanel.Dock="Right">
             <Grid.RowDefinitions>
-                <RowDefinition Height="1.5*"/>
-                <RowDefinition Height="1"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="1.5*" MinHeight="413"/>
+                <RowDefinition Height="3"/>
+                <RowDefinition Height="*" MinHeight="200"/>
             </Grid.RowDefinitions>
 
-            <GridSplitter Grid.Row="1" Background="#333333"/>
-
-            <syncfusion:SfSchedule FocusedMonth="GhostWhite" 
+            <syncfusion:SfSchedule x:Name="Schedule" 
+                                   FocusedMonth="GhostWhite" 
                                    NonFocusedMonth="LightGray" 
+                                   Margin="5" 
+                                   IntervalHeight="20" 
+                                   WorkStartHour="15"
+                                   WorkEndHour="22"
                                    ScheduleType="WorkWeek" 
-                                   WorkEndHour="0" 
-                                   WorkStartHour="12"
-                                   Margin="5"/>
+                                   ShowNonWorkingHours="True"
+                                   TimeMode="TwentyFourHours" 
+                                   IsHighLightWorkingHours="True" 
+                                   ShowAllDay="False" TimeLineViewRowCount="-1"/>
 
+            <GridSplitter Grid.Row="1" Background="#333333" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+
+            <Grid Grid.Row="2" Background="#078e00"/>
         </Grid>
     </DockPanel>
 </Window>
