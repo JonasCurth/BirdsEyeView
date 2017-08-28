@@ -77,6 +77,9 @@
     <Compile Include="SmallCalenderControl.xaml.cs">
       <DependentUpon>SmallCalenderControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TitleBarControl.xaml.cs">
+      <DependentUpon>TitleBarControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UploadPlanControl.xaml.cs">
       <DependentUpon>UploadPlanControl.xaml</DependentUpon>
     </Compile>
@@ -96,6 +99,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="SmallCalenderControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TitleBarControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

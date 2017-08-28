@@ -13,7 +13,11 @@ namespace DidiDerDenker.BirdsEyeView.Controls
         public event EventHandler SelectedDateChanged;
 
         public static DependencyProperty SelectedDateProperty =
-            DependencyProperty.Register("SelectedDate", typeof(DateTime?), typeof(SmallCalenderControl));
+            DependencyProperty.Register("SelectedDate", 
+                    typeof(DateTime?), 
+                    typeof(SmallCalenderControl), 
+                    new FrameworkPropertyMetadata(null,
+                        FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
 
         public DateTime? SelectedDate
         {

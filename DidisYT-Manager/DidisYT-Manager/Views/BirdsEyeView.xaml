@@ -1,0 +1,116 @@
+﻿<Window x:Class="DidiDerDenker.BirdsEyeView.Client.Views.BirdsEyeView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DidiDerDenker.BirdsEyeView.Client.Views"
+        xmlns:controls="clr-namespace:DidiDerDenker.BirdsEyeView.Controls;assembly=DidiDerDenker.BirdsEyeView.Controls"
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+        mc:Ignorable="d"
+        Title="MainWindow" 
+        Height="800" MinHeight="642"
+        Width="1200" MinWidth="800"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        DataContext="{StaticResource BirdsEyeViewInterface}">
+    <DockPanel>
+
+        <!-- Titlebar-->
+        <controls:TitleBarControl DockPanel.Dock="Top"
+                                  MinimizedChanged="TitleBarControl_MinimizedChanged"
+                                  MaximizedChanged="TitleBarControl_MaximizedChanged"
+                                  CloseChanged="TitleBarControl_CloseChanged"
+                                  MouseDownChanged="TitleBarControl_MouseDownChanged"/>
+
+
+        <!-- Left panel with calendar and upload plan-->
+        <Grid DockPanel.Dock="Left" Width="250">
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="3"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Rectangle Grid.Row="1" Fill="#b2b2b2"/>
+            
+            <!-- Small calendar-->
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <syncfusion:CalendarEdit x:Name="ActualCalendar"
+                                         Margin="20 10 20 5"
+                                         Width="Auto"
+                                         Grid.Row="0" 
+                                         ShowWeekNumbers="True" 
+                                         Background="Transparent"
+                                         BorderThickness="0" 
+                                         HeaderBackground="#FF333333" 
+                                         HeaderForeground="White" 
+                                         AllowMultiplySelection="False"
+                                         ScrollToDateEnabled="False"
+                                         Style="{DynamicResource CalendarEditStyle1}" 
+                                         Date="{Binding SelectedDate, 
+                                                        Mode=TwoWay}" 
+                                         PreviewMouseWheel="OnPreviewMouseWheel"
+                                         />
+
+
+                <syncfusion:CalendarEdit Grid.Row="2" 
+                                         Margin="20 5 20 5"
+                                         Width="Auto"
+                                         Date="{Binding Date, ElementName=ActualCalendar, Converter={StaticResource CalenderMonthConverter}}"
+                                         ShowWeekNumbers="True" 
+                                         Background="Transparent"
+                                         BorderThickness="0" 
+                                         HeaderBackground="#FF333333" 
+                                         HeaderForeground="White" 
+                                         AllowMultiplySelection="False"
+                                         AllowSelection="False"
+                                         Style="{DynamicResource CalendarEditStyle1}"
+                                         PreviewMouseWheel="OnPreviewMouseWheel"/>
+            </Grid>
+
+            <!-- Upload plan-->
+            <controls:UploadPlanControl Grid.Row="2"
+                                        Margin="20 10 20 10"/>
+        </Grid>
+
+        <Rectangle DockPanel.Dock="Left" Width="3" Fill="#b2b2b2"/>
+
+        <!-- Schedule and video lists-->
+        <Grid DockPanel.Dock="Right">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.94*" MinHeight="313"/>
+                <RowDefinition Height="3"/>
+                <RowDefinition Height="*" MinHeight="200"/>
+            </Grid.RowDefinitions>
+            
+            <!-- Schedule-->
+            <syncfusion:SfSchedule x:Name="Schedule" 
+                                   FocusedMonth="GhostWhite" 
+                                   NonFocusedMonth="LightGray" 
+                                   Margin="5" 
+                                   IntervalHeight="20" 
+                                   WorkStartHour="15"
+                                   WorkEndHour="24"
+                                   ScheduleType="Week" 
+                                   ShowNonWorkingHours="True"
+                                   TimeMode="TwentyFourHours" 
+                                   IsHighLightWorkingHours="True" 
+                                   ShowAllDay="False" 
+                                   TimeLineViewRowCount="-1" 
+                                   FirstDayOfWeek="Monday" 
+                                   NonWorkingDays=""/>
+
+            <GridSplitter Grid.Row="1" Background="#b2b2b2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+            
+            <!-- video lists-->
+            <Grid Grid.Row="2" />
+        </Grid>
+    </DockPanel>
+</Window>

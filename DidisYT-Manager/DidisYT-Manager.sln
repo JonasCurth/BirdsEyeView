@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DidiDerDenker.BirdsEyeView.Client", "DidisYT-Manager\DidiDerDenker.BirdsEyeView.Client.csproj", "{E1692FB8-7ACE-457F-9D1E-1E3C25ABFA35}"
 EndProject
@@ -14,6 +14,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DidiDerDenker.BirdsEyeView.Converter", "DidiDerDenker.BirdsEyeView.Converter\DidiDerDenker.BirdsEyeView.Converter.csproj", "{8D0BFD07-7062-42DA-9260-8BDCD6E18A91}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Converter", "Converter", "{46AE0AEC-BD7F-45C9-A686-401EA59977C9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{3FBF05BC-8038-4927-866B-9CA43AE6C0AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DidiDerDenker.BirdsEyeView.Database", "DidiDerDenker.BirdsEyeView.Database\DidiDerDenker.BirdsEyeView.Database.csproj", "{9B3D90B6-2D70-41F3-96A6-572F5859C16B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,10 @@ Global
 		{8D0BFD07-7062-42DA-9260-8BDCD6E18A91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D0BFD07-7062-42DA-9260-8BDCD6E18A91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D0BFD07-7062-42DA-9260-8BDCD6E18A91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B3D90B6-2D70-41F3-96A6-572F5859C16B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B3D90B6-2D70-41F3-96A6-572F5859C16B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B3D90B6-2D70-41F3-96A6-572F5859C16B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B3D90B6-2D70-41F3-96A6-572F5859C16B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,5 +49,6 @@ Global
 		{E1692FB8-7ACE-457F-9D1E-1E3C25ABFA35} = {056DA182-F876-408C-B2B6-36799D2ED06F}
 		{2A18DCA5-45A5-4070-8F4D-37747DE1A730} = {9ECB1FBD-1B78-4B99-8445-2B1929B42EEB}
 		{8D0BFD07-7062-42DA-9260-8BDCD6E18A91} = {46AE0AEC-BD7F-45C9-A686-401EA59977C9}
+		{9B3D90B6-2D70-41F3-96A6-572F5859C16B} = {3FBF05BC-8038-4927-866B-9CA43AE6C0AB}
 	EndGlobalSection
 EndGlobal
