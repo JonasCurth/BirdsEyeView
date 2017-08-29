@@ -38,8 +38,16 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationFramework.Luna" />
     <Reference Include="ReachFramework" />
-    <Reference Include="Syncfusion.Shared.Wpf, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Shared.Wpf, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Syncfusion\Syncfusion.Shared.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Tools.Wpf, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Syncfusion\Syncfusion.Tools.Wpf.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -74,9 +82,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="SmallCalenderControl.xaml.cs">
-      <DependentUpon>SmallCalenderControl.xaml</DependentUpon>
-    </Compile>
     <Compile Include="TitleBarControl.xaml.cs">
       <DependentUpon>TitleBarControl.xaml</DependentUpon>
     </Compile>
@@ -98,10 +103,6 @@
     <None Include="Resources\Icons_Disabled_32\Thumbs.db" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="SmallCalenderControl.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="TitleBarControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -227,6 +228,10 @@
     <ProjectReference Include="..\DidiDerDenker.BirdsEyeView.Converter\DidiDerDenker.BirdsEyeView.Converter.csproj">
       <Project>{8d0bfd07-7062-42da-9260-8bdcd6e18a91}</Project>
       <Name>DidiDerDenker.BirdsEyeView.Converter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DidiDerDenker.BirdsEyeView.Objects\DidiDerDenker.BirdsEyeView.Objects.csproj">
+      <Project>{139C33A0-402B-41A6-96DA-49E542E00C9C}</Project>
+      <Name>DidiDerDenker.BirdsEyeView.Objects</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

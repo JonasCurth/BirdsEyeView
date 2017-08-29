@@ -15,13 +15,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.ComponentModel;
+using Syncfusion.Windows.Shared;
 
 namespace DidiDerDenker.BirdsEyeView.Client.Views
 {
     /// <summary>
     /// Interaktionslogik für MainWindow.xaml
     /// </summary>
-    public partial class BirdsEyeView : Window
+    public partial class BirdsEyeView : ChromelessWindow
     {
         BirdsEyeViewInterfaceViewModel vm;
 
@@ -41,32 +42,7 @@ namespace DidiDerDenker.BirdsEyeView.Client.Views
                 //this.Schedule.MoveToDate(vm.SelectedDate.GetValueOrDefault());
             }
         }
-
-        private PropertyChangedEventHandler OnPropertyChanged()
-        {
-            throw new NotImplementedException();
-        }
-
-        private void OnWindowCloseClick(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
-        private void OnWindowMaximizeClick(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
-        private void OnWindowMinimizeClick(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
-        private void OnTitlebarMouseDown(object sender, MouseButtonEventArgs e)
-        {
-            
-        }
-
+        
         private void OnPreviewMouseWheel(object sender, MouseWheelEventArgs e)
         {
             e.Handled = true;

@@ -1,8 +1,8 @@
-﻿using System;
+﻿using DidiDerDenker.BirdsEyeView.Objects;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
 {
@@ -10,12 +10,12 @@ namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
     {
         #region fields
         private DateTime? selectedDate;
-        
         #endregion
 
         #region constructor
         public BirdsEyeViewInterfaceViewModel()
         {
+            //this.SelectedDate = DateTime.Now;
         }
         #endregion
 
@@ -28,6 +28,26 @@ namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
                 this.selectedDate = value;
                 OnPropertyChanged();
             }
+        }
+
+        public Task Capture
+        {
+            get { return Task.Capture; }
+        }
+
+        public Task Render
+        {
+            get { return Task.Render; }
+        }
+
+        public Task Upload
+        {
+            get { return Task.Upload; }
+        }
+
+        public Task Release
+        {
+            get { return Task.Release; }
         }
         #endregion
 

@@ -4,35 +4,233 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DidiDerDenker.BirdsEyeView.Controls"
+             xmlns:syncfusion="http://schemas.syncfusion.com/wpf" 
+             xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Luna" 
+             xmlns:Converter="clr-namespace:DidiDerDenker.BirdsEyeView.Converter;assembly=DidiDerDenker.BirdsEyeView.Converter"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    
+    <UserControl.Resources>
+        <Converter:EnumConverter x:Key="EnumConverter"/>
+        <Style x:Key="VideoListSplitButton" TargetType="{x:Type syncfusion:SplitButton}">
+            <Setter Property="Label" Value="Task"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="#333333"/>
+            <Setter Property="Foreground" Value="#FF00156E"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="ItemsPanel">
+                <Setter.Value>
+                    <ItemsPanelTemplate>
+                        <StackPanel IsItemsHost="True"/>
+                    </ItemsPanelTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="SizeForm" Value="Small"/>
+                        <Condition Property="HitTestArea" Value="LabelAndImage"/>
+                    </MultiTrigger.Conditions>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type syncfusion:SplitButton}">
+
+                                <Border x:Name="Bd" 
+                                        BorderBrush="{TemplateBinding BorderBrush}" 
+                                        BorderThickness="{TemplateBinding BorderThickness}" 
+                                        Background="{TemplateBinding Background}" 
+                                        IsEnabled="{TemplateBinding IsEnabled}" 
+                                        MinHeight="22" 
+                                        Opacity="{TemplateBinding Opacity}">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition Width="14"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Border x:Name="PART_Button" Background="Transparent" Grid.Column="0">
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                    <ColumnDefinition/>
+                                                </Grid.ColumnDefinitions>
+                                                <TextBlock x:Name="label" 
+                                                           Grid.Column="1" 
+                                                           Foreground="White" 
+                                                           HorizontalAlignment="Center" 
+                                                           VerticalAlignment="{TemplateBinding VerticalAlignment}"><Run FontWeight="Bold" Text="Aufgabe:"/><Run Text=" "/><Run Text="{TemplateBinding Label}"/></TextBlock>
+                                            </Grid>
+                                        </Border>
+
+                                        <Border x:Name="PART_ToggleButton" 
+                                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                                BorderThickness="1,0,0,0" 
+                                                Margin="0 0 2 0"
+                                                Background="Transparent" 
+                                                Grid.Column="2" 
+                                                ToolTip="{TemplateBinding ToggleButtonToolTip}">
+                                            <Path Data="M0,0L3.5,4 7,0z" 
+                                                  Focusable="False" 
+                                                  Fill="#FF567DB1" 
+                                                  HorizontalAlignment="Center" 
+                                                  SnapsToDevicePixels="True" 
+                                                  Stroke="#FF567DB1" 
+                                                  StrokeThickness="0.5" 
+                                                  VerticalAlignment="Center"/>
+                                        </Border>
+
+                                        <Popup x:Name="PART_Popup" 
+                                               AllowsTransparency="True" 
+                                               Focusable="False" 
+                                               IsOpen="{Binding IsDropDownOpen, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type syncfusion:DropDownButton}}}" 
+                                               PopupAnimation="Fade" 
+                                               Placement="Bottom" 
+                                               StaysOpen="False">
+
+                                            <Themes:SystemDropShadowChrome x:Name="PART_Shadow" 
+                                                                           SnapsToDevicePixels="True">
+                                                <Border BorderBrush="{DynamicResource {x:Static SystemColors.WindowFrameBrushKey}}" 
+                                                        BorderThickness="1" 
+                                                        Background="#FFFAFAFA" 
+                                                        MinWidth="28" 
+                                                        MinHeight="14">
+                                                    <ScrollViewer CanContentScroll="True" 
+                                                                  Margin="1" 
+                                                                  Style="{DynamicResource {ComponentResourceKey ResourceId=MenuScrollViewer, TypeInTargetAssembly={x:Type FrameworkElement}}}">
+                                                        <ItemsPresenter x:Name="Presenter" 
+                                                                        KeyboardNavigation.DirectionalNavigation="Cycle" 
+                                                                        Grid.IsSharedSizeScope="True" 
+                                                                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" 
+                                                                        KeyboardNavigation.TabNavigation="Cycle"/>
+                                                    </ScrollViewer>
+                                                </Border>
+                                            </Themes:SystemDropShadowChrome>
+                                        </Popup>
+                                    </Grid>
+                                </Border>
+                                <ControlTemplate.Triggers>
+
+                                    <Trigger Property="HasDropShadow" SourceName="PART_Popup" Value="True">
+                                        <Setter Property="Margin" TargetName="PART_Shadow" Value="0,0,5,5"/>
+                                    </Trigger>
+
+                                    <!-- Is mouse over toggle button-->
+                                    <Trigger Property="IsMouseOver" SourceName="PART_ToggleButton" Value="True">
+                                        <Setter Property="Background" TargetName="PART_ToggleButton" Value="#b2b2b2"/>
+                                        <Setter Property="Foreground" TargetName="label" Value="#FF00156E"/>
+                                    </Trigger>
+
+                                    <!-- Is Mouse Over normal button part and drop down menu is closed-->
+                                    <MultiTrigger>
+                                        <MultiTrigger.Conditions>
+                                            <Condition Property="IsMouseOver" Value="True"/>
+                                            <Condition Property="IsMouseOver" SourceName="PART_ToggleButton" Value="False"/>
+                                            <Condition Property="IsDropDownOpen" Value="False"/>
+                                        </MultiTrigger.Conditions>
+                                        <Setter Property="Foreground" TargetName="label" Value="#FF00156E"/>
+                                        <Setter Property="Background" TargetName="PART_ToggleButton" Value="#FFD3D0C7"/>
+                                    </MultiTrigger>
+
+                                    <!-- Is mouse over toggle button part and drop down menu is closed-->
+                                    <MultiTrigger>
+                                        <MultiTrigger.Conditions>
+                                            <Condition Property="IsMouseOver" SourceName="PART_Button" Value="False"/>
+                                            <Condition Property="IsMouseOver" SourceName="PART_ToggleButton" Value="True"/>
+                                            <Condition Property="IsDropDownOpen" Value="False"/>
+                                        </MultiTrigger.Conditions>
+                                        <!--<Setter Property="Foreground" TargetName="label" Value="#FF00156E"/>-->
+                                        <!--<Setter Property="Background" TargetName="PART_Button" Value="#FFD3D0C7"/>-->
+                                    </MultiTrigger>
+
+                                    <!-- Is drop down menu open-->
+                                    <Trigger Property="IsDropDownOpen" Value="True">
+                                        <!--<Setter Property="Background" TargetName="Bd" Value="#b2b2b2"/>-->
+                                        <Setter Property="Background" TargetName="PART_ToggleButton" Value="#b2b2b2"/>
+                                        <Setter Property="ToolTipService.IsEnabled" Value="False"/>
+                                    </Trigger>
+
+                                    <!-- Is mouse not over normal button and it is pressed-->
+                                    <MultiTrigger>
+                                        <MultiTrigger.Conditions>
+                                            <Condition Property="IsMouseOver" SourceName="PART_Button" Value="False"/>
+                                            <Condition Property="IsPressed" Value="True"/>
+                                        </MultiTrigger.Conditions>
+                                        <!--<Setter Property="Background" TargetName="Bd" Value="#b2b2b2"/>-->
+                                        <!--<Setter Property="Foreground" TargetName="label" Value="#FF00156E"/>-->
+                                        <Setter Property="Background" TargetName="PART_ToggleButton" Value="#b2b2b2"/>
+                                    </MultiTrigger>
+
+                                    <!-- Is mouse over normal button and it is pressed-->
+                                    <MultiTrigger>
+                                        <MultiTrigger.Conditions>
+                                            <Condition Property="IsMouseOver" SourceName="PART_Button" Value="True"/>
+                                            <Condition Property="IsPressed" Value="True"/>
+                                        </MultiTrigger.Conditions>
+                                        <Setter Property="Background" TargetName="Bd" Value="#b2b2b2"/>
+                                        <Setter Property="Foreground" TargetName="label" Value="#FF00156E"/>
+                                        <Setter Property="Background" TargetName="PART_ToggleButton" Value="#b2b2b2"/>
+                                    </MultiTrigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="Background" Value="Transparent"/>
+                </MultiTrigger>
+
+                <!-- Is mouse over-->
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="#FF00156E"/>
+                    <Setter Property="Background" Value="#b2b2b2"/>
+                </Trigger>
+
+                <!-- Is button pressed-->
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Foreground" Value="#FF00156E"/>
+                </Trigger>
+
+                <!-- Is drop down menu opened-->
+                <Trigger Property="IsDropDownOpen" Value="True">
+                    <Setter Property="Foreground" Value="#FF00156E"/>
+                    <!--<Setter Property="Background" Value="#b2b2b2"/>-->
+                </Trigger>
+
+                <!-- Is disabled-->
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Opacity" Value="0.5"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+
     <DockPanel>
 
-        <Border BorderThickness="0"
-                BorderBrush="#b2b2b2"
-                Background="#333333"
-                CornerRadius="5 5 0 0"
-                Height="42"
-                DockPanel.Dock="Top">
-            <Grid>
-                <TextBlock Foreground="White"
-                           Text="Upload-Plan"
-                           HorizontalAlignment="Center"
-                           VerticalAlignment="Center"
-                           FontSize="20"
-                           FontWeight="Bold"/>
+        <syncfusion:SplitButton DockPanel.Dock="Top" 
+                                HorizontalAlignment="Stretch"
+                                Height="26"
+                                Style="{DynamicResource VideoListSplitButton}"
+                                SizeForm="Small"
+                                HitTestArea="LabelAndImage" 
+                                Background="#FF333333" 
+                                Label="{Binding Task, Converter={StaticResource EnumConverter}, Mode=OneWay, FallbackValue=Task,
+                                                RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:VideoListControl}}}"
+                                >
+            <syncfusion:DropDownMenuGroup>
+                <syncfusion:DropDownMenuGroup.ItemTemplate>
+                    <DataTemplate>
+                        <RadioButton Content="{Binding Header}"
+                                     Margin="5 0"/>
+                    </DataTemplate>
+                </syncfusion:DropDownMenuGroup.ItemTemplate>
 
-                <Button Style="{StaticResource ImageButton}"
-                    HorizontalAlignment="Right">
-                    <Image Source="Resources/Icons_White_32/Update_32_W.png"/>
-                </Button>
-            </Grid>
-        </Border>
+                <RadioButton Content="Test1"/>
+                <RadioButton Content="Test2"/>
+                <RadioButton Content="Test3"/>
+            </syncfusion:DropDownMenuGroup>
+        </syncfusion:SplitButton>
 
         <Border BorderThickness="2 0 2 2"
                 BorderBrush="#b2b2b2"
-                CornerRadius="0 0 5 5"
                 Grid.Row="1">
 
             <ListBox Background="Transparent"

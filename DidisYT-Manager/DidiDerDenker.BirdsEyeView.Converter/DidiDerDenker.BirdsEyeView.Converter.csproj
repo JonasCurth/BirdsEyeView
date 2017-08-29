@@ -43,7 +43,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CalenderMonthConverter.cs" />
+    <Compile Include="EnumConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DidiDerDenker.BirdsEyeView.Objects\DidiDerDenker.BirdsEyeView.Objects.csproj">
+      <Project>{139c33a0-402b-41a6-96da-49e542e00c9c}</Project>
+      <Name>DidiDerDenker.BirdsEyeView.Objects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DidiDerDenker.BirdsEyeView.Operations\DidiDerDenker.BirdsEyeView.Operations.csproj">
+      <Project>{368cde91-3b70-43fb-9f10-11ac9d2c3860}</Project>
+      <Name>DidiDerDenker.BirdsEyeView.Operations</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

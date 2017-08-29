@@ -36,17 +36,19 @@
             </Button>
 
             <StackPanel x:Name="WindowButtonPanel"
-                    Grid.Column="4"
-                    Orientation="Horizontal">
+                        Grid.Column="4"
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Right">
 
                 <Button x:Name="MinimizeBtn"
-                    Click="OnWindowMinimizeClick"
-                    Style="{DynamicResource ImageButton}">
+                        Click="OnWindowMinimizeClick"
+                        Style="{DynamicResource ImageButton}">
                     <Image Source="Resources/Icons_White_32/Minimize_32_W.png"/>
                 </Button>
                 <Button x:Name="MaximizeBtn"
                     Click="OnWindowMaximizeClick"
-                    Style="{DynamicResource ImageButton}">
+                    Style="{DynamicResource ImageButton}"
+                        Visibility="Collapsed">
                     <Image Source="Resources/Icons_White_32/Maximize_32_W.png"/>
                 </Button>
                 <Button x:Name="CloseBtn"

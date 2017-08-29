@@ -1,8 +1,8 @@
-﻿using System;
+﻿using DidiDerDenker.BirdsEyeView.Objects;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -20,9 +20,18 @@ namespace DidiDerDenker.BirdsEyeView.Controls
     /// </summary>
     public partial class VideoListControl : UserControl
     {
+        public static DependencyProperty TaskProperty =
+            DependencyProperty.Register("Task", typeof(Enum), typeof(VideoListControl));
+
         public VideoListControl()
         {
             InitializeComponent();
         }
+
+        public Task Task
+        {
+            get { return (Task)this.GetValue(TaskProperty); }
+            set { this.SetValue(TaskProperty, value); }
+        } 
     }
 }
