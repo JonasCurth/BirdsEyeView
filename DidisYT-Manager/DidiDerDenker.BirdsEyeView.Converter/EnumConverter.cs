@@ -16,7 +16,7 @@ namespace DidiDerDenker.BirdsEyeView.Converter
         {
             if (null != value && value is Enum)
             {
-                return ((Enum)value).GetDisplayName(Language.EN);
+                return ((Enum)value).GetDisplayName(Language.DE);
             }
 
             return null;
