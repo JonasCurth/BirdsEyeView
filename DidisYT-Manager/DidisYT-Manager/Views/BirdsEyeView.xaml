@@ -32,7 +32,7 @@
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
-                <RowDefinition Height="3"/>
+                <RowDefinition Height="2"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
@@ -84,13 +84,13 @@
                                         Margin="20 10 20 10"/>
         </Grid>
 
-        <Rectangle DockPanel.Dock="Left" Width="3" Fill="#b2b2b2"/>
+        <Rectangle DockPanel.Dock="Left" Width="2" Fill="#b2b2b2"/>
 
         <!-- Schedule and video lists-->
         <Grid DockPanel.Dock="Right">
             <Grid.RowDefinitions>
-                <RowDefinition Height="0.9*" MinHeight="313"/>
-                <RowDefinition Height="3"/>
+                <RowDefinition Height="1.5*" MinHeight="313"/>
+                <RowDefinition Height="2"/>
                 <RowDefinition Height="*" MinHeight="200"/>
             </Grid.RowDefinitions>
 
