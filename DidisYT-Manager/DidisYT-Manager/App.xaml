@@ -276,5 +276,175 @@
             </Setter>
         </Style>
 
+        
+        <!-- Window Icons-->
+        <ControlTemplate x:Key="MinimizeIcon" TargetType="{x:Type Button}" >
+            <Border Name="minborder4"   BorderThickness="1" CornerRadius="1" Background="Transparent"  MinHeight="20" Width="22"  Margin="1,0,1,5">
+                <Canvas Width="18" Height="18">
+                    <Line X1="2" X2="16"  Y1="12" Y2="12" Stroke="White" StrokeThickness="1"/>
+                    <Line X1="2" X2="16"  Y1="13" Y2="13" Stroke="White" StrokeThickness="1"/>
+                    <Line X1="2" X2="16"  Y1="14" Y2="14" Stroke="White" StrokeThickness="1"/>
+                </Canvas>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter TargetName="minborder4" Property="Background" >
+                        <Setter.Value>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#66FFFFFF" Offset="0"/>
+                                <GradientStop Color="#00FFFFFF" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter TargetName="minborder4" Property="BorderBrush" >
+                        <Setter.Value>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#00FFFFFF" Offset="0"/>
+                                <GradientStop Color="#7FFFFFFF" Offset="0.1"/>
+                            </LinearGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="true">
+                    <Setter TargetName="minborder4" Property="Background">
+                        <Setter.Value>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#99FFFFFF" Offset="0"/>
+                                <GradientStop Color="#00FFFFFF" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+        <ControlTemplate x:Key="MaximizeIcon" TargetType="{x:Type Button}">
+            <Border Name="maxborder4" BorderThickness="1" CornerRadius="1" Background="Transparent" Height="20" Width="22" HorizontalAlignment="Right" Margin="1,2,1,5">
+                <Canvas Width="18" Height="18">
+                    <Rectangle Fill="Transparent" Stroke="White" Width="18" Height="14"/>
+                    <Rectangle Canvas.Top="0" Canvas.Left="0" Fill="{TemplateBinding Background}" Stroke="{TemplateBinding Background}" Width="7" Height="3" Margin="0,2,0,0"/>
+                    <Line X1="0" X2="16"  Y1="8" Y2="8" Stroke="Transparent" StrokeThickness="1"/>
+                </Canvas>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter TargetName="maxborder4" Property="Background" >
+                        <Setter.Value>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#66FFFFFF" Offset="0"/>
+                                <GradientStop Color="#00FFFFFF" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter TargetName="maxborder4" Property="BorderBrush" >
+                        <Setter.Value>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#00FFFFFF" Offset="0"/>
+                                <GradientStop Color="#7FFFFFFF" Offset="0.1"/>
+                            </LinearGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="true">
+                    <Setter TargetName="maxborder4" Property="Background">
+                        <Setter.Value>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#99FFFFFF" Offset="0"/>
+                                <GradientStop Color="#00FFFFFF" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+        <ControlTemplate x:Key="CloseIcon" TargetType="{x:Type Button}">
+            <Border Name="closeborder4" BorderThickness="1" CornerRadius="1" Background="Transparent" Height="20" Width="22" HorizontalAlignment="Right" Margin="1,0,1,5">
+                <Canvas Width="18" Height="18">
+                    <!--<Path Fill="#FFFFFFFF" Stretch="Fill" Stroke="#FF000000" Width="11" Height="10" Canvas.Left="0.875" Data="M284.20002,237.66667 L287.59967,237.66667 288.733,239.46634 290.06676,237.53303 293.0665,237.53303 293.0665,238.99951 290.59978,241.26536 290.59978,242.26457 293.19982,244.59636 293.19982,245.66247 290.13311,245.72877 288.74141,243.79678 287.39973,245.59584 284.26634,245.59584 284.26634,244.663 286.66638,242.39751 286.66638,241.26476 284.19968,238.79938 z"/>-->
+                    <Line X1="3" X2="16" Y1="3" Y2="16" Stroke="White" StrokeThickness="1"/>
+                    <Line X1="3" X2="16" Y1="16" Y2="3" Stroke="White" StrokeThickness="1"/>
+                </Canvas>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter TargetName="closeborder4" Property="Background" >
+                        <Setter.Value>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#66FFFFFF" Offset="0"/>
+                                <GradientStop Color="#00FFFFFF" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter TargetName="closeborder4" Property="BorderBrush" >
+                        <Setter.Value>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#00FFFFFF" Offset="0"/>
+                                <GradientStop Color="#7FFFFFFF" Offset="0.1"/>
+                            </LinearGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="true">
+                    <Setter TargetName="closeborder4" Property="Background">
+                        <Setter.Value>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#99FFFFFF" Offset="0"/>
+                                <GradientStop Color="#00FFFFFF" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+        <ControlTemplate x:Key="RestoreIcon" TargetType="{x:Type Button}">
+            <Border Name="resborder4"   BorderThickness="1" CornerRadius="1" Background="Transparent"  Height="20" Width="20"  Margin="1,0,1,5">
+                <Canvas Width="18" Height="18">
+                    <Line X1="2" X2="16"  Y1="4" Y2="4" Stroke="White" StrokeThickness="1"/>
+                    <Line X1="2" X2="16"  Y1="18" Y2="18" Stroke="White" StrokeThickness="1"/>
+                    <Line X1="2" X2="2"  Y1="4" Y2="18" Stroke="White" StrokeThickness="1"/>
+                    <Line X1="16" X2="16"  Y1="4" Y2="18" Stroke="White" StrokeThickness="1"/>
+
+                    <Line X1="4" X2="18"  Y1="2" Y2="2" Stroke="White" StrokeThickness="1"/>
+                    <Line X1="16" X2="18"  Y1="18" Y2="18" Stroke="White" StrokeThickness="1"/>
+                    <Line X1="4" X2="4"  Y1="4" Y2="6" Stroke="White" StrokeThickness="1"/>
+                    <Line X1="18" X2="18"  Y1="2" Y2="16" Stroke="White" StrokeThickness="1"/>
+                </Canvas>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter TargetName="resborder4" Property="Background" >
+                        <Setter.Value>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#66FFFFFF" Offset="0"/>
+                                <GradientStop Color="#00FFFFFF" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter TargetName="resborder4" Property="BorderBrush" >
+                        <Setter.Value>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#00FFFFFF" Offset="0"/>
+                                <GradientStop Color="#7FFFFFFF" Offset="0.1"/>
+                            </LinearGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="true">
+                    <Setter TargetName="resborder4" Property="Background">
+                        <Setter.Value>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#99FFFFFF" Offset="0"/>
+                                <GradientStop Color="#00FFFFFF" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
     </Application.Resources>
 </Application>
