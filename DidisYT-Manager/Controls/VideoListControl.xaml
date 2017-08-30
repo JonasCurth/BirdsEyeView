@@ -11,6 +11,7 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <UserControl.Resources>
         <Converter:EnumConverter x:Key="EnumConverter"/>
+        
         <Style x:Key="VideoListSplitButton" TargetType="{x:Type syncfusion:SplitButton}">
             <Setter Property="Label" Value="Task"/>
             <Setter Property="BorderThickness" Value="1"/>
@@ -84,8 +85,9 @@
                                                AllowsTransparency="True" 
                                                Focusable="False" 
                                                IsOpen="{Binding IsDropDownOpen, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type syncfusion:DropDownButton}}}" 
-                                               PopupAnimation="Fade" 
-                                               Placement="Bottom" 
+                                               PopupAnimation="Fade"
+                                               Width="{Binding ActualWidth, ElementName=Bd}"
+                                               Placement="Bottom"
                                                StaysOpen="False">
 
                                             <Themes:SystemDropShadowChrome x:Name="PART_Shadow" 
@@ -213,8 +215,7 @@
                                 HitTestArea="LabelAndImage" 
                                 Background="#FF333333" 
                                 Label="{Binding Task, Converter={StaticResource EnumConverter}, Mode=OneWay, FallbackValue=Task,
-                                                RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:VideoListControl}}}"
-                                >
+                                                RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:VideoListControl}}}">
             <syncfusion:DropDownMenuGroup>
                 <syncfusion:DropDownMenuGroup.ItemTemplate>
                     <DataTemplate>
@@ -222,10 +223,6 @@
                                      Margin="5 0"/>
                     </DataTemplate>
                 </syncfusion:DropDownMenuGroup.ItemTemplate>
-
-                <RadioButton Content="Test1"/>
-                <RadioButton Content="Test2"/>
-                <RadioButton Content="Test3"/>
             </syncfusion:DropDownMenuGroup>
         </syncfusion:SplitButton>
 

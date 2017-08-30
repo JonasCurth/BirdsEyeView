@@ -27,6 +27,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DidiDerDenker.BirdsEyeView.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DidiDerDenker.BirdsEyeView.Operations", "DidiDerDenker.BirdsEyeView.Operations\DidiDerDenker.BirdsEyeView.Operations.csproj", "{368CDE91-3B70-43FB-9F10-11AC9D2C3860}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{0FF49A1C-A155-42FA-B8D2-93E2B49DFD4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DidiDerDenker.BirdsEyeView.Resources", "Resources\DidiDerDenker.BirdsEyeView.Resources.csproj", "{CA693A0B-F0D1-474D-A535-7097A9788E25}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +61,10 @@ Global
 		{368CDE91-3B70-43FB-9F10-11AC9D2C3860}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{368CDE91-3B70-43FB-9F10-11AC9D2C3860}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{368CDE91-3B70-43FB-9F10-11AC9D2C3860}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA693A0B-F0D1-474D-A535-7097A9788E25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA693A0B-F0D1-474D-A535-7097A9788E25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA693A0B-F0D1-474D-A535-7097A9788E25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA693A0B-F0D1-474D-A535-7097A9788E25}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -68,5 +76,6 @@ Global
 		{9B3D90B6-2D70-41F3-96A6-572F5859C16B} = {3FBF05BC-8038-4927-866B-9CA43AE6C0AB}
 		{139C33A0-402B-41A6-96DA-49E542E00C9C} = {88977CA4-6406-4B84-BD5C-95040A96D1E9}
 		{368CDE91-3B70-43FB-9F10-11AC9D2C3860} = {B5CC6487-842C-4A5E-9B9C-F191938ABED0}
+		{CA693A0B-F0D1-474D-A535-7097A9788E25} = {0FF49A1C-A155-42FA-B8D2-93E2B49DFD4A}
 	EndGlobalSection
 EndGlobal

@@ -82,9 +82,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="TitleBarControl.xaml.cs">
-      <DependentUpon>TitleBarControl.xaml</DependentUpon>
-    </Compile>
     <Compile Include="UploadPlanControl.xaml.cs">
       <DependentUpon>UploadPlanControl.xaml</DependentUpon>
     </Compile>
@@ -99,14 +96,8 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Resources\Icons_Disabled_128\Thumbs.db" />
-    <None Include="Resources\Icons_Disabled_32\Thumbs.db" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="TitleBarControl.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="UploadPlanControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -117,114 +108,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Icons_White_32\Back_32_W.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Icons_White_32\Close_32_W.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Icons_White_32\Maximize_32_W.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Icons_White_32\Minimize_32_W.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Icons_White_32\Save_32_W.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Icons_White_32\Update_32_W.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Icons_Black_128\Back_128_B.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Icons_Black_128\Close_128_B.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Icons_Black_128\Maximize_128_B.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Icons_Black_128\Minimize_128_B.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Icons_Black_128\Save_128_B.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Icons_Black_128\Update_128_B.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Icons_Black_32\Back_32_B.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Icons_Black_32\Close_32_B.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Icons_Black_32\Maximize_32_B.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Icons_Black_32\Minimize_32_B.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Icons_Black_32\Save_32_B.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Icons_Black_32\Update_32_B.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Icons_Disabled_128\Back_128_G.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Icons_Disabled_128\Close_128_G.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Icons_Disabled_128\Maximize_128_G.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Icons_Disabled_128\Minimize_128_G.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Icons_Disabled_128\Save_128_G.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Icons_Disabled_128\Update_128_G.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Icons_Disabled_32\Back_32_Disabled.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Icons_Disabled_32\Close_32_Disabled.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Icons_Disabled_32\Maximize_32_Disabled.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Icons_Disabled_32\Minimize_32_Disabled.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Icons_Disabled_32\Save_32_Disabled.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Icons_Disabled_32\Update_32_G.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Icons_White_128\Back_128_W.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Icons_White_128\Close_128_W.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Icons_White_128\Maximize_128_W.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Icons_White_128\Minimize_128_W.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Icons_White_128\Save_128_W.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Icons_White_128\Update_128_W.png" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\DidiDerDenker.BirdsEyeView.Converter\DidiDerDenker.BirdsEyeView.Converter.csproj">
       <Project>{8d0bfd07-7062-42da-9260-8bdcd6e18a91}</Project>
       <Name>DidiDerDenker.BirdsEyeView.Converter</Name>
@@ -232,6 +115,10 @@
     <ProjectReference Include="..\DidiDerDenker.BirdsEyeView.Objects\DidiDerDenker.BirdsEyeView.Objects.csproj">
       <Project>{139C33A0-402B-41A6-96DA-49E542E00C9C}</Project>
       <Name>DidiDerDenker.BirdsEyeView.Objects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Resources\DidiDerDenker.BirdsEyeView.Resources.csproj">
+      <Project>{ca693a0b-f0d1-474d-a535-7097a9788e25}</Project>
+      <Name>DidiDerDenker.BirdsEyeView.Resources</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

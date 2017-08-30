@@ -8,34 +8,23 @@
                          xmlns:shared="http://schemas.syncfusion.com/wpf"
                          mc:Ignorable="d"
                          shared:SkinStorage.VisualStyle="Blend"
+                         Background="#FDF5F5F5"
                          Height="800" MinHeight="642"
                          Width="1200" MinWidth="800"
                          UseNativeChrome="True"
                          CornerRadius="0"
-                         Icon="/DidiDerDenker.BirdsEyeView.Client;component/appicon.ico"
+                         Icon="/DidiDerDenker.BirdsEyeView.Resources;component/appicon.ico"
+                         TitleBarBackground="#078e00"
                          MaximizeButtonTemplate="{StaticResource MaximizeIcon}"
                          MinimizeButtonTemplate="{StaticResource MinimizeIcon}"
                          CloseButtonTemplate="{StaticResource CloseIcon}"
-                         RestoreButtonTemplate="{StaticResource RestoreIcon}">
-
-    <shared:ChromelessWindow.Resources>
-    </shared:ChromelessWindow.Resources>
+                         RestoreButtonTemplate="{StaticResource MaximizeIcon}">
 
     <shared:ChromelessWindow.DataContext>
         <StaticResource ResourceKey="BirdsEyeViewInterface"/>
     </shared:ChromelessWindow.DataContext>
 
     <DockPanel>
-
-        <!-- Titlebar-->
-        <!--<controls:TitleBarControl DockPanel.Dock="Top"
-                                  MinimizedChanged="TitleBarControl_MinimizedChanged"
-                                  MaximizedChanged="TitleBarControl_MaximizedChanged"
-                                  CloseChanged="TitleBarControl_CloseChanged"
-                                  MouseDownChanged="TitleBarControl_MouseDownChanged"/>-->
-
-
-        <!-- Left panel with calendar and upload plan-->
         <Grid DockPanel.Dock="Left" Width="250">
 
             <Grid.RowDefinitions>
@@ -58,6 +47,7 @@
                                     Margin="20 10 20 5"
                                     Width="Auto"
                                     Grid.Row="0" 
+                                     FontSize="12"
                                     ShowWeekNumbers="True" 
                                     BorderThickness="0" 
                                     HeaderBackground="#FF333333" 
@@ -80,6 +70,7 @@
                                          HeaderBackground="#FF333333" 
                                          HeaderForeground="White" 
                                          AllowMultiplySelection="False"
+                                     FontSize="12"
                                          AllowSelection="False"
                                          Style="{DynamicResource CalendarEditStyle1}"
                                          PreviewMouseWheel="OnPreviewMouseWheel"/>
@@ -95,7 +86,7 @@
         <!-- Schedule and video lists-->
         <Grid DockPanel.Dock="Right">
             <Grid.RowDefinitions>
-                <RowDefinition Height="1.02*" MinHeight="313"/>
+                <RowDefinition Height="0.9*" MinHeight="313"/>
                 <RowDefinition Height="3"/>
                 <RowDefinition Height="*" MinHeight="200"/>
             </Grid.RowDefinitions>
@@ -115,7 +106,7 @@
                                    ShowAllDay="False" 
                                    TimeLineViewRowCount="-1" 
                                    FirstDayOfWeek="Monday" 
-                                   NonWorkingDays=""/>
+                                   NonWorkingDays="" HeaderBackground="{x:Null}" MajorTickTimeFormat="HH:mm"/>
 
             <GridSplitter Grid.Row="1" Background="#b2b2b2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
 

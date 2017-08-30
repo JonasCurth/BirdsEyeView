@@ -1,5 +1,5 @@
 ﻿using DidiDerDenker.BirdsEyeView.Objects;
-using DidiDerDenker.BirdsEyeView.Operations.Resources;
+using DidiDerDenker.BirdsEyeView.Resources.Resources;
 using System;
 using System.Collections.Generic;
 using System.Linq;

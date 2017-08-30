@@ -22,6 +22,7 @@ namespace DidiDerDenker.BirdsEyeView.Controls
     {
         public static DependencyProperty TaskProperty =
             DependencyProperty.Register("Task", typeof(Enum), typeof(VideoListControl));
+        
 
         public VideoListControl()
         {

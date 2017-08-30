@@ -20,13 +20,13 @@
                            Text="Upload-Plan"
                            HorizontalAlignment="Center"
                            VerticalAlignment="Center"
-                           FontSize="10"/>
+                           FontSize="12"/>
 
                 <Button Style="{StaticResource ImageButton}"
                         HorizontalAlignment="Right"
                         Width="16"
                         Height="16">
-                    <Image Source="Resources/Icons_White_32/Update_32_W.png" />
+                    <Image Source="/DidiDerDenker.BirdsEyeView.Resources;Component/Images/Icons_White_32/Update_32_W.png" />
                 </Button>
             </Grid>
         </Border>

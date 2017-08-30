@@ -143,8 +143,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Images\Icons_Disabled_128\Thumbs.db" />
-    <None Include="Images\Icons_Disabled_32\Thumbs.db" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -192,114 +190,10 @@
       <Project>{368cde91-3b70-43fb-9f10-11ac9d2c3860}</Project>
       <Name>DidiDerDenker.BirdsEyeView.Operations</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Icons_Black_128\Back_128_B.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Icons_Black_128\Close_128_B.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Icons_Black_128\Maximize_128_B.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Icons_Black_128\Minimize_128_B.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Icons_Black_128\Save_128_B.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Icons_Black_128\Update_128_B.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Icons_Black_32\Back_32_B.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Icons_Black_32\Close_32_B.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Icons_Black_32\Maximize_32_B.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Icons_Black_32\Minimize_32_B.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Icons_Black_32\Save_32_B.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Icons_Black_32\Update_32_B.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Icons_Disabled_128\Back_128_G.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Icons_Disabled_128\Close_128_G.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Icons_Disabled_128\Maximize_128_G.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Icons_Disabled_128\Minimize_128_G.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Icons_Disabled_128\Save_128_G.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Icons_Disabled_128\Update_128_G.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Icons_Disabled_32\Back_32_Disabled.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Icons_Disabled_32\Close_32_Disabled.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Icons_Disabled_32\Maximize_32_Disabled.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Icons_Disabled_32\Minimize_32_Disabled.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Icons_Disabled_32\Save_32_Disabled.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Icons_Disabled_32\Update_32_G.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Icons_White_128\Back_128_W.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Icons_White_128\Close_128_W.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Icons_White_128\Maximize_128_W.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Icons_White_128\Minimize_128_W.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Icons_White_128\Save_128_W.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Icons_White_128\Update_128_W.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Icons_White_32\Back_32_W.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Icons_White_32\Close_32_W.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Icons_White_32\Maximize_32_W.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Icons_White_32\Minimize_32_W.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Icons_White_32\Save_32_W.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Icons_White_32\Update_32_W.png" />
+    <ProjectReference Include="..\Resources\DidiDerDenker.BirdsEyeView.Resources.csproj">
+      <Project>{ca693a0b-f0d1-474d-a535-7097a9788e25}</Project>
+      <Name>DidiDerDenker.BirdsEyeView.Resources</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
