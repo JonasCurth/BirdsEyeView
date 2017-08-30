@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Convert.cs" />
     <Compile Include="Ensure.cs" />
     <Compile Include="Extensions\EnumExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

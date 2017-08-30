@@ -1,4 +1,6 @@
-﻿using DidiDerDenker.BirdsEyeView.Objects;
+﻿using DidiDerDenker.BirdsEyeView.Database;
+using DidiDerDenker.BirdsEyeView.Objects;
+using DidiDerDenker.BirdsEyeView.Objects.Collections;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,12 +12,14 @@ namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
     {
         #region fields
         private DateTime? selectedDate;
+        private VideoCollection allVideos;
         #endregion
 
         #region constructor
         public BirdsEyeViewInterfaceViewModel()
         {
             //this.SelectedDate = DateTime.Now;
+            this.AllVideos = DatabaseConnection.Default.GetAllVideos();
         }
         #endregion
 
@@ -26,6 +30,16 @@ namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
             set
             {
                 this.selectedDate = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public VideoCollection AllVideos
+        {
+            get { return this.allVideos; }
+            set
+            {
+                this.allVideos = value;
                 OnPropertyChanged();
             }
         }
