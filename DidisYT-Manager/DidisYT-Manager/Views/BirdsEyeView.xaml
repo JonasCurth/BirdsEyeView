@@ -124,20 +124,24 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="10"/>
                 </Grid.ColumnDefinitions>
-
+                
                 <controls:VideoListControl Grid.Column="1"
                                            Margin="10" 
                                            Task="{Binding Capture}"
-                                           />
+                                           FilteredList="{Binding ScheduledList}"/>
                 <controls:VideoListControl Grid.Column="2"
                                            Margin="10"
-                                           Task="{Binding Render}"/>
+                                           Task="{Binding Render}"
+                                           FilteredList="{Binding CapturedList}"/>
                 <controls:VideoListControl Grid.Column="3"
                                            Margin="10"
-                                           Task="{Binding Upload}"/>
+                                           Task="{Binding Upload}"
+                                           FilteredList="{Binding RenderedList}"/>
                 <controls:VideoListControl Grid.Column="4"
                                            Margin="10"
-                                           Task="{Binding Release}"/>
+                                           Task="{Binding Release}"
+                                           FilteredList="{Binding UploadedList}"/>
+                
             </Grid>
         </Grid>
     </DockPanel>

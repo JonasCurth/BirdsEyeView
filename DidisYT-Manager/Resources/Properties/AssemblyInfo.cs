@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Allgemeine Informationen über eine Assembly werden über die folgenden
 // Attribute gesteuert. Ändern Sie diese Attributwerte, um die Informationen zu ändern,
 // die einer Assembly zugeordnet sind.
-[assembly: AssemblyTitle("DidiDerDenker.BirdsEyeView.Resources")]
+[assembly: AssemblyTitle("Resources")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("DidiDerDenker.BirdsEyeView.Resources")]
+[assembly: AssemblyProduct("Resources")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Die folgende GUID bestimmt die ID der Typbibliothek, wenn dieses Projekt für COM verfügbar gemacht wird
-[assembly: Guid("ca693a0b-f0d1-474d-a535-7097a9788e25")]
+[assembly: Guid("e4bf29bc-a78c-446e-b12b-48d403e7ea75")]
 
 // Versionsinformationen für eine Assembly bestehen aus den folgenden vier Werten:
 //

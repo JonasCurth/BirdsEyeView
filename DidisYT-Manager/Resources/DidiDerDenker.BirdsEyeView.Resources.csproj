@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CA693A0B-F0D1-474D-A535-7097A9788E25}</ProjectGuid>
+    <ProjectGuid>{E4BF29BC-A78C-446E-B12B-48D403E7EA75}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DidiDerDenker.BirdsEyeView.Resources</RootNamespace>
@@ -43,39 +43,33 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\EnumResources.Designer.cs">
-      <DependentUpon>EnumResources.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <DependentUpon>EnumResources.resx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Icons_Disabled_32\Back_32_Disabled.png" />
     <Resource Include="Images\Icons_Disabled_32\Close_32_Disabled.png" />
     <Resource Include="Images\Icons_Disabled_32\Minimize_32_Disabled.png" />
+    <Resource Include="Images\Icons_Disabled_32\Restore_32_Disabled.png" />
     <Resource Include="Images\Icons_Disabled_32\Save_32_Disabled.png" />
+    <Resource Include="Images\Icons_Disabled_32\Update_32_Disabled.png" />
     <Resource Include="Images\Icons_White_32\Back_32_W.png" />
     <Resource Include="Images\Icons_White_32\Close_32_W.png" />
     <Resource Include="Images\Icons_White_32\Minimize_32_W.png" />
+    <Resource Include="Images\Icons_White_32\Restore_32_W.png" />
     <Resource Include="Images\Icons_White_32\Save_32_W.png" />
     <Resource Include="Images\Icons_White_32\Update_32_W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="appicon.ico" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\EnumResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>EnumResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="appicon.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Icons_Disabled_32\Restore_32_Disabled.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Icons_Disabled_32\Update_32_Disabled.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Icons_White_32\Restore_32_W.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

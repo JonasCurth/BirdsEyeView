@@ -116,6 +116,12 @@ namespace DidiDerDenker.BirdsEyeView.Objects
             this.Mode = newVideo.Mode;
             this.Episode = newVideo.Episode;
         }
+
+        public override string ToString()
+        {
+            //ToDo: Only for LetsPlays!
+            return $"{this.Class} {this.Project} [Deutsch] #{this.Episode} {this.Name}";
+        }
         #endregion
     }
 }

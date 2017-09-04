@@ -22,7 +22,9 @@ namespace DidiDerDenker.BirdsEyeView.Controls
     {
         public static DependencyProperty TaskProperty =
             DependencyProperty.Register("Task", typeof(Enum), typeof(VideoListControl));
-        
+        public static DependencyProperty FilteredListProperty =
+            DependencyProperty.Register("FilteredList", typeof(ListCollectionView), typeof(VideoListControl));
+
 
         public VideoListControl()
         {
@@ -33,6 +35,12 @@ namespace DidiDerDenker.BirdsEyeView.Controls
         {
             get { return (Task)this.GetValue(TaskProperty); }
             set { this.SetValue(TaskProperty, value); }
-        } 
+        }
+
+        public ListCollectionView FilteredList
+        {
+            get { return (ListCollectionView)this.GetValue(FilteredListProperty); }
+            set { this.SetValue(FilteredListProperty, value); }
+        }
     }
 }

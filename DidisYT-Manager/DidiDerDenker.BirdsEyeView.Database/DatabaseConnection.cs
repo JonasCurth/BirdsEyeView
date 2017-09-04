@@ -95,6 +95,31 @@ namespace DidiDerDenker.BirdsEyeView.Database
 
             return collection;
         }
+
+        public ProjectCollection GetAllProjects()
+        {
+            ProjectCollection collection = new ProjectCollection();
+            using (SqlConnection connection = new SqlConnection(this.ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("SELECT * FROM Projects", connection))
+                {
+                    connection.Open();
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            string id = Convert.ToString(reader["Project_ID"]);
+                            string name = Convert.ToString(reader["Project_Name"]);
+
+                            collection.Add(new Project(id, name));
+                        }
+                    }
+                }
+            }
+
+            return collection;
+        }
         #endregion
     }
 }

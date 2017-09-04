@@ -52,7 +52,7 @@
       <Name>DidiDerDenker.BirdsEyeView.Objects</Name>
     </ProjectReference>
     <ProjectReference Include="..\Resources\DidiDerDenker.BirdsEyeView.Resources.csproj">
-      <Project>{ca693a0b-f0d1-474d-a535-7097a9788e25}</Project>
+      <Project>{e4bf29bc-a78c-446e-b12b-48d403e7ea75}</Project>
       <Name>DidiDerDenker.BirdsEyeView.Resources</Name>
     </ProjectReference>
   </ItemGroup>

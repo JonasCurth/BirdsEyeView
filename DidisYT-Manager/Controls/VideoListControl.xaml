@@ -216,11 +216,12 @@
                                 Background="#FF333333" 
                                 Label="{Binding Task, Converter={StaticResource EnumConverter}, Mode=OneWay, FallbackValue=Task,
                                                 RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:VideoListControl}}}">
-            <syncfusion:DropDownMenuGroup>
+            <syncfusion:DropDownMenuGroup ItemsSource="{Binding Projects}">
                 <syncfusion:DropDownMenuGroup.ItemTemplate>
                     <DataTemplate>
-                        <RadioButton Content="{Binding Header}"
-                                     Margin="5 0"/>
+                        <RadioButton Content="{Binding Name}"
+                                     GroupName="FilterGroup"
+                                     Margin="5 3"/>
                     </DataTemplate>
                 </syncfusion:DropDownMenuGroup.ItemTemplate>
             </syncfusion:DropDownMenuGroup>
@@ -231,7 +232,9 @@
                 Grid.Row="1">
 
             <ListBox Background="Transparent"
-                         BorderThickness="0"
+                     ItemsSource="{Binding FilteredList, RelativeSource={RelativeSource AncestorType=UserControl}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                     BorderThickness="0"
+                     IsSynchronizedWithCurrentItem="True"
                      Grid.Row="1"/>
 
         </Border>

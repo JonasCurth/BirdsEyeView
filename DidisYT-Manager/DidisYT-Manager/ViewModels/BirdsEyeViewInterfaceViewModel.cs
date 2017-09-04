@@ -3,8 +3,10 @@ using DidiDerDenker.BirdsEyeView.Objects;
 using DidiDerDenker.BirdsEyeView.Objects.Collections;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using System.Windows.Data;
 
 namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
 {
@@ -12,14 +14,32 @@ namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
     {
         #region fields
         private DateTime? selectedDate;
-        private VideoCollection allVideos;
+        private VideoCollection videos;
+        private ProjectCollection projects;
+
+        private ICollectionView scheduledList;
+        private ICollectionView capturedList;
+        private ICollectionView renderedList;
+        private ICollectionView uploadedList;
         #endregion
 
         #region constructor
         public BirdsEyeViewInterfaceViewModel()
         {
             //this.SelectedDate = DateTime.Now;
-            this.AllVideos = DatabaseConnection.Default.GetAllVideos();
+            this.Videos = DatabaseConnection.Default.GetAllVideos();
+            this.Projects = DatabaseConnection.Default.GetAllProjects();
+
+            this.ScheduledList = new CollectionViewSource { Source = this.Videos }.View;
+            this.CapturedList = new CollectionViewSource { Source = this.Videos }.View;
+            this.RenderedList = new CollectionViewSource { Source = this.Videos }.View;
+            this.UploadedList = new CollectionViewSource { Source = this.Videos }.View;
+
+            this.ScheduledList.Filter = new Predicate<object>(x => ((Video)x).Mode == (int)Task.Capture);
+            this.CapturedList.Filter = new Predicate<object>(x => ((Video)x).Mode == (int)Task.Render);
+            this.RenderedList.Filter = new Predicate<object>(x => ((Video)x).Mode == (int)Task.Upload);
+            this.UploadedList.Filter = new Predicate<object>(x => ((Video)x).Mode == (int)Task.Release);
+
         }
         #endregion
 
@@ -34,12 +54,62 @@ namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
             }
         }
 
-        public VideoCollection AllVideos
+        public VideoCollection Videos
         {
-            get { return this.allVideos; }
+            get { return this.videos; }
             set
             {
-                this.allVideos = value;
+                this.videos = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public ProjectCollection Projects
+        {
+            get { return this.projects; }
+            set
+            {
+                this.projects = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public ICollectionView ScheduledList
+        {
+            get { return this.scheduledList; }
+            set
+            {
+                this.scheduledList = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public ICollectionView CapturedList
+        {
+            get { return this.capturedList; }
+            set
+            {
+                this.capturedList = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public ICollectionView RenderedList
+        {
+            get { return this.renderedList; }
+            set
+            {
+                this.renderedList = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public ICollectionView UploadedList
+        {
+            get { return this.uploadedList; }
+            set
+            {
+                this.uploadedList = value;
                 OnPropertyChanged();
             }
         }
@@ -66,6 +136,12 @@ namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
         #endregion
 
         #region private methods
+        private bool FilterByCaptureTask(object obj)
+        {
+            Video video = obj as Video;
+
+            return true;
+        }
         #endregion
 
         #region public methods
