@@ -1,0 +1,35 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <!-- !!!!! If some resource key is changed or some new resource key is added all client must update this resource dictionary!!!!!-->
+    <!--Common-->
+    <system:String x:Uid="MainTitle"
+                   x:Key="MainTitle">Vogelperspektive</system:String>
+    <system:String x:Uid="Task"
+                   x:Key="Task">Aufgabe: </system:String>
+    <system:String x:Uid="UploadPlan"
+                   x:Key="UploadPlan">Upload-Plan</system:String>
+    
+    <!-- Tasks-->
+    <system:String x:Uid="Task_Scheduled"
+                   x:Key="Task_Scheduled">Geplant</system:String>
+    <system:String x:Uid="Task_Capture"
+                   x:Key="Task_Capture">Aufnehmen</system:String>
+    <system:String x:Uid="Task_Captured"
+                   x:Key="Task_Captured">Aufgenommen</system:String>
+    <system:String x:Uid="Task_Render"
+                   x:Key="Task_Render">Rendern</system:String>
+    <system:String x:Uid="Task_Rendered"
+                   x:Key="Task_Rendered">Gerendert</system:String>
+    <system:String x:Uid="Task_Upload"
+                   x:Key="Task_Upload">Hochladen</system:String>
+    <system:String x:Uid="Task_Uploaded"
+                   x:Key="Task_Uploaded">Hochgeladen</system:String>
+    <system:String x:Uid="Task_Release"
+                   x:Key="Task_Release">Veröffentlichen</system:String>
+    <system:String x:Uid="Task_Released"
+                   x:Key="Task_Released">Veröffentlicht</system:String>
+    <system:String x:Uid="Task_Done"
+                   x:Key="Task_Done">Abgeschlossen</system:String>
+    
+</ResourceDictionary>

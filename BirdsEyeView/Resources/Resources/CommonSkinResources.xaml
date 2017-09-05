@@ -1,0 +1,424 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <!--THIS RESOURCES MUST BE SET AND VALID -->
+    <!--Font-->
+    <FontFamily x:Key="StandardFontFamily">Segoe UI</FontFamily>
+    <sys:Double x:Key="StandardFontSize">12</sys:Double>
+    <FontWeight x:Key="StandardFontWeight">Normal</FontWeight>
+    <!--Application colors-->
+    <SolidColorBrush x:Key="ApplicationBackground"
+                     Color="White" />
+    <SolidColorBrush x:Key="ApplicationForeground"
+                     Color="Black" />
+    
+    <!--Dialog colors-->
+    <SolidColorBrush x:Key="DialogBackground"
+                     Color="#F0F0F0" />
+    <SolidColorBrush x:Key="DialogForeground"
+                     Color="Black" />
+    <!--Menu colors-->
+    <LinearGradientBrush x:Key="MenuBackground"
+                         StartPoint="0,0"
+                         EndPoint="0,1">
+        <LinearGradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="#F0F0F0"
+                              Offset="0.0" />
+                <GradientStop Color="#D4D4D4"
+                              Offset="0.8" />
+                <GradientStop Color="#DFDFDF"
+                              Offset="1.0" />
+            </GradientStopCollection>
+        </LinearGradientBrush.GradientStops>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="MenuForeground"
+                     Color="Black" />
+    <!--Common colors-->
+    <SolidColorBrush x:Key="SelectedBackgroundBrush"
+                     Color="#006FB4" />
+    <SolidColorBrush x:Key="SelectedForegroundBrush"
+                     Color="White" />
+    <SolidColorBrush x:Key="SelectedBorderBrush"
+                     Color="White" />
+    <SolidColorBrush x:Key="DisabledBackgroundBrush"
+                     Color="#EEE" />
+    <SolidColorBrush x:Key="DisabledForegroundBrush"
+                     Color="#888" />
+    <SolidColorBrush x:Key="DisabledBorderBrush"
+                     Color="#FF888888" />
+    <LinearGradientBrush x:Key="NormalBorderBrush"
+                         StartPoint="0,0"
+                         EndPoint="0,1">
+        <GradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="#8c8c8c"
+                              Offset="0.0" />
+                <GradientStop Color="#8c8c8c"
+                              Offset="1.0" />
+            </GradientStopCollection>
+        </GradientBrush.GradientStops>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="SolidBorderBrush"
+                     Color="#8c8c8c" />
+    <LinearGradientBrush x:Key="NormalBrush"
+                         StartPoint="0,0"
+                         EndPoint="0,1">
+        <GradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="#FFF"
+                              Offset="0.0" />
+                <GradientStop Color="#CCC"
+                              Offset="1.0" />
+            </GradientStopCollection>
+        </GradientBrush.GradientStops>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="StandardHeaderBackgroundBrush"
+                         StartPoint="0,0"
+                         EndPoint="0,1">
+        <GradientStop Color="#CCCCCC"
+                      Offset="0" />
+        <GradientStop Color="#EEEEEE"
+                      Offset="0.05" />
+        <GradientStop Color="White"
+                      Offset="0.1" />
+        <GradientStop Color="#FFE8E8E8"
+                      Offset="1" />
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="AlternationBrush"
+                     Color="#eff4f7" />
+    <SolidColorBrush x:Key="SelectedItemBackgroundBrush"
+                     Color="#4C90E1" />
+    <SolidColorBrush x:Key="SelectedItemForegroundBrush"
+                     Color="White" />
+    <LinearGradientBrush x:Key="InformationViewBackgroundBrush"
+                         StartPoint="0,0"
+                         EndPoint="0,1">
+        <GradientStop Color="#F0F4F7"
+                      Offset="0" />
+        <GradientStop Color="#D7E1ED"
+                      Offset="0.5" />
+        <GradientStop Color="#C6D6E6"
+                      Offset="0.5" />
+        <GradientStop Color="#CFDBE9"
+                      Offset="0.7" />
+        <GradientStop Color="#F3F6F9"
+                      Offset="1" />
+    </LinearGradientBrush>
+    <!--Error colors-->
+    <SolidColorBrush x:Key="ErrorTextForeground"
+                     Color="#d20032" />
+    <!--Button colors-->
+    <LinearGradientBrush x:Key="ButtonBackground"
+                         EndPoint="0,1"
+                         StartPoint="0,0">
+        <GradientStop Color="#ffffff"
+                      Offset="0" />
+        <GradientStop Color="#c8c8c8"
+                      Offset="1" />
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ButtonBorderBrush"
+                     Color="#FF8C8C8C" />
+    <SolidColorBrush x:Key="ButtonFocusOuterBorderBrush"
+                     Color="#FF3A7DDA" />
+    <SolidColorBrush x:Key="ButtonFocusInnerBorderBrush"
+                     Color="#FF6A9EE5" />
+    <LinearGradientBrush x:Key="ButtonMouseOverBackground"
+                         EndPoint="0,1"
+                         StartPoint="0,0">
+        <GradientStop Color="#c8c8c8"
+                      Offset="0" />
+        <GradientStop Color="#ffffff"
+                      Offset="1" />
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ButtonPressedBackground"
+                         EndPoint="0,1"
+                         StartPoint="0,0">
+        <GradientStop Color="#646464"
+                      Offset="0" />
+        <GradientStop Color="#969696"
+                      Offset="1" />
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ButtonDisabledBackground"
+                         EndPoint="0,1"
+                         StartPoint="0,0">
+        <GradientStop Color="#ffffff"
+                      Offset="0" />
+        <GradientStop Color="#E6E6E6"
+                      Offset="1" />
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ButtonDisabledBorderBrush"
+                     Color="#FFC8C8C8" />
+    <SolidColorBrush x:Key="ButtonDisabledForeground"
+                     Color="#FFC8C8C8" />
+    <Style x:Key="ButtonFocusVisual">
+        <Setter Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Rectangle Margin="2,2,2,3"
+                               SnapsToDevicePixels="true"
+                               Stroke="Black"
+                               StrokeThickness="1"
+                               StrokeDashArray="1 2" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--Separator Styles-->
+    <Style x:Key="HorizontalSeparatorStyle"
+           TargetType="{x:Type Separator}">
+        <Setter Property="Background"
+                Value="#8E8A8B" />
+        <Setter Property="BorderBrush"
+                Value="White" />
+        <Setter Property="Focusable"
+                Value="false" />
+        <Setter Property="VerticalAlignment"
+                Value="Top" />
+        <Setter Property="HorizontalAlignment"
+                Value="Stretch" />
+        <Setter Property="Height"
+                Value="2" />
+        <Setter Property="Margin"
+                Value="0" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Separator}">
+                    <Border SnapsToDevicePixels="true"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="0,0,0,1" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="InverseHorizontalSeparatorStyle"
+           TargetType="{x:Type Separator}">
+        <Setter Property="Background"
+                Value="#B0B0B0" />
+        <Setter Property="BorderBrush"
+                Value="White" />
+        <Setter Property="Focusable"
+                Value="false" />
+        <Setter Property="VerticalAlignment"
+                Value="Top" />
+        <Setter Property="HorizontalAlignment"
+                Value="Stretch" />
+        <Setter Property="Height"
+                Value="2" />
+        <Setter Property="Margin"
+                Value="0" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Separator}">
+                    <Border SnapsToDevicePixels="true"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="0,1,0,0" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="VerticalSeparatorStyle"
+           TargetType="{x:Type Separator}">
+        <Setter Property="Background"
+                Value="#8E8A8B" />
+        <Setter Property="BorderBrush"
+                Value="White" />
+        <Setter Property="Focusable"
+                Value="false" />
+        <Setter Property="VerticalAlignment"
+                Value="Stretch" />
+        <Setter Property="HorizontalAlignment"
+                Value="Left" />
+        <Setter Property="Width"
+                Value="2" />
+        <Setter Property="Margin"
+                Value="0" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Separator}">
+                    <Border SnapsToDevicePixels="true"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="0,0,1,0" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ControlRegionStyle"
+           TargetType="{x:Type Border}">
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0,0"
+                                     EndPoint="0,1">
+                    <LinearGradientBrush.GradientStops>
+                        <GradientStopCollection>
+                            <GradientStop Color="#ebebeb"
+                                          Offset="0.0" />
+                            <GradientStop Color="#bebebe"
+                                          Offset="1.0" />
+                        </GradientStopCollection>
+                    </LinearGradientBrush.GradientStops>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="BorderBrush"
+                Value="#8c8c8c" />
+        <Setter Property="BorderThickness"
+                Value="0,1,0,1" />
+    </Style>
+    <Style x:Key="HeaderTextBlockStyle"
+           TargetType="{x:Type TextBlock}">
+        <Setter Property="TextTrimming"
+                Value="CharacterEllipsis" />
+        <Setter Property="FontWeight"
+                Value="Medium" />
+        <Setter Property="HorizontalAlignment"
+                Value="Stretch" />
+        <Setter Property="VerticalAlignment"
+                Value="Center" />
+        <Setter Property="Margin"
+                Value="5,0" />
+        <Setter Property="Foreground"
+                Value="Black" />
+        <Setter Property="FontSize"
+                Value="12" />
+        <Setter Property="FontStyle"
+                Value="Normal" />
+    </Style>
+    <Style x:Key="HeaderTitleStyle"
+           TargetType="{x:Type TextBlock}">
+        <Setter Property="HorizontalAlignment"
+                Value="Center" />
+        <Setter Property="VerticalAlignment"
+                Value="Center" />
+        <Setter Property="Foreground"
+                Value="Black" />
+        <Setter Property="FontSize"
+                Value="13" />
+        <Setter Property="FontWeight"
+                Value="Bold" />
+    </Style>
+    <Style x:Key="SmallHeaderTitleStyle"
+           TargetType="{x:Type TextBlock}">
+        <Setter Property="HorizontalAlignment"
+                Value="Center" />
+        <Setter Property="VerticalAlignment"
+                Value="Center" />
+        <Setter Property="Foreground"
+                Value="Black" />
+        <Setter Property="FontSize"
+                Value="12" />
+        <Setter Property="FontWeight"
+                Value="Bold" />
+    </Style>
+    <Style x:Key="Header1TextBlockStyle"
+           TargetType="{x:Type TextBlock}">
+        <Setter Property="TextTrimming"
+                Value="CharacterEllipsis" />
+        <Setter Property="FontWeight"
+                Value="Bold" />
+        <Setter Property="HorizontalAlignment"
+                Value="Stretch" />
+        <Setter Property="VerticalAlignment"
+                Value="Center" />
+        <Setter Property="Foreground"
+                Value="Black" />
+        <Setter Property="FontSize"
+                Value="14" />
+        <Setter Property="FontStyle"
+                Value="Normal" />
+    </Style>
+    <Style x:Key="Header2TextBlockStyle"
+           TargetType="{x:Type TextBlock}">
+        <Setter Property="TextTrimming"
+                Value="CharacterEllipsis" />
+        <Setter Property="FontWeight"
+                Value="Bold" />
+        <Setter Property="HorizontalAlignment"
+                Value="Stretch" />
+        <Setter Property="VerticalAlignment"
+                Value="Center" />
+        <Setter Property="Foreground"
+                Value="Black" />
+        <Setter Property="FontSize"
+                Value="13" />
+        <Setter Property="FontStyle"
+                Value="Normal" />
+    </Style>
+    <Style x:Key="Header3TextBlockStyle"
+           TargetType="{x:Type TextBlock}">
+        <Setter Property="TextTrimming"
+                Value="CharacterEllipsis" />
+        <Setter Property="FontWeight"
+                Value="Bold" />
+        <Setter Property="HorizontalAlignment"
+                Value="Stretch" />
+        <Setter Property="VerticalAlignment"
+                Value="Center" />
+        <Setter Property="Foreground"
+                Value="Black" />
+        <Setter Property="FontSize"
+                Value="12" />
+        <Setter Property="FontStyle"
+                Value="Normal" />
+    </Style>
+    <!--Colors-->
+    <SolidColorBrush x:Key="SolidBlack"
+                     Color="#000000" />
+    <SolidColorBrush x:Key="SolidWhite"
+                     Color="#FFFFFF" />
+
+    <SolidColorBrush x:Key="SolidRedMediaInterface"
+                     Color="#d20032" />
+    <SolidColorBrush x:Key="SolidRed1"
+                     Color="#aa0232" />
+    <SolidColorBrush x:Key="SolidRed2"
+                     Color="#7e0621" />
+
+    <SolidColorBrush x:Key="SolidGrey1"
+                     Color="#e6e6e6" />
+    <SolidColorBrush x:Key="SolidGrey2"
+                     Color="#dcdcdc" />
+    <SolidColorBrush x:Key="SolidGrey3"
+                     Color="#d2d2d2" />
+    <SolidColorBrush x:Key="SolidGrey4"
+                     Color="#c8c8c8" />
+    <SolidColorBrush x:Key="SolidGrey5"
+                     Color="#bebebe" />
+    <SolidColorBrush x:Key="SolidGrey6"
+                     Color="#969696" />
+    <SolidColorBrush x:Key="SolidGrey7"
+                     Color="#8c8c8c" />
+    <SolidColorBrush x:Key="SolidGrey8"
+                     Color="#646464" />
+    <SolidColorBrush x:Key="SolidGrey9"
+                     Color="#505050" />
+
+    <SolidColorBrush x:Key="SolidBlue1"
+                     Color="#3a7dda" />
+    <SolidColorBrush x:Key="SolidBlue2"
+                     Color="#6a9ee5" />
+    <SolidColorBrush x:Key="SolidBlue3"
+                     Color="#dbe9f8" />
+
+    <SolidColorBrush x:Key="SolidGreen"
+                     Color="#159a42" />
+
+    <SolidColorBrush x:Key="SolidYellow"
+                     Color="#fddf2f" />
+    <SolidColorBrush x:Key="SolidYellow1"
+                     Color="#fbee9f" />
+
+    <SolidColorBrush x:Key="SolidBlueGrey1"
+                     Color="#d6e1ec" />
+    <SolidColorBrush x:Key="SolidBlueGrey2"
+                     Color="#eff4f7" />
+    <SolidColorBrush x:Key="SolidBlueGrey3"
+                     Color="#c6d6e6" />
+    <SolidColorBrush x:Key="SolidBlueGrey4"
+                     Color="#cfdbe9" />
+    <SolidColorBrush x:Key="SolidBlueGrey5"
+                     Color="#f3f6f9" />
+</ResourceDictionary>
