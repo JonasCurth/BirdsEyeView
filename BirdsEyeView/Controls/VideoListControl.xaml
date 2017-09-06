@@ -18,15 +18,17 @@
                                 Style="{DynamicResource VideoListSplitButton}"
                                 SizeForm="Small"
                                 HitTestArea="LabelAndImage" 
-                                Background="#FF333333" 
+                                Background="{DynamicResource SolidGrey10}" 
                                 Label="{Binding Task, Mode=OneWay, FallbackValue=Task,
                                                 RelativeSource={RelativeSource AncestorType=UserControl}}">
-            <syncfusion:DropDownMenuGroup ItemsSource="{Binding Projects}">
+            <syncfusion:DropDownMenuGroup ItemsSource="{Binding Projects}" 
+                                          Background="{DynamicResource SolidGrey10}">
                 <syncfusion:DropDownMenuGroup.ItemTemplate>
                     <DataTemplate>
                         <RadioButton Content="{Binding Name}"
                                      GroupName="FilterGroup"
-                                     Margin="5 3"/>
+                                     Margin="5 3"
+                                     Foreground="{DynamicResource ApplicationForeground}"/>
                     </DataTemplate>
                 </syncfusion:DropDownMenuGroup.ItemTemplate>
             </syncfusion:DropDownMenuGroup>
@@ -39,7 +41,7 @@
             <ListBox Background="Transparent"
                      ItemsSource="{Binding FilteredList, RelativeSource={RelativeSource AncestorType=UserControl}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                      BorderThickness="0"
-                     Foreground="Pink"
+                     Foreground="Black"
                      IsSynchronizedWithCurrentItem="True"
                      ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                      Grid.Row="1"/>

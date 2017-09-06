@@ -1,11 +1,9 @@
 ﻿<Application x:Class="DidiDerDenker.BirdsEyeView.Client.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:DidiDerDenker.BirdsEyeView.Client"
              xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+             xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Luna" 
              xmlns:Tools="clr-namespace:Syncfusion.Windows.Tools;assembly=Syncfusion.Shared.Wpf"
-             xmlns:vm="clr-namespace:DidiDerDenker.BirdsEyeView.Client.ViewModels"
-             xmlns:converter="clr-namespace:DidiDerDenker.BirdsEyeView.Converter;assembly=DidiDerDenker.BirdsEyeView.Converter"
              Startup="OnStartup"
              ShutdownMode="OnExplicitShutdown">
     <Application.Resources>
@@ -14,9 +12,8 @@
                 <ResourceDictionary Source="\DidiDerDenker.BirdsEyeView.Resources;component\Resources\CommonSkinResources.xaml"/>
                 <ResourceDictionary Source="\DidiDerDenker.BirdsEyeView.Resources;component\Resources\CommonStyleResources.xaml"/>
                 <ResourceDictionary Source="\DidiDerDenker.BirdsEyeView.Resources;component\Resources\LocalizedCommonResources.xaml"/>
-                <ResourceDictionary Source="/Syncfusion.Shared.WPF;component/SkinManager/BlendStyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
-        
+
     </Application.Resources>
 </Application>

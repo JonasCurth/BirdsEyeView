@@ -12,261 +12,7 @@
         <Setter Property="Height" Value="32"/>
     </Style>
 
-    <Style x:Key="SmallCalendar" TargetType="{x:Type syncfusion:CalendarEdit}">
-        <Setter Property="MinWidth" Value="150"/>
-        <Setter Property="MinHeight" Value="150"/>
-        <Setter Property="Height" Value="164"/>
-        <Setter Property="Width" Value="180"/>
-        <Setter Property="IsTabStop" Value="False"/>
-        <Setter Property="MaxWidth" Value="450"/>
-        <Setter Property="MaxHeight" Value="450"/>
-        <Setter Property="BorderThickness" Value="1"/>
-        <Setter Property="WeekNumberBorderThickness" Value="1"/>
-        <Setter Property="WeekNumberCornerRadius" Value="2"/>
-        <Setter Property="WeekNumberSelectionBorderThickness" Value="1"/>
-        <Setter Property="WeekNumberSelectionBorderCornerRadius" Value="2"/>
-        <Setter Property="Calendar">
-            <Setter.Value>
-                <Binding Path="Culture" RelativeSource="{RelativeSource Self}">
-                    <Binding.Converter>
-                        <Tools:CultureToCalendarConverter/>
-                    </Binding.Converter>
-                </Binding>
-            </Setter.Value>
-        </Setter>
-        <Setter Property="Background" Value="White"/>
-        <Setter Property="Foreground" Value="#FF333333"/>
-        <Setter Property="BorderBrush">
-            <Setter.Value>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FFA3AEB9" Offset="0"/>
-                    <GradientStop Color="#FF627685" Offset="1"/>
-                    <GradientStop Color="#FF718597" Offset="0.474"/>
-                </LinearGradientBrush>
-            </Setter.Value>
-        </Setter>
-        <Setter Property="HeaderBackground" Value="#FFE8EDF2"/>
-        <Setter Property="HeaderForeground" Value="#FF333333"/>
-        <Setter Property="SelectionForeground" Value="Black"/>
-        <Setter Property="SelectionBorderBrush" Value="#FFDAD9D9"/>
-        <Setter Property="WeekNumberSelectionBorderBrush" Value="Beige"/>
-        <Setter Property="SelectionForeground" Value="Black"/>
-        <Setter Property="WeekNumberHoverBorderBrush" Value="Transparent"/>
-        <Setter Property="WeekNumberHoverBackground" Value="Transparent"/>
-        <Setter Property="WeekNumberHoverForeground" Value="Black"/>
-        <Setter Property="WeekNumberSelectionBackground" Value="Transparent"/>
-        <Setter Property="WeekNumberSelectionBorderBrush" Value="Transparent"/>
-        <Setter Property="WeekNumberSelectionForeground" Value="Black"/>
-        <Setter Property="WeekNumberBackground" Value="Transparent"/>
-        <Setter Property="WeekNumberForeground" Value="#078e00"/>
-        <Setter Property="FontSize" Value="10"/>
-        <Setter Property="MouseOverBorderBrush" Value="#FFDAD9D9"/>
-        <Setter Property="MouseOverBackground" Value="#FFDAD9D9"/>
-        <Setter Property="MouseOverForeground" Value="Black"/>
-        <Setter Property="SelectedDayCellBackground" Value="#FFDAD9D9"/>
-        <Setter Property="SelectedDayCellBorderBrush" Value="#FFDAD9D9"/>
-        <Setter Property="SelectedDayCellForeground" Value="Black"/>
-        <Setter Property="SelectedDayCellHoverBackground" Value="#FFDAD9D9"/>
-        <Setter Property="TodayCellBorderBrush" Value="#FFAAAAAA"/>
-        <Setter Property="NotCurrentMonthForeground" Value="#FF777777"/>
-        <Setter Property="TodayCellBackground" Value="#FFAAAAAA"/>
-        <Setter Property="TodayCellSelectedBackground" Value="#FFB6D0D9"/>
-        <Setter Property="TodayCellSelectedBorderBrush" Value="#FFCBE5EE"/>
-        <Setter Property="TodayCellForeground" Value="White"/>
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type syncfusion:CalendarEdit}">
-                    <Border x:Name="Border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Height="{TemplateBinding Height}" Width="{TemplateBinding Width}">
-                        <Border BorderBrush="Transparent" BorderThickness="2">
-                            <Grid x:Name="MainGrid" FlowDirection="{TemplateBinding FlowDirection}">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="10"/>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition/>
-                                    <ColumnDefinition Width="4*"/>
-                                    <ColumnDefinition/>
-                                    <ColumnDefinition Width="10"/>
-                                </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="1.5*"/>
-                                    <RowDefinition Height="1.5*"/>
-                                    <RowDefinition Height="6.5*"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="7"/>
-                                </Grid.RowDefinitions>
-                                <Grid Background="{Binding HeaderBackground, RelativeSource={RelativeSource TemplatedParent}}" Grid.ColumnSpan="6" Grid.Column="0" Grid.Row="0">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition/>
-                                        <ColumnDefinition Width="4*"/>
-                                        <ColumnDefinition/>
-                                    </Grid.ColumnDefinitions>
-                                    <StackPanel x:Name="PART_NextMonthButtonPanel" Grid.Column="2" Grid.Row="0" VerticalAlignment="Center">
-                                        <syncfusion:NavigateButton x:Name="PART_NextMonthButton" Foreground="{Binding HeaderForeground, RelativeSource={RelativeSource TemplatedParent}}" Focusable="False" HorizontalAlignment="Right" IsTabStop="False" Margin="0,0,12,0" MinWidth="5" MinHeight="5" VerticalAlignment="Center">
-                                            <syncfusion:NavigateButton.Template>
-                                                <ControlTemplate TargetType="{x:Type syncfusion:NavigateButton}">
-                                                    <syncfusion:NavigateButtonBase x:Name="Button" BorderBrush="Transparent" BorderThickness="0.5" Background="Transparent" CornerRadius="3" Command="syncfusion:CalendarEdit.NextCommand" IsTabStop="False">
-                                                        <Path x:Name="Triangle" Data="M349.625,210.75L349.625,215.75 353.125,213.5z" Fill="#FFFFFF" HorizontalAlignment="Right" Height="10" Stretch="Fill" Stroke="#FFFFFF" StrokeThickness="1" VerticalAlignment="Center" Width="6"/>
-                                                    </syncfusion:NavigateButtonBase>
-                                                    <ControlTemplate.Triggers>
-                                                        <Trigger Property="IsMouseOver" Value="True">
-                                                            <Setter Property="Fill" TargetName="Triangle" Value="#FF73A9D8"/>
-                                                            <Setter Property="Stroke" TargetName="Triangle" Value="#FF73A9D8"/>
-                                                        </Trigger>
-                                                        <Trigger Property="Enabled" Value="False">
-                                                            <Setter Property="Opacity" TargetName="Triangle" Value="0.5"/>
-                                                        </Trigger>
-                                                    </ControlTemplate.Triggers>
-                                                </ControlTemplate>
-                                            </syncfusion:NavigateButton.Template>
-                                        </syncfusion:NavigateButton>
-                                    </StackPanel>
-                                    <StackPanel x:Name="PART_PrevMonthButtonPanel" Grid.Column="0" Grid.Row="0" VerticalAlignment="Center">
-                                        <syncfusion:NavigateButton x:Name="PART_PrevMonthButton" Foreground="{Binding HeaderForeground, RelativeSource={RelativeSource TemplatedParent}}" Focusable="False" HorizontalAlignment="Left" IsTabStop="False" Margin="12,0,0,0" MinWidth="5" MinHeight="5" VerticalAlignment="Center">
-                                            <syncfusion:NavigateButton.Template>
-                                                <ControlTemplate TargetType="{x:Type syncfusion:NavigateButton}">
-                                                    <syncfusion:NavigateButtonBase x:Name="Button" BorderBrush="Transparent" BorderThickness="0.5" Background="Transparent" CornerRadius="3" Command="syncfusion:CalendarEdit.PrevCommand" IsTabStop="False">
-                                                        <Path x:Name="Triangle" Data="M367.375,215.625L367.5,220.375 363.5,217.875z" Fill="#FFFFFF" HorizontalAlignment="Left" Height="10" Stretch="Fill" Stroke="#FFFFFF" StrokeThickness="1" VerticalAlignment="Center" Width="6"/>
-                                                    </syncfusion:NavigateButtonBase>
-                                                    <ControlTemplate.Triggers>
-                                                        <Trigger Property="IsMouseOver" Value="True">
-                                                            <Setter Property="Fill" TargetName="Triangle" Value="#FF73A9D8"/>
-                                                            <Setter Property="Stroke" TargetName="Triangle" Value="#FF73A9D8"/>
-                                                        </Trigger>
-                                                        <Trigger Property="Enabled" Value="False">
-                                                            <Setter Property="Opacity" TargetName="Triangle" Value="0.5"/>
-                                                        </Trigger>
-                                                    </ControlTemplate.Triggers>
-                                                </ControlTemplate>
-                                            </syncfusion:NavigateButton.Template>
-                                        </syncfusion:NavigateButton>
-                                    </StackPanel>
-                                    <syncfusion:MonthButton x:Name="PART_Month1" Grid.Column="1" Foreground="{Binding HeaderForeground, RelativeSource={RelativeSource TemplatedParent}}" Grid.Row="0" VerticalAlignment="Center">
-                                        <syncfusion:MonthButton.Style>
-                                            <Style TargetType="{x:Type syncfusion:MonthButton}">
-                                                <Setter Property="HorizontalContentAlignment" Value="Center"/>
-                                                <Setter Property="VerticalContentAlignment" Value="Center"/>
-                                                <Setter Property="Foreground" Value="#FF333333"/>
-                                                <Setter Property="FontFamily" Value="{Binding FontFamily, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type syncfusion:CalendarEdit}}}"/>
-                                                <Setter Property="FontSize" Value="{Binding FontSize, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type syncfusion:CalendarEdit}}}"/>
-                                                <Setter Property="FontStyle" Value="{Binding FontStyle, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type syncfusion:CalendarEdit}}}"/>
-                                                <Setter Property="FontWeight" Value="{Binding FontWeight, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type syncfusion:CalendarEdit}}}"/>
-                                                <Setter Property="Background" Value="Transparent"/>
-                                                <Setter Property="Focusable" Value="False"/>
-                                                <Setter Property="Foreground" Value="{Binding HeaderForeground, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type syncfusion:CalendarEdit}}}"/>
-                                                <Setter Property="Template">
-                                                    <Setter.Value>
-                                                        <ControlTemplate TargetType="{x:Type syncfusion:MonthButton}">
-                                                            <Border x:Name="Border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CornerRadius="{TemplateBinding Border.CornerRadius}">
-                                                                <ContentPresenter Content="{TemplateBinding Content}" TextElement.Foreground="{TemplateBinding Foreground}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
-                                                            </Border>
-                                                            <ControlTemplate.Triggers>
-                                                                <Trigger Property="IsMouseOver" Value="True">
-                                                                    <Setter Property="Foreground" Value="#FF73A9D8"/>
-                                                                </Trigger>
-                                                            </ControlTemplate.Triggers>
-                                                        </ControlTemplate>
-                                                    </Setter.Value>
-                                                </Setter>
-                                            </Style>
-                                        </syncfusion:MonthButton.Style>
-                                    </syncfusion:MonthButton>
-                                    <syncfusion:MonthButton x:Name="PART_Month2" Grid.Column="1" Foreground="{Binding HeaderForeground, RelativeSource={RelativeSource TemplatedParent}}" Grid.Row="0" VerticalAlignment="Center">
-                                        <syncfusion:MonthButton.Style>
-                                            <Style TargetType="{x:Type syncfusion:MonthButton}">
-                                                <Setter Property="HorizontalContentAlignment" Value="Center"/>
-                                                <Setter Property="VerticalContentAlignment" Value="Center"/>
-                                                <Setter Property="Foreground" Value="#FF333333"/>
-                                                <Setter Property="FontFamily" Value="{Binding FontFamily, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type syncfusion:CalendarEdit}}}"/>
-                                                <Setter Property="FontSize" Value="{Binding FontSize, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type syncfusion:CalendarEdit}}}"/>
-                                                <Setter Property="FontStyle" Value="{Binding FontStyle, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type syncfusion:CalendarEdit}}}"/>
-                                                <Setter Property="FontWeight" Value="{Binding FontWeight, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type syncfusion:CalendarEdit}}}"/>
-                                                <Setter Property="Background" Value="Transparent"/>
-                                                <Setter Property="Focusable" Value="False"/>
-                                                <Setter Property="Foreground" Value="{Binding HeaderForeground, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type syncfusion:CalendarEdit}}}"/>
-                                                <Setter Property="Template">
-                                                    <Setter.Value>
-                                                        <ControlTemplate TargetType="{x:Type syncfusion:MonthButton}">
-                                                            <Border x:Name="Border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CornerRadius="{TemplateBinding Border.CornerRadius}">
-                                                                <ContentPresenter Content="{TemplateBinding Content}" TextElement.Foreground="{TemplateBinding Foreground}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
-                                                            </Border>
-                                                            <ControlTemplate.Triggers>
-                                                                <Trigger Property="IsMouseOver" Value="True">
-                                                                    <Setter Property="Foreground" Value="#FF73A9D8"/>
-                                                                </Trigger>
-                                                            </ControlTemplate.Triggers>
-                                                        </ControlTemplate>
-                                                    </Setter.Value>
-                                                </Setter>
-                                            </Style>
-                                        </syncfusion:MonthButton.Style>
-                                    </syncfusion:MonthButton>
-                                    <StackPanel x:Name="PART_YearUpDownPanel" Grid.Column="1" HorizontalAlignment="Center" Orientation="Horizontal" Grid.Row="0" Visibility="Collapsed">
-                                        <TextBlock x:Name="PART_EditMonthName" HorizontalAlignment="Right" Padding="1" VerticalAlignment="Center"/>
-                                        <syncfusion:UpDown x:Name="PART_YearUpDown" BorderThickness="0" HorizontalAlignment="Center" Height="18" MaxValue="{Binding MaxDate.Year, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type syncfusion:CalendarEdit}}}" MinValue="{Binding MinDate.Year, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type syncfusion:CalendarEdit}}}" NumberDecimalDigits="0" Width="45"/>
-                                    </StackPanel>
-                                </Grid>
-                                <Popup x:Name="PART_MonthPopup" Grid.ColumnSpan="6" Grid.Column="0" Placement="Center" Grid.Row="0">
-                                    <ListBox HorizontalContentAlignment="Center" Width="{TemplateBinding Width}"/>
-                                </Popup>
-                                <ContentPresenter x:Name="PART_WeekNumbers" ClipToBounds="True" Content="{Binding WeekNumbersGrid, RelativeSource={RelativeSource TemplatedParent}}" Grid.Column="1" Margin="0,0,3,0" Grid.Row="2" Visibility="Collapsed"/>
-                                <ContentPresenter Grid.ColumnSpan="3" Content="{Binding DayNamesGrid, RelativeSource={RelativeSource TemplatedParent}}" Grid.Column="2" Grid.Row="1" VerticalAlignment="Center"/>
-                                <ContentPresenter ClipToBounds="True" Grid.ColumnSpan="3" Content="{Binding CurrentDayGrid, RelativeSource={RelativeSource TemplatedParent}}" Grid.Column="2" Grid.Row="2"/>
-                                <ContentPresenter x:Name="WeekNumbersForYearCurrent" ClipToBounds="True" Grid.ColumnSpan="3" Content="{Binding CurrentWeekNumbersGrid, RelativeSource={RelativeSource TemplatedParent}}" Grid.Column="2" Grid.Row="2"/>
-                                <ContentPresenter x:Name="WeekNumbersForYearFollow" ClipToBounds="True" Grid.ColumnSpan="3" Content="{Binding FollowingWeekNumbersGrid, RelativeSource={RelativeSource TemplatedParent}}" Grid.Column="2" Grid.Row="2"/>
-                                <ContentPresenter ClipToBounds="True" Grid.ColumnSpan="3" Content="{Binding FollowingDayGrid, RelativeSource={RelativeSource TemplatedParent}}" Grid.Column="2" Grid.Row="2"/>
-                                <ContentPresenter ClipToBounds="True" Grid.ColumnSpan="3" Content="{Binding CurrentMonthGrid, RelativeSource={RelativeSource TemplatedParent}}" Grid.Column="2" Grid.Row="1" Grid.RowSpan="2"/>
-                                <ContentPresenter ClipToBounds="True" Grid.ColumnSpan="3" Content="{Binding CurrentYearGrid, RelativeSource={RelativeSource TemplatedParent}}" Grid.Column="2" Grid.Row="1" Grid.RowSpan="2"/>
-                                <ContentPresenter ClipToBounds="True" Grid.ColumnSpan="3" Content="{Binding CurrentYearRangeGrid, RelativeSource={RelativeSource TemplatedParent}}" Grid.Column="2" Grid.Row="1" Grid.RowSpan="2"/>
-                                <ContentPresenter ClipToBounds="True" Grid.ColumnSpan="3" Content="{Binding FollowingMonthGrid, RelativeSource={RelativeSource TemplatedParent}}" Grid.Column="2" Margin="0,5,0,0" Grid.Row="1" Grid.RowSpan="2"/>
-                                <ContentPresenter ClipToBounds="True" Grid.ColumnSpan="3" Content="{Binding FollowingYearGrid, RelativeSource={RelativeSource TemplatedParent}}" Grid.Column="2" Margin="0,5,0,0" Grid.Row="1" Grid.RowSpan="2"/>
-                                <ContentPresenter ClipToBounds="True" Grid.ColumnSpan="3" Content="{Binding FollowingYearRangeGrid, RelativeSource={RelativeSource TemplatedParent}}" Grid.Column="2" Grid.Row="1" Grid.RowSpan="2"/>
-                                <Grid x:Name="PART_TodayGrid" Background="Transparent" Grid.ColumnSpan="3" Grid.Column="1" TextElement.Foreground="White" Height="20" Grid.Row="3">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="Auto"/>
-                                        <ColumnDefinition Width="Auto"/>
-                                    </Grid.ColumnDefinitions>
-                                    <Grid.Visibility>
-                                        <Binding Path="TodayRowIsVisible" RelativeSource="{RelativeSource TemplatedParent}">
-                                            <Binding.Converter>
-                                                <syncfusion:BooleanToVisibilityConverterEx/>
-                                            </Binding.Converter>
-                                        </Binding>
-                                    </Grid.Visibility>
-                                    <Button x:Name="PART_TodayButton" Content="Today :" Grid.Column="0" Uid="AccessTodayTextID" Width="Auto">
-                                        <Button.Style>
-                                            <Style TargetType="{x:Type Button}">
-                                                <Setter Property="Foreground" Value="#FF333333"/>
-                                                <Setter Property="Background" Value="Transparent"/>
-                                                <Setter Property="Focusable" Value="False"/>
-                                                <Setter Property="Template">
-                                                    <Setter.Value>
-                                                        <ControlTemplate TargetType="{x:Type Button}">
-                                                            <Border Background="{TemplateBinding Background}" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                                                <ContentPresenter Content="{TemplateBinding Content}" Margin="1,0"/>
-                                                            </Border>
-                                                        </ControlTemplate>
-                                                    </Setter.Value>
-                                                </Setter>
-                                            </Style>
-                                        </Button.Style>
-                                    </Button>
-                                    <Border Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                        <TextBlock Foreground="#FF333333" HorizontalAlignment="Center" Text="{Binding TodayDate, RelativeSource={RelativeSource TemplatedParent}}"/>
-                                    </Border>
-                                </Grid>
-                            </Grid>
-                        </Border>
-                    </Border>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsEnabled" Value="False">
-                            <Setter Property="Opacity" TargetName="Border" Value="0.5"/>
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-    <Style x:Key="VideoListSplitButton" TargetType="{x:Type syncfusion:SplitButton}">
+    <Style x:Key="VideoListSplitButton" TargetType="syncfusion:SplitButton">
         <Setter Property="Label" Value="Task"/>
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="Background" Value="Transparent"/>
@@ -289,7 +35,7 @@
                 </MultiTrigger.Conditions>
                 <Setter Property="Template">
                     <Setter.Value>
-                        <ControlTemplate TargetType="{x:Type syncfusion:SplitButton}">
+                        <ControlTemplate TargetType="syncfusion:SplitButton">
 
                             <Border x:Name="Bd" 
                                         BorderBrush="{TemplateBinding BorderBrush}" 
@@ -342,7 +88,7 @@
                                     <Popup x:Name="PART_Popup" 
                                                AllowsTransparency="True" 
                                                Focusable="False" 
-                                               IsOpen="{Binding IsDropDownOpen, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type syncfusion:DropDownButton}}}" 
+                                               IsOpen="{Binding IsDropDownOpen, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType=syncfusion:DropDownButton}}" 
                                                PopupAnimation="Fade"
                                                Width="{Binding ActualWidth, ElementName=Bd}"
                                                Placement="Bottom"
@@ -350,14 +96,14 @@
 
                                         <Themes:SystemDropShadowChrome x:Name="PART_Shadow" 
                                                                            SnapsToDevicePixels="True">
-                                            <Border BorderBrush="{DynamicResource {x:Static SystemColors.WindowFrameBrushKey}}" 
+                                            <Border BorderBrush="{DynamicResource SystemColors.WindowFrameBrushKey}" 
                                                         BorderThickness="1" 
                                                         Background="#FFFAFAFA" 
                                                         MinWidth="28" 
                                                         MinHeight="14">
                                                 <ScrollViewer CanContentScroll="True" 
                                                                   Margin="1" 
-                                                                  Style="{DynamicResource {ComponentResourceKey ResourceId=MenuScrollViewer, TypeInTargetAssembly={x:Type FrameworkElement}}}">
+                                                                  Style="{DynamicResource {ComponentResourceKey ResourceId=MenuScrollViewer, TypeInTargetAssembly=FrameworkElement}}">
                                                     <ItemsPresenter x:Name="Presenter" 
                                                                         KeyboardNavigation.DirectionalNavigation="Cycle" 
                                                                         Grid.IsSharedSizeScope="True" 
@@ -461,11 +207,480 @@
             </Trigger>
         </Style.Triggers>
     </Style>
-    
 
+    <Style x:Key="SmallCalendar" TargetType="syncfusion:CalendarEdit">
+        <Setter Property="MinWidth" Value="150"/>
+        <Setter Property="MinHeight" Value="150"/>
+        <Setter Property="Height" Value="164"/>
+        <Setter Property="Width" Value="180"/>
+        <Setter Property="IsTabStop" Value="False"/>
+        <Setter Property="MaxWidth" Value="450"/>
+        <Setter Property="MaxHeight" Value="450"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="WeekNumberBorderThickness" Value="1"/>
+        <Setter Property="WeekNumberCornerRadius" Value="2"/>
+        <Setter Property="WeekNumberSelectionBorderThickness" Value="1"/>
+        <Setter Property="WeekNumberSelectionBorderCornerRadius" Value="2"/>
+        <Setter Property="Calendar">
+            <Setter.Value>
+                <Binding Path="Culture" RelativeSource="{RelativeSource Self}">
+                    <Binding.Converter>
+                        <Tools:CultureToCalendarConverter/>
+                    </Binding.Converter>
+                </Binding>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="Foreground" Value="#FF333333"/>
+        <Setter Property="BorderBrush">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFA3AEB9" Offset="0"/>
+                    <GradientStop Color="#FF627685" Offset="1"/>
+                    <GradientStop Color="#FF718597" Offset="0.474"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="HeaderBackground" Value="#FFE8EDF2"/>
+        <Setter Property="HeaderForeground" Value="#FF333333"/>
+        <Setter Property="SelectionForeground" Value="Black"/>
+        <Setter Property="SelectionBorderBrush" Value="#FFDAD9D9"/>
+        <Setter Property="WeekNumberSelectionBorderBrush" Value="Beige"/>
+        <Setter Property="SelectionForeground" Value="Black"/>
+        <Setter Property="WeekNumberHoverBorderBrush" Value="Transparent"/>
+        <Setter Property="WeekNumberHoverBackground" Value="Transparent"/>
+        <Setter Property="WeekNumberHoverForeground" Value="Black"/>
+        <Setter Property="WeekNumberSelectionBackground" Value="Transparent"/>
+        <Setter Property="WeekNumberSelectionBorderBrush" Value="Transparent"/>
+        <Setter Property="WeekNumberSelectionForeground" Value="Black"/>
+        <Setter Property="WeekNumberBackground" Value="Transparent"/>
+        <Setter Property="WeekNumberForeground" Value="#078e00"/>
+        <Setter Property="FontSize" Value="10"/>
+        <Setter Property="MouseOverBorderBrush" Value="#FFDAD9D9"/>
+        <Setter Property="MouseOverBackground" Value="#FFDAD9D9"/>
+        <Setter Property="MouseOverForeground" Value="Black"/>
+        <Setter Property="SelectedDayCellBackground" Value="#FFDAD9D9"/>
+        <Setter Property="SelectedDayCellBorderBrush" Value="#FFDAD9D9"/>
+        <Setter Property="SelectedDayCellForeground" Value="Black"/>
+        <Setter Property="SelectedDayCellHoverBackground" Value="#FFDAD9D9"/>
+        <Setter Property="TodayCellBorderBrush" Value="#FFAAAAAA"/>
+        <Setter Property="NotCurrentMonthForeground" Value="#FF777777"/>
+        <Setter Property="TodayCellBackground" Value="#FFAAAAAA"/>
+        <Setter Property="TodayCellSelectedBackground" Value="#FFB6D0D9"/>
+        <Setter Property="TodayCellSelectedBorderBrush" Value="#FFCBE5EE"/>
+        <Setter Property="TodayCellForeground" Value="White"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="syncfusion:CalendarEdit">
+                    <Border x:Name="Border" BorderBrush="{TemplateBinding BorderBrush}" 
+                            BorderThickness="{TemplateBinding BorderThickness}" 
+                            Background="{TemplateBinding Background}" 
+                            Height="{TemplateBinding Height}" 
+                            Width="{TemplateBinding Width}">
+                        <Border BorderBrush="Transparent" BorderThickness="2">
+                            <Grid x:Name="MainGrid" FlowDirection="{TemplateBinding FlowDirection}">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="10"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="4*"/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="10"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="1.5*"/>
+                                    <RowDefinition Height="1.5*"/>
+                                    <RowDefinition Height="6.5*"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="7"/>
+                                </Grid.RowDefinitions>
+                                <Grid Background="{Binding HeaderBackground, RelativeSource={RelativeSource TemplatedParent}}" 
+                                      Grid.ColumnSpan="6" 
+                                      Grid.Column="0" 
+                                      Grid.Row="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition Width="4*"/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel x:Name="PART_NextMonthButtonPanel" Grid.Column="2" Grid.Row="0" VerticalAlignment="Center">
+                                        <syncfusion:NavigateButton x:Name="PART_NextMonthButton" 
+                                                                   Foreground="{Binding HeaderForeground, RelativeSource={RelativeSource TemplatedParent}}" 
+                                                                   Focusable="False" 
+                                                                   HorizontalAlignment="Right" 
+                                                                   IsTabStop="False" 
+                                                                   Margin="0,0,12,0" 
+                                                                   MinWidth="5" 
+                                                                   MinHeight="5" 
+                                                                   VerticalAlignment="Center">
+                                            <syncfusion:NavigateButton.Template>
+                                                <ControlTemplate TargetType="syncfusion:NavigateButton">
+                                                    <syncfusion:NavigateButtonBase x:Name="Button" BorderBrush="Transparent" BorderThickness="0.5" Background="Transparent" CornerRadius="3" Command="syncfusion:CalendarEdit.NextCommand" IsTabStop="False">
+                                                        <Path x:Name="Triangle" Data="M349.625,210.75L349.625,215.75 353.125,213.5z" Fill="#FFFFFF" HorizontalAlignment="Right" Height="10" Stretch="Fill" Stroke="#FFFFFF" StrokeThickness="1" VerticalAlignment="Center" Width="6"/>
+                                                    </syncfusion:NavigateButtonBase>
+                                                    <ControlTemplate.Triggers>
+                                                        <Trigger Property="IsMouseOver" Value="True">
+                                                            <Setter Property="Fill" TargetName="Triangle" Value="#FF73A9D8"/>
+                                                            <Setter Property="Stroke" TargetName="Triangle" Value="#FF73A9D8"/>
+                                                        </Trigger>
+                                                        <Trigger Property="Enabled" Value="False">
+                                                            <Setter Property="Opacity" TargetName="Triangle" Value="0.5"/>
+                                                        </Trigger>
+                                                    </ControlTemplate.Triggers>
+                                                </ControlTemplate>
+                                            </syncfusion:NavigateButton.Template>
+                                        </syncfusion:NavigateButton>
+                                    </StackPanel>
+                                    <StackPanel x:Name="PART_PrevMonthButtonPanel" Grid.Column="0" Grid.Row="0" VerticalAlignment="Center">
+                                        <syncfusion:NavigateButton x:Name="PART_PrevMonthButton" 
+                                                                   Foreground="{Binding HeaderForeground, RelativeSource={RelativeSource TemplatedParent}}" 
+                                                                   Focusable="False" 
+                                                                   HorizontalAlignment="Left" 
+                                                                   IsTabStop="False" 
+                                                                   Margin="12,0,0,0" 
+                                                                   MinWidth="5" 
+                                                                   MinHeight="5" 
+                                                                   VerticalAlignment="Center">
+                                            <syncfusion:NavigateButton.Template>
+                                                <ControlTemplate TargetType="syncfusion:NavigateButton">
+                                                    <syncfusion:NavigateButtonBase x:Name="Button" 
+                                                                                   BorderBrush="Transparent" 
+                                                                                   BorderThickness="0.5" 
+                                                                                   Background="Transparent" 
+                                                                                   CornerRadius="3" 
+                                                                                   Command="syncfusion:CalendarEdit.PrevCommand" 
+                                                                                   IsTabStop="False">
+                                                        <Path x:Name="Triangle" 
+                                                              Data="M367.375,215.625L367.5,220.375 363.5,217.875z" 
+                                                              Fill="#FFFFFF" 
+                                                              HorizontalAlignment="Left" 
+                                                              Height="10" 
+                                                              Stretch="Fill" 
+                                                              Stroke="#FFFFFF" 
+                                                              StrokeThickness="1" 
+                                                              VerticalAlignment="Center" 
+                                                              Width="6"/>
+                                                    </syncfusion:NavigateButtonBase>
+                                                    <ControlTemplate.Triggers>
+                                                        <Trigger Property="IsMouseOver" Value="True">
+                                                            <Setter Property="Fill" TargetName="Triangle" Value="#FF73A9D8"/>
+                                                            <Setter Property="Stroke" TargetName="Triangle" Value="#FF73A9D8"/>
+                                                        </Trigger>
+                                                        <Trigger Property="Enabled" Value="False">
+                                                            <Setter Property="Opacity" TargetName="Triangle" Value="0.5"/>
+                                                        </Trigger>
+                                                    </ControlTemplate.Triggers>
+                                                </ControlTemplate>
+                                            </syncfusion:NavigateButton.Template>
+                                        </syncfusion:NavigateButton>
+                                    </StackPanel>
+                                    <syncfusion:MonthButton x:Name="PART_Month1" 
+                                                            Grid.Column="1" 
+                                                            Foreground="{Binding HeaderForeground, RelativeSource={RelativeSource TemplatedParent}}" 
+                                                            Grid.Row="0" 
+                                                            VerticalAlignment="Center">
+                                        <syncfusion:MonthButton.Style>
+                                            <Style TargetType="{x:Type syncfusion:MonthButton}">
+                                                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                                <Setter Property="VerticalContentAlignment" Value="Center"/>
+                                                <Setter Property="Foreground" Value="#FF333333"/>
+                                                <Setter Property="FontFamily" 
+                                                        Value="{Binding FontFamily, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType=syncfusion:CalendarEdit}}"/>
+                                                <Setter Property="FontSize" Value="{Binding FontSize, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType=syncfusion:CalendarEdit}}"/>
+                                                <Setter Property="FontStyle" Value="{Binding FontStyle, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType=syncfusion:CalendarEdit}}"/>
+                                                <Setter Property="FontWeight" Value="{Binding FontWeight, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType=syncfusion:CalendarEdit}}"/>
+                                                <Setter Property="Background" Value="Transparent"/>
+                                                <Setter Property="Focusable" Value="False"/>
+                                                <Setter Property="Foreground" Value="{Binding HeaderForeground, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType=syncfusion:CalendarEdit}}"/>
+                                                <Setter Property="Template">
+                                                    <Setter.Value>
+                                                        <ControlTemplate TargetType="syncfusion:MonthButton">
+                                                            <Border x:Name="Border" 
+                                                                    BorderBrush="{TemplateBinding BorderBrush}" 
+                                                                    BorderThickness="{TemplateBinding BorderThickness}" 
+                                                                    Background="{TemplateBinding Background}" 
+                                                                    CornerRadius="{TemplateBinding Border.CornerRadius}">
+                                                                <ContentPresenter Content="{TemplateBinding Content}" 
+                                                                                  TextElement.Foreground="{TemplateBinding Foreground}" 
+                                                                                  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                                                                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                                                            </Border>
+                                                            <ControlTemplate.Triggers>
+                                                                <Trigger Property="IsMouseOver" Value="True">
+                                                                    <Setter Property="Foreground" Value="#FF73A9D8"/>
+                                                                </Trigger>
+                                                            </ControlTemplate.Triggers>
+                                                        </ControlTemplate>
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </Style>
+                                        </syncfusion:MonthButton.Style>
+                                    </syncfusion:MonthButton>
+                                    <syncfusion:MonthButton x:Name="PART_Month2" 
+                                                            Grid.Column="1" 
+                                                            Foreground="{Binding HeaderForeground, RelativeSource={RelativeSource TemplatedParent}}" 
+                                                            Grid.Row="0" VerticalAlignment="Center">
+                                        <syncfusion:MonthButton.Style>
+                                            <Style TargetType="syncfusion:MonthButton">
+                                                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                                <Setter Property="VerticalContentAlignment" Value="Center"/>
+                                                <Setter Property="Foreground" Value="#FF333333"/>
+                                                <Setter Property="FontFamily" Value="{Binding FontFamily, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType=syncfusion:CalendarEdit}}"/>
+                                                <Setter Property="FontSize" Value="{Binding FontSize, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType=syncfusion:CalendarEdit}}"/>
+                                                <Setter Property="FontStyle" Value="{Binding FontStyle, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType=syncfusion:CalendarEdit}}"/>
+                                                <Setter Property="FontWeight" Value="{Binding FontWeight, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType=syncfusion:CalendarEdit}}"/>
+                                                <Setter Property="Background" Value="Transparent"/>
+                                                <Setter Property="Focusable" Value="False"/>
+                                                <Setter Property="Foreground" Value="{Binding HeaderForeground, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType=syncfusion:CalendarEdit}}"/>
+                                                <Setter Property="Template">
+                                                    <Setter.Value>
+                                                        <ControlTemplate TargetType="syncfusion:MonthButton">
+                                                            <Border x:Name="Border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CornerRadius="{TemplateBinding Border.CornerRadius}">
+                                                                <ContentPresenter Content="{TemplateBinding Content}" TextElement.Foreground="{TemplateBinding Foreground}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                                                            </Border>
+                                                            <ControlTemplate.Triggers>
+                                                                <Trigger Property="IsMouseOver" Value="True">
+                                                                    <Setter Property="Foreground" Value="#FF73A9D8"/>
+                                                                </Trigger>
+                                                            </ControlTemplate.Triggers>
+                                                        </ControlTemplate>
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </Style>
+                                        </syncfusion:MonthButton.Style>
+                                    </syncfusion:MonthButton>
+                                    <StackPanel x:Name="PART_YearUpDownPanel" 
+                                                Grid.Column="1" 
+                                                HorizontalAlignment="Center" 
+                                                Orientation="Horizontal" 
+                                                Grid.Row="0" 
+                                                Visibility="Collapsed">
+                                        <TextBlock x:Name="PART_EditMonthName" 
+                                                   HorizontalAlignment="Right" 
+                                                   Padding="1" 
+                                                   VerticalAlignment="Center"/>
+                                        <syncfusion:UpDown x:Name="PART_YearUpDown" 
+                                                           BorderThickness="0" 
+                                                           HorizontalAlignment="Center" 
+                                                           Height="18" 
+                                                           MaxValue="{Binding MaxDate.Year, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType=syncfusion:CalendarEdit}}"
+                                                           MinValue="{Binding MinDate.Year, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType=syncfusion:CalendarEdit}}" 
+                                                           NumberDecimalDigits="0" 
+                                                           Width="45"/>
+                                    </StackPanel>
+                                </Grid>
+                                <Popup x:Name="PART_MonthPopup" Grid.ColumnSpan="6" Grid.Column="0" Placement="Center" Grid.Row="0">
+                                    <ListBox HorizontalContentAlignment="Center" Width="{TemplateBinding Width}"/>
+                                </Popup>
+                                <ContentPresenter x:Name="PART_WeekNumbers" ClipToBounds="True" Content="{Binding WeekNumbersGrid, RelativeSource={RelativeSource TemplatedParent}}" Grid.Column="1" Margin="0,0,3,0" Grid.Row="2" Visibility="Collapsed"/>
+                                <ContentPresenter Grid.ColumnSpan="3" Content="{Binding DayNamesGrid, RelativeSource={RelativeSource TemplatedParent}}" Grid.Column="2" Grid.Row="1" VerticalAlignment="Center"/>
+                                <ContentPresenter ClipToBounds="True" Grid.ColumnSpan="3" Content="{Binding CurrentDayGrid, RelativeSource={RelativeSource TemplatedParent}}" Grid.Column="2" Grid.Row="2"/>
+                                <ContentPresenter x:Name="WeekNumbersForYearCurrent" ClipToBounds="True" Grid.ColumnSpan="3" Content="{Binding CurrentWeekNumbersGrid, RelativeSource={RelativeSource TemplatedParent}}" Grid.Column="2" Grid.Row="2"/>
+                                <ContentPresenter x:Name="WeekNumbersForYearFollow" ClipToBounds="True" Grid.ColumnSpan="3" Content="{Binding FollowingWeekNumbersGrid, RelativeSource={RelativeSource TemplatedParent}}" Grid.Column="2" Grid.Row="2"/>
+                                <ContentPresenter ClipToBounds="True" Grid.ColumnSpan="3" Content="{Binding FollowingDayGrid, RelativeSource={RelativeSource TemplatedParent}}" Grid.Column="2" Grid.Row="2"/>
+                                <ContentPresenter ClipToBounds="True" Grid.ColumnSpan="3" Content="{Binding CurrentMonthGrid, RelativeSource={RelativeSource TemplatedParent}}" Grid.Column="2" Grid.Row="1" Grid.RowSpan="2"/>
+                                <ContentPresenter ClipToBounds="True" Grid.ColumnSpan="3" Content="{Binding CurrentYearGrid, RelativeSource={RelativeSource TemplatedParent}}" Grid.Column="2" Grid.Row="1" Grid.RowSpan="2"/>
+                                <ContentPresenter ClipToBounds="True" Grid.ColumnSpan="3" Content="{Binding CurrentYearRangeGrid, RelativeSource={RelativeSource TemplatedParent}}" Grid.Column="2" Grid.Row="1" Grid.RowSpan="2"/>
+                                <ContentPresenter ClipToBounds="True" Grid.ColumnSpan="3" Content="{Binding FollowingMonthGrid, RelativeSource={RelativeSource TemplatedParent}}" Grid.Column="2" Margin="0,5,0,0" Grid.Row="1" Grid.RowSpan="2"/>
+                                <ContentPresenter ClipToBounds="True" Grid.ColumnSpan="3" Content="{Binding FollowingYearGrid, RelativeSource={RelativeSource TemplatedParent}}" Grid.Column="2" Margin="0,5,0,0" Grid.Row="1" Grid.RowSpan="2"/>
+                                <ContentPresenter ClipToBounds="True" Grid.ColumnSpan="3" Content="{Binding FollowingYearRangeGrid, RelativeSource={RelativeSource TemplatedParent}}" Grid.Column="2" Grid.Row="1" Grid.RowSpan="2"/>
+                                <Grid x:Name="PART_TodayGrid" Background="Transparent" Grid.ColumnSpan="3" Grid.Column="1" TextElement.Foreground="White" Height="20" Grid.Row="3">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.Visibility>
+                                        <Binding Path="TodayRowIsVisible" RelativeSource="{RelativeSource TemplatedParent}">
+                                            <Binding.Converter>
+                                                <syncfusion:BooleanToVisibilityConverterEx/>
+                                            </Binding.Converter>
+                                        </Binding>
+                                    </Grid.Visibility>
+                                    <Button x:Name="PART_TodayButton" Content="Today :" Grid.Column="0" Uid="AccessTodayTextID" Width="Auto">
+                                        <Button.Style>
+                                            <Style TargetType="Button">
+                                                <Setter Property="Foreground" Value="#FF333333"/>
+                                                <Setter Property="Background" Value="Transparent"/>
+                                                <Setter Property="Focusable" Value="False"/>
+                                                <Setter Property="Template">
+                                                    <Setter.Value>
+                                                        <ControlTemplate TargetType="Button">
+                                                            <Border Background="{TemplateBinding Background}" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                                                <ContentPresenter Content="{TemplateBinding Content}" Margin="1,0"/>
+                                                            </Border>
+                                                        </ControlTemplate>
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </Style>
+                                        </Button.Style>
+                                    </Button>
+                                    <Border Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <TextBlock Foreground="#FF333333" HorizontalAlignment="Center" Text="{Binding TodayDate, RelativeSource={RelativeSource TemplatedParent}}"/>
+                                    </Border>
+                                </Grid>
+                            </Grid>
+                        </Border>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" TargetName="Border" Value="0.5"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="TextBox" x:Key="DescriptionTextBox">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="{StaticResource TextBox.Static.Border}"/>
+        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="KeyboardNavigation.TabNavigation" Value="None"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="AllowDrop" Value="true"/>
+        <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst"/>
+        <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+        <Setter Property="AcceptsReturn" Value="True"/>
+        <Setter Property="Height" Value="100"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="VerticalScrollBarVisibility" Value="Auto"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TextBox">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                        <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Opacity" TargetName="border" Value="0.56"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource TextBox.MouseOver.Border}"/>
+                        </Trigger>
+                        <Trigger Property="IsKeyboardFocused" Value="true">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource TextBox.Focus.Border}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsInactiveSelectionHighlightEnabled" Value="true"/>
+                    <Condition Property="IsSelectionActive" Value="false"/>
+                </MultiTrigger.Conditions>
+                <Setter Property="SelectionBrush" Value="{DynamicResource SystemColors.InactiveSelectionHighlightBrushKey}"/>
+            </MultiTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style TargetType="Button">
+        <Setter Property="SnapsToDevicePixels"
+                Value="true" />
+        <Setter Property="ToolTipService.ShowOnDisabled"
+                Value="True" />
+        <Setter Property="MinHeight"
+                Value="22" />
+        <Setter Property="MinWidth"
+                Value="22" />
+        <Setter Property="FontSize"
+                Value="12" />
+        <Setter Property="FontWeight"
+                Value="Normal" />
+        <Setter Property="Foreground"
+                Value="#000000" />
+        <Setter Property="BorderBrush"
+                Value="{StaticResource ButtonBorderBrush}" />
+        <Setter Property="Background"
+                Value="{StaticResource ButtonBackground}" />
+        <Setter Property="FocusVisualStyle"
+                Value="{StaticResource ButtonFocusVisual}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Border x:Name="PART_OuterBorder"
+                                BorderThickness="0,0,0,1"
+                                Background="{Binding Background, ElementName=PART_InnerBorder}"
+                                CornerRadius="6"
+                                BorderBrush="White" />
+                        <Border x:Name="PART_InnerBorder"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                Background="{TemplateBinding Background}"
+                                BorderThickness="1"
+                                Margin="0,0,0,1"
+                                CornerRadius="4" />
+                        <Border x:Name="PART_FocusBorder"
+                                BorderBrush="Transparent"
+                                Background="Transparent"
+                                BorderThickness="1"
+                                Margin="1,1,1,2"
+                                CornerRadius="3" />
+                        <StackPanel x:Name="ContentArea"
+                                    Orientation="Horizontal"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"
+                                    Margin="1,0,1,1">
+                            <ContentPresenter x:Name="PART_Content"
+                                              RecognizesAccessKey="True"
+                                              VerticalAlignment="Center"
+                                              HorizontalAlignment="Center"
+                                              Margin="3,0" />
+                        </StackPanel>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsDefaulted"
+                                 Value="True">
+                            <Setter Property="BorderBrush"
+                                    TargetName="PART_InnerBorder"
+                                    Value="{StaticResource ButtonFocusOuterBorderBrush}" />
+                            <Setter Property="BorderBrush"
+                                    TargetName="PART_FocusBorder"
+                                    Value="{StaticResource ButtonFocusInnerBorderBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+                            <Setter Property="Background"
+                                    TargetName="PART_InnerBorder"
+                                    Value="{StaticResource ButtonMouseOverBackground}" />
+                        </Trigger>
+                        <Trigger Property="IsPressed"
+                                 Value="True">
+                            <Setter Property="Background"
+                                    TargetName="PART_InnerBorder"
+                                    Value="{DynamicResource StandardButtonPressedBackground}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled"
+                                 Value="False">
+                            <Setter Property="Foreground"
+                                    Value="{StaticResource ButtonDisabledForeground}" />
+                            <Setter Property="Background"
+                                    TargetName="PART_InnerBorder"
+                                    Value="{StaticResource ButtonDisabledBackground}" />
+                            <Setter Property="BorderBrush"
+                                    TargetName="PART_InnerBorder"
+                                    Value="{StaticResource ButtonDisabledBorderBrush}" />
+                        </Trigger>
+                        <Trigger Property="HasContent"
+                                 Value="False">
+                            <Setter TargetName="PART_Content"
+                                    Property="Visibility"
+                                    Value="Collapsed" />
+                            <Setter TargetName="ContentArea"
+                                    Property="HorizontalAlignment"
+                                    Value="Center" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
     <!-- Window Icons-->
     <ControlTemplate x:Key="MinimizeIcon" 
-                         TargetType="{x:Type Button}" >
+                         TargetType="Button" >
         <Border Name="minborder"   
                     BorderThickness="1"
                     CornerRadius="1" 
@@ -517,9 +732,8 @@
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
-
     <ControlTemplate x:Key="MaximizeIcon" 
-                         TargetType="{x:Type Button}">
+                         TargetType="Button">
         <Border Name="maxborder" 
                     BorderThickness="1" 
                     CornerRadius="1" 
@@ -573,9 +787,8 @@
 
         </ControlTemplate.Triggers>
     </ControlTemplate>
-
     <ControlTemplate x:Key="CloseIcon" 
-                         TargetType="{x:Type Button}">
+                         TargetType="Button">
         <Border Name="closeborder" 
                     BorderThickness="1" 
                     CornerRadius="1" 
@@ -629,8 +842,8 @@
 
         </ControlTemplate.Triggers>
     </ControlTemplate>
-
-    <ControlTemplate x:Key="RestoreIcon" TargetType="{x:Type Button}">
+    <ControlTemplate x:Key="RestoreIcon" 
+                     TargetType="Button">
         <Border Name="resborder4"   BorderThickness="1" CornerRadius="1" Background="Transparent"  Height="20" Width="20"  Margin="1,0,1,5">
             <Canvas Width="18" Height="18">
                 <Line X1="2" X2="16"  Y1="4" Y2="4" Stroke="White" StrokeThickness="1"/>
