@@ -19,7 +19,7 @@ namespace DidiDerDenker.BirdsEyeView.Database
 
         #region Constructor
         public DatabaseConnection()
-            :this(@"Data Source=tcp:176.9.55.20,49803;Initial Catalog=DD_DATABASE;User ID=Database;Password=tesT-Ad1")
+            :this(@"Data Source=JonasCurth.de;Initial Catalog=DD_DATABASE;User ID=Database;Password=tesT-Ad1")
         { }
 
         public DatabaseConnection(string connectionString)
