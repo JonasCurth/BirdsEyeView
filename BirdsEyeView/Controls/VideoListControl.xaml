@@ -11,7 +11,7 @@
              d:DesignHeight="300" d:DesignWidth="300">
 
     <DockPanel>
-
+        
         <syncfusion:SplitButton DockPanel.Dock="Top" 
                                 HorizontalAlignment="Stretch"
                                 Height="26"
@@ -25,10 +25,10 @@
                                           Background="{DynamicResource SolidGrey10}">
                 <syncfusion:DropDownMenuGroup.ItemTemplate>
                     <DataTemplate>
-                        <RadioButton Content="{Binding Name}"
-                                     GroupName="FilterGroup"
-                                     Margin="5 3"
-                                     Foreground="{DynamicResource ApplicationForeground}"/>
+                        <CheckBox Content="{Binding Name}"
+                                  Margin="5 3"
+                                  Foreground="{DynamicResource ApplicationForeground}"
+                                  Command="{Binding FilterCommand}" CommandParameter="{Binding}"/>
                     </DataTemplate>
                 </syncfusion:DropDownMenuGroup.ItemTemplate>
             </syncfusion:DropDownMenuGroup>
