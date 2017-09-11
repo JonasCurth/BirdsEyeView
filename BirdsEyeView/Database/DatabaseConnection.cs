@@ -81,7 +81,9 @@ namespace DidiDerDenker.BirdsEyeView.Database
                             string name = Convert.ToString(reader["Video_Name"]);
                             DateTime? date = Operations.Convert.ToNullableDateTime(Convert.ToString(reader["Video_Date"]), 
                                                                                    Convert.ToString(reader["Video_Time"]));
-                            Uri url = new Uri(Convert.ToString(reader["Video_URL"]));
+                            Uri url;
+                            Uri.TryCreate(Convert.ToString(reader["Video_URL"]), UriKind.RelativeOrAbsolute, out url);
+
                             string classname = Convert.ToString(reader["Class_Name"]);
                             string project = Convert.ToString(reader["Project_Name"]);
                             int mode = Convert.ToInt32(reader["Mode_ID"]);

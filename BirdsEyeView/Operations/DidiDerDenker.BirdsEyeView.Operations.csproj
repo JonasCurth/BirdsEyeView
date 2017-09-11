@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Convert.cs" />
     <Compile Include="Ensure.cs" />
+    <Compile Include="Filter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
