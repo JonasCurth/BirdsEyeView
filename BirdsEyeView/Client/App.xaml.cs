@@ -32,7 +32,7 @@ namespace DidiDerDenker.BirdsEyeView.Client
     {
         #region fields
         private static Client defaultInstance;
-        private Window window;
+        private Window window = Application.Current.MainWindow;
         #endregion
 
         #region constructor

@@ -8,11 +8,11 @@ namespace DidiDerDenker.BirdsEyeView.Operations
 {
     public static class Convert
     {
-        public static DateTime? ToNullableDateTime(string date, string time)
+        public static DateTime ToDateTime(string date, string time)
         {
             if(String.IsNullOrEmpty(date) || String.IsNullOrEmpty(time))
             {
-                return null;
+                return new DateTime();
             }
 
             DateTime d = System.Convert.ToDateTime(date);

@@ -32,4 +32,13 @@
     <system:String x:Uid="Task_Done"
                    x:Key="Task_Done">Abgeschlossen</system:String>
     
+    
+    <!-- Classes-->
+    <system:String x:Uid="LP"
+                   x:Key="LP">Let's Play</system:String>
+    <system:String x:Uid="DD"
+                   x:Key="DD">Didi TV</system:String>
+    <system:String x:Uid="BO"
+                   x:Key="BO">Best of</system:String>
+    
 </ResourceDictionary>

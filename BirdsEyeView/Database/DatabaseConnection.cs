@@ -79,7 +79,7 @@ namespace DidiDerDenker.BirdsEyeView.Database
                         {
                             int id = Convert.ToInt32(reader["Video_ID"]);
                             string name = Convert.ToString(reader["Video_Name"]);
-                            DateTime? date = Operations.Convert.ToNullableDateTime(Convert.ToString(reader["Video_Date"]), 
+                            DateTime date = Operations.Convert.ToDateTime(Convert.ToString(reader["Video_Date"]), 
                                                                                    Convert.ToString(reader["Video_Time"]));
                             Uri url;
                             Uri.TryCreate(Convert.ToString(reader["Video_URL"]), UriKind.RelativeOrAbsolute, out url);

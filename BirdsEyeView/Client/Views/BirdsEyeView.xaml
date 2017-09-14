@@ -7,6 +7,7 @@
                          xmlns:converter="clr-namespace:DidiDerDenker.BirdsEyeView.Converter;assembly=DidiDerDenker.BirdsEyeView.Converter"
                          xmlns:controls="clr-namespace:DidiDerDenker.BirdsEyeView.Controls;assembly=DidiDerDenker.BirdsEyeView.Controls"
                          xmlns:shared="http://schemas.syncfusion.com/wpf"
+                         xmlns:schedule="clr-namespace:Syncfusion.UI.Xaml.Schedule;assembly=Syncfusion.SfSchedule.WPF"
                          mc:Ignorable="d"
                          Title="{DynamicResource MainTitle}"
                          TitleFontSize="14"
@@ -108,7 +109,8 @@
             <!-- Schedule-->
             <shared:SfSchedule x:Name="Schedule" 
                                    FocusedMonth="GhostWhite" 
-                                   NonFocusedMonth="LightGray" 
+                                   NonFocusedMonth="LightGray"
+                               Language="de-de"
                                    Margin="5" 
                                    IntervalHeight="20" 
                                    WorkStartHour="15"
@@ -119,8 +121,18 @@
                                    IsHighLightWorkingHours="True" 
                                    ShowAllDay="False" 
                                    TimeLineViewRowCount="-1" 
+                               ItemsSource="{Binding Videos}"
                                    FirstDayOfWeek="Monday" 
-                                   NonWorkingDays="" HeaderBackground="{x:Null}" MajorTickTimeFormat="HH:mm"/>
+                                   NonWorkingDays="" HeaderBackground="{x:Null}" MajorTickTimeFormat="HH:mm">
+                <shared:SfSchedule.AppointmentMapping>
+                    <schedule:ScheduleAppointmentMapping
+                        SubjectMapping="Subject"
+                        AppointmentBackgroundMapping="Color"
+                        StartTimeMapping="Date"
+                        EndTimeMapping="EndDate"
+                        />
+                </shared:SfSchedule.AppointmentMapping>
+            </shared:SfSchedule>
 
             <GridSplitter Grid.Row="1" Background="#b2b2b2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
 

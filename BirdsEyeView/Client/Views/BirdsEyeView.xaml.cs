@@ -49,6 +49,7 @@ namespace DidiDerDenker.BirdsEyeView.Client.Views
             this.vm = this.DataContext as BirdsEyeViewInterfaceViewModel;
 
             this.vm.PropertyChanged += this.PropertyChanged;
+            this.Schedule.Appointments[0].AppointmentBackground = new SolidColorBrush(Colors.Blue);
         }
     }
 }

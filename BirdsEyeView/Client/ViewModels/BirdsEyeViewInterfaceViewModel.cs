@@ -26,8 +26,6 @@ namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
         private ICollectionView capturedList;
         private ICollectionView renderedList;
         private ICollectionView uploadedList;
-
-        private DelegateCommand<Project> filterCommand;
         #endregion
 
         #region constructor
