@@ -28,7 +28,7 @@
                         <CheckBox Content="{Binding Name}"
                                   Margin="5 3"
                                   Foreground="{DynamicResource ApplicationForeground}"
-                                  Command="{Binding FilterCommand}" CommandParameter="{Binding}"/>
+                                  IsChecked="{Binding IsFilter}"/>
                     </DataTemplate>
                 </syncfusion:DropDownMenuGroup.ItemTemplate>
             </syncfusion:DropDownMenuGroup>

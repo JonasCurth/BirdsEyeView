@@ -1,4 +1,5 @@
 ﻿using DidiDerDenker.BirdsEyeView.Objects;
+using DidiDerDenker.BirdsEyeView.Objects.Collections;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,14 +14,15 @@ namespace DidiDerDenker.BirdsEyeView.Operations
             return video.Mode == (int)task;
         }
 
-        public static bool IsProject(Video video, Project project)
+        public static bool IsProject(Video video, ProjectCollection projectCollection)
         {
-            return video.Project == project.Name;
+            return projectCollection.Any(p => video.Project.Equals(p.Name) && p.IsFilter) 
+                || projectCollection.All(p => !p.IsFilter);
         }
         
-        public static bool SetFilter(bool taskFilter, bool projectFilter = true)
+        public static bool SetFilter(Video video, Task task, ProjectCollection projectCollection)
         {
-            return taskFilter && projectFilter;
+            return IsTask(video, task) && IsProject(video, projectCollection);
         }
     }
 }

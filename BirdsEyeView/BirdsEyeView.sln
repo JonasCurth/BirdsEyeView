@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DidiDerDenker.BirdsEyeView.Client", "Client\DidiDerDenker.BirdsEyeView.Client.csproj", "{E1692FB8-7ACE-457F-9D1E-1E3C25ABFA35}"
 EndProject
@@ -30,6 +30,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{0FF49A1C-A155-42FA-B8D2-93E2B49DFD4A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DidiDerDenker.BirdsEyeView.Resources", "Resources\DidiDerDenker.BirdsEyeView.Resources.csproj", "{E4BF29BC-A78C-446E-B12B-48D403E7EA75}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Command", "Command", "{93A1F970-9F76-4D06-B85C-8091C3AEBB6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DidiDerDenker.BirdsEyeView.Command", "Command\DidiDerDenker.BirdsEyeView.Command.csproj", "{8ED4E867-16C8-41BA-A573-E7C38580DE0D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,6 +69,10 @@ Global
 		{E4BF29BC-A78C-446E-B12B-48D403E7EA75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4BF29BC-A78C-446E-B12B-48D403E7EA75}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4BF29BC-A78C-446E-B12B-48D403E7EA75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8ED4E867-16C8-41BA-A573-E7C38580DE0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8ED4E867-16C8-41BA-A573-E7C38580DE0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8ED4E867-16C8-41BA-A573-E7C38580DE0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8ED4E867-16C8-41BA-A573-E7C38580DE0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -77,5 +85,9 @@ Global
 		{139C33A0-402B-41A6-96DA-49E542E00C9C} = {88977CA4-6406-4B84-BD5C-95040A96D1E9}
 		{368CDE91-3B70-43FB-9F10-11AC9D2C3860} = {B5CC6487-842C-4A5E-9B9C-F191938ABED0}
 		{E4BF29BC-A78C-446E-B12B-48D403E7EA75} = {0FF49A1C-A155-42FA-B8D2-93E2B49DFD4A}
+		{8ED4E867-16C8-41BA-A573-E7C38580DE0D} = {93A1F970-9F76-4D06-B85C-8091C3AEBB6B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CB83FBB2-0167-4F8C-965A-42EB31705821}
 	EndGlobalSection
 EndGlobal

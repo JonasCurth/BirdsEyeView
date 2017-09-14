@@ -173,6 +173,10 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Command\DidiDerDenker.BirdsEyeView.Command.csproj">
+      <Project>{8ed4e867-16c8-41ba-a573-e7c38580de0d}</Project>
+      <Name>DidiDerDenker.BirdsEyeView.Command</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Controls\DidiDerDenker.BirdsEyeView.Controls.csproj">
       <Project>{2a18dca5-45a5-4070-8f4d-37747de1a730}</Project>
       <Name>DidiDerDenker.BirdsEyeView.Controls</Name>

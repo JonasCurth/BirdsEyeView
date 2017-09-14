@@ -1,12 +1,15 @@
-﻿using DidiDerDenker.BirdsEyeView.Database;
+﻿using DidiDerDenker.BirdsEyeView.Command;
+using DidiDerDenker.BirdsEyeView.Database;
 using DidiDerDenker.BirdsEyeView.Objects;
 using DidiDerDenker.BirdsEyeView.Objects.Collections;
+using DidiDerDenker.BirdsEyeView.Operations;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Windows.Data;
+using System.Windows.Input;
 
 namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
 {
@@ -23,6 +26,8 @@ namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
         private ICollectionView capturedList;
         private ICollectionView renderedList;
         private ICollectionView uploadedList;
+
+        private DelegateCommand<Project> filterCommand;
         #endregion
 
         #region constructor
@@ -43,6 +48,11 @@ namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
             this.CapturedList.Filter = new Predicate<object>(x => ((Video)x).Mode == (int)Task.Render);
             this.RenderedList.Filter = new Predicate<object>(x => ((Video)x).Mode == (int)Task.Upload);
             this.UploadedList.Filter = new Predicate<object>(x => ((Video)x).Mode == (int)Task.Release);
+
+            foreach (Project project in this.Projects)
+            {
+                project.PropertyChanged += this.OnFilterChanged;
+            }
 
         }
         #endregion
@@ -120,12 +130,6 @@ namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
         #endregion
 
         #region private methods
-        private bool FilterByCaptureTask(object obj)
-        {
-            Video video = obj as Video;
-
-            return true;
-        }
         #endregion
 
         #region public methods
@@ -133,7 +137,16 @@ namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
         #endregion
 
         #region events
-
+        private void OnFilterChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName.Equals("IsFilter"))
+            {
+                this.ScheduledList.Filter = new Predicate<object>(x => Filter.SetFilter((Video)x, Task.Capture, this.Projects));
+                this.CapturedList.Filter = new Predicate<object>(x => Filter.SetFilter((Video)x, Task.Render, this.Projects));
+                this.RenderedList.Filter = new Predicate<object>(x => Filter.SetFilter((Video)x, Task.Upload, this.Projects));
+                this.UploadedList.Filter = new Predicate<object>(x => Filter.SetFilter((Video)x, Task.Release, this.Projects));
+            }
+        }
         #endregion
 
     }
