@@ -42,8 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class.cs" />
     <Compile Include="Collections\ProjectCollection.cs" />
     <Compile Include="Collections\VideoCollection.cs" />
+    <Compile Include="DatabaseObject.cs" />
+    <Compile Include="FormatKey.cs" />
     <Compile Include="Language.cs" />
     <Compile Include="Project.cs" />
     <Compile Include="Task.cs" />

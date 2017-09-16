@@ -9,6 +9,8 @@
                    x:Key="Task">Aufgabe: </system:String>
     <system:String x:Uid="UploadPlan"
                    x:Key="UploadPlan">Upload-Plan</system:String>
+    <system:String x:Uid="PlanVideo"
+                   x:Key="PlanVideo">Video planen</system:String>
     
     <!-- Tasks-->
     <system:String x:Uid="Task_Scheduled"

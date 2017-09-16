@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -9,7 +10,7 @@ using System.Windows.Media;
 
 namespace DidiDerDenker.BirdsEyeView.Objects
 {
-    public class Video : INotifyPropertyChanged
+    public class Video : DatabaseObject
     {
         #region Fields
         private int id;
@@ -17,12 +18,10 @@ namespace DidiDerDenker.BirdsEyeView.Objects
         private DateTime date;
         private DateTime endDate;
         private Uri url;
-        private string className;
-        private string project;
+        private Class c;
+        private Project project;
         private int mode;
         private string episode;
-
-        public event PropertyChangedEventHandler PropertyChanged;
         #endregion
 
         #region Constructor
@@ -33,18 +32,18 @@ namespace DidiDerDenker.BirdsEyeView.Objects
                      string name,
                      DateTime date,
                      string url,
-                     string className,
-                     string project,
+                     Class c,
+                     Project project,
                      int mode,
                      string episode)
-            :this(id, name, date, new Uri(url), className, project, mode, episode) { }
+            :this(id, name, date, new Uri(url), c, project, mode, episode) { }
 
         public Video(int id, 
                      string name, 
                      DateTime date,
                      Uri url, 
-                     string className, 
-                     string project,
+                     Class c, 
+                     Project project,
                      int mode,
                      string episode)
         {
@@ -53,10 +52,12 @@ namespace DidiDerDenker.BirdsEyeView.Objects
             this.Date = date;
             this.EndDate = this.Date.AddHours(1);
             this.URL = url;
-            this.Class = className;
+            this.Class = c;
             this.Project = project;
             this.Mode = mode;
             this.Episode = episode;
+            
+            Videos.Add(this);
         }
         #endregion
 
@@ -111,17 +112,17 @@ namespace DidiDerDenker.BirdsEyeView.Objects
             }
         }
 
-        public string Class
+        public Class Class
         {
-            get { return this.className; }
+            get { return this.c; }
             set
             {
-                this.className = value;
+                this.c = value;
                 OnPropertyChanged();
             }
         }
 
-        public string Project
+        public Project Project
         {
             get { return this.project; }
             set
@@ -153,16 +154,7 @@ namespace DidiDerDenker.BirdsEyeView.Objects
         {
             get
             {
-                SolidColorBrush brush = null;
-                switch (this.Class)
-                {
-                    case "Let's Play": brush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#078e00")); break;
-                    case "Didi TV": brush = new SolidColorBrush(Colors.Blue); break;
-                    case "Best of": brush = new SolidColorBrush(Colors.DarkGreen); break;
-                    default: brush = new SolidColorBrush(Colors.Pink); break;
-                }
-
-                return brush;
+                return this.Class.Color;
             }
         }
 
@@ -170,23 +162,36 @@ namespace DidiDerDenker.BirdsEyeView.Objects
         {
             get
             {
-                string name = null;
-                switch (this.Class)
+                if (String.IsNullOrEmpty(this.Project.ScheduleFormat))
                 {
-                    case "Let's Play": name = $"{this.Project} #{this.Episode}"; break;
-                    case "Didi TV": name = $"{this.Project} #{this.Episode}"; break;
-                    case "Best of": name = "Best of PietSmiet"; break;
+                    return this.GetFormat(this.Class.ScheduleFormat);
                 }
-
-                return name;
+                else
+                {
+                    return this.GetFormat(this.Project.ScheduleFormat);
+                }
             }
         }
+
+        public static ObservableCollection<Video> Videos
+        {
+            get;
+            set;
+        } = new ObservableCollection<Video>();
         #endregion
 
         #region private and protected methods
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        private string GetFormat(string format)
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            return format.Replace(FormatKey.ID, this.Id.ToString()).
+                    Replace(FormatKey.NAME, this.Name.ToString()).
+                    Replace(FormatKey.DATE, this.Date.ToString()).
+                    Replace(FormatKey.ENDDATE, this.EndDate.ToString()).
+                    Replace(FormatKey.URL, this.URL.ToString()).
+                    Replace(FormatKey.CLASS, this.Class.ToString()).
+                    Replace(FormatKey.PROJECT, this.Project.ToString()).
+                    Replace(FormatKey.MODE, this.Mode.ToString()).
+                    Replace(FormatKey.EPISODE, this.Episode.ToString());
         }
         #endregion
 
@@ -205,7 +210,14 @@ namespace DidiDerDenker.BirdsEyeView.Objects
         public override string ToString()
         {
             //ToDo: Only for LetsPlays!
-            return $"{this.Class} {this.Project} [Deutsch] #{this.Episode} {this.Name}";
+            if (String.IsNullOrEmpty(this.Project.Format))
+            {
+                return this.GetFormat(this.Class.Format);
+            }
+            else
+            {
+                return this.GetFormat(this.Project.Format);
+            }
         }
         #endregion
     }

@@ -5,6 +5,7 @@ using DidiDerDenker.BirdsEyeView.Objects.Collections;
 using DidiDerDenker.BirdsEyeView.Operations;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
@@ -16,11 +17,11 @@ namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
     public class BirdsEyeViewInterfaceViewModel : BaseViewModel
     {
         #region fields
-        private Client Client;
 
         private DateTime? selectedDate;
-        private VideoCollection videos;
-        private ProjectCollection projects;
+        private ObservableCollection<Video> videos;
+        private ObservableCollection<Project> projects;
+        private ObservableCollection<Class> Classes;
 
         private ICollectionView scheduledList;
         private ICollectionView capturedList;
@@ -29,13 +30,15 @@ namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
         #endregion
 
         #region constructor
-        public BirdsEyeViewInterfaceViewModel(Client client)
+        public BirdsEyeViewInterfaceViewModel()
         {
-            this.Client = client;
-
             //this.SelectedDate = DateTime.Now;
-            this.Videos = DatabaseConnection.Default.GetAllVideos();
-            this.Projects = DatabaseConnection.Default.GetAllProjects();
+            DatabaseConnection.Default.GetAllClasses();
+            DatabaseConnection.Default.GetAllProjects();
+            DatabaseConnection.Default.GetAllVideos();
+
+            this.Projects = Project.Projects;
+            this.Videos = Video.Videos;
 
             this.ScheduledList = new CollectionViewSource { Source = this.Videos }.View;
             this.CapturedList = new CollectionViewSource { Source = this.Videos }.View;
@@ -66,7 +69,7 @@ namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
             }
         }
 
-        public VideoCollection Videos
+        public ObservableCollection<Video> Videos
         {
             get { return this.videos; }
             set
@@ -76,7 +79,7 @@ namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
             }
         }
 
-        public ProjectCollection Projects
+        public ObservableCollection<Project> Projects
         {
             get { return this.projects; }
             set
@@ -139,6 +142,7 @@ namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
         {
             if (e.PropertyName.Equals("IsFilter"))
             {
+                this.Videos.Add(new Video(1, "Test", DateTime.Today, "http://youtube.com", Class.Classes.First(), Project.Projects.First(), 1, "001"));
                 this.ScheduledList.Filter = new Predicate<object>(x => Filter.SetFilter((Video)x, Task.Capture, this.Projects));
                 this.CapturedList.Filter = new Predicate<object>(x => Filter.SetFilter((Video)x, Task.Render, this.Projects));
                 this.RenderedList.Filter = new Predicate<object>(x => Filter.SetFilter((Video)x, Task.Upload, this.Projects));

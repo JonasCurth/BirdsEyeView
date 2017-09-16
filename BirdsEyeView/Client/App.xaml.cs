@@ -15,23 +15,26 @@ namespace DidiDerDenker.BirdsEyeView.Client
     /// </summary>
     public partial class App : Application
     {
+        public static Client AppClient;
+
         private void OnStartup(object sender, StartupEventArgs e)
         {
             Views.BirdsEyeView view = new Views.BirdsEyeView();
             Current.MainWindow = view;
 
-            BirdsEyeViewInterfaceViewModel vm = new BirdsEyeViewInterfaceViewModel(Client.Default);
+            BirdsEyeViewInterfaceViewModel vm = new BirdsEyeViewInterfaceViewModel();
+
+            AppClient = new Client(view);
 
             Current.ShutdownMode = ShutdownMode.OnMainWindowClose;
 
-            Client.Default.Show(vm);
+            AppClient.Show(vm);
         }
     }
 
     public class Client
     {
         #region fields
-        private static Client defaultInstance;
         private Window window = Application.Current.MainWindow;
         #endregion
 
@@ -40,24 +43,9 @@ namespace DidiDerDenker.BirdsEyeView.Client
         {
             this.window = window;
         }
-
-        public Client()
-            : this(Application.Current.MainWindow) { }
         #endregion
 
         #region public / protected properties
-        public static Client Default
-        {
-            get
-            {
-                if(null == defaultInstance)
-                {
-                    defaultInstance = new Client();
-                }
-
-                return defaultInstance;
-            }
-        }
 
         public Window Window
         {

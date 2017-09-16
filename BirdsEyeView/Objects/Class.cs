@@ -1,54 +1,54 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media;
 
 namespace DidiDerDenker.BirdsEyeView.Objects
 {
-    public class Project : DatabaseObject
+    public class Class : DatabaseObject
     {
-        private string id;
-        private string name;
+        #region fields
+        string id;
+        string name;
         string format;
         string scheduleFormat;
+        SolidColorBrush color;
+        #endregion
 
-
-        private bool isFilter;
-
-        public Project()
-        :this(null, null, null, null) { }
-
-        public Project(string id, string name, string format, string scheduleFormat)
+        #region constructor
+        public Class(string id, string name, string colorCode, string format, string scheduleFormat)
         {
             this.Id = id;
             this.Name = name;
             this.Format = format;
             this.ScheduleFormat = scheduleFormat;
-            
-            Projects.Add(this);
-        }
 
-        public String Id
+            this.Color = new SolidColorBrush((Color)ColorConverter.ConvertFromString(colorCode));
+            
+            Classes.Add(this);
+        }
+        #endregion
+
+        #region public properties
+        public string Id
         {
             get { return this.id; }
-            private set { this.id = value; }
-        }
-
-        public String Name
-        {
-            get { return this.name; }
-            private set { this.name = value; }
-        }
-        public bool IsFilter
-        {
-            get { return this.isFilter; }
             set
             {
-                this.isFilter = value;
+                this.id = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public string Name
+        {
+            get { return this.name; }
+            set
+            {
+                this.name = value;
                 OnPropertyChanged();
             }
         }
@@ -73,20 +73,33 @@ namespace DidiDerDenker.BirdsEyeView.Objects
             }
         }
 
-        public static ObservableCollection<Project> Projects
+        public static ObservableCollection<Class> Classes
         {
             get;
             private set;
-        } = new ObservableCollection<Project>();
+        } = new ObservableCollection<Class>();
 
-        public static Project GetProjectByName(string name)
+        public SolidColorBrush Color
+        {
+            get { return this.color; }
+            set { this.color = value; }
+        }
+
+        #endregion
+
+        #region private protected methods
+
+        #endregion
+
+        #region public methods
+        public static Class GetClassByName(string name)
         {
 
-            foreach (Project project in Projects)
+            foreach (Class c in Classes)
             {
-                if (project.Name == name)
+                if(c.Name == name)
                 {
-                    return project;
+                    return c;
                 }
             }
 
@@ -97,5 +110,6 @@ namespace DidiDerDenker.BirdsEyeView.Objects
         {
             return this.Name;
         }
+        #endregion
     }
 }

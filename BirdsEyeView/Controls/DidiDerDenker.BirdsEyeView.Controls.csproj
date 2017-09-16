@@ -52,6 +52,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Syncfusion\Syncfusion.Schedule.Wpf.dll</HintPath>
     </Reference>
+    <Reference Include="Syncfusion.SfInput.WPF, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Syncfusion\Syncfusion.SfInput.WPF.dll</HintPath>
+    </Reference>
     <Reference Include="Syncfusion.SfRadialMenu.WPF, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Syncfusion\Syncfusion.SfRadialMenu.WPF.dll</HintPath>
@@ -152,6 +156,9 @@
       <Project>{e4bf29bc-a78c-446e-b12b-48d403e7ea75}</Project>
       <Name>DidiDerDenker.BirdsEyeView.Resources</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dialog\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

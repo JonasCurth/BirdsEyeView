@@ -64,9 +64,8 @@ namespace DidiDerDenker.BirdsEyeView.Database
         #endregion
 
         #region public methods
-        public VideoCollection GetAllVideos()
+        public void GetAllVideos()
         {
-            VideoCollection collection = new VideoCollection();
             using (SqlConnection connection = new SqlConnection(this.ConnectionString))
             {
                 using(SqlCommand cmd = new SqlCommand("SELECT * FROM AllVideos", connection))
@@ -84,23 +83,21 @@ namespace DidiDerDenker.BirdsEyeView.Database
                             Uri url;
                             Uri.TryCreate(Convert.ToString(reader["Video_URL"]), UriKind.RelativeOrAbsolute, out url);
 
-                            string classname = Convert.ToString(reader["Class_Name"]);
-                            string project = Convert.ToString(reader["Project_Name"]);
+                            Class c = Class.GetClassByName(Convert.ToString(reader["Class_Name"]));
+                            Project project = Project.GetProjectByName(Convert.ToString(reader["Project_Name"]));
                             int mode = Convert.ToInt32(reader["Mode_ID"]);
                             string episode = Convert.ToString(reader["Video_Episode"]);
-
-                            collection.Add( new Video(id, name, date, url, classname, project, mode, episode));
+                            Video video = new Video(id, name, date, url, c, project, mode, episode);
+                            //collection.Add( new Video(id, name, date, url, classname, project, mode, episode));
                         }
                     }
                 }
             }
-
-            return collection;
+            //return collection;
         }
 
-        public ProjectCollection GetAllProjects()
+        public void GetAllProjects()
         {
-            ProjectCollection collection = new ProjectCollection();
             using (SqlConnection connection = new SqlConnection(this.ConnectionString))
             {
                 using (SqlCommand cmd = new SqlCommand("SELECT * FROM Projects", connection))
@@ -113,15 +110,40 @@ namespace DidiDerDenker.BirdsEyeView.Database
                         {
                             string id = Convert.ToString(reader["Project_ID"]);
                             string name = Convert.ToString(reader["Project_Name"]);
-
-                            collection.Add(new Project(id, name));
+                            string format = Convert.ToString(reader["Project_Video_Title"]);
+                            string scheduleFormat = Convert.ToString(reader["Project_Schedule_Title"]);
+                            Project project = new Project(id, name, format, scheduleFormat);
                         }
                     }
                 }
             }
-
-            return collection;
         }
+
+        public void GetAllClasses()
+        {
+            using (SqlConnection connection = new SqlConnection(this.ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("SELECT * FROM Classes", connection))
+                {
+                    connection.Open();
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            string id = Convert.ToString(reader["Class_ID"]);
+                            string name = Convert.ToString(reader["Class_Name"]);
+                            string colorCode = Convert.ToString(reader["Class_Color"]);
+                            string format = Convert.ToString(reader["Class_Video_Title"]);
+                            string scheduleFormat = Convert.ToString(reader["Class_Schedule_Title"]);
+
+                            Class c = new Class(id, name, colorCode, format, scheduleFormat);
+                        }
+                    }
+                }
+            }
+        }
+
         #endregion
     }
 }

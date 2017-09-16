@@ -184,7 +184,7 @@
                 Value="0" />
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Separator}">
+                <ControlTemplate TargetType="Separator">
                     <Border SnapsToDevicePixels="true"
                             Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
@@ -211,7 +211,7 @@
                 Value="0" />
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Separator}">
+                <ControlTemplate TargetType="Separator">
                     <Border SnapsToDevicePixels="true"
                             Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
@@ -238,7 +238,7 @@
                 Value="0" />
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Separator}">
+                <ControlTemplate TargetType="Separator">
                     <Border SnapsToDevicePixels="true"
                             Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
