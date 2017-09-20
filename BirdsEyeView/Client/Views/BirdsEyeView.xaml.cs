@@ -16,6 +16,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.ComponentModel;
 using Syncfusion.Windows.Shared;
+using DidiDerDenker.BirdsEyeView.Objects;
 
 namespace DidiDerDenker.BirdsEyeView.Client.Views
 {
@@ -36,6 +37,8 @@ namespace DidiDerDenker.BirdsEyeView.Client.Views
             if (e.PropertyName.Equals("SelectedDate"))
             {
                 this.Schedule.MoveToDate(this.vm.SelectedDate.GetValueOrDefault());
+                
+
             }
         }
         
@@ -49,7 +52,13 @@ namespace DidiDerDenker.BirdsEyeView.Client.Views
             this.vm = this.DataContext as BirdsEyeViewInterfaceViewModel;
 
             this.vm.PropertyChanged += this.PropertyChanged;
-            this.Schedule.Appointments[0].AppointmentBackground = new SolidColorBrush(Colors.Blue);
+        }
+
+        private void OnAppointmentEditorOpening(object sender, Syncfusion.UI.Xaml.Schedule.AppointmentEditorOpeningEventArgs e)
+        {
+            e.Cancel = true;
+
+            App.AppClient.ShowVideoEditDialog((ScheduleAppointment)e.Appointment);
         }
     }
 }

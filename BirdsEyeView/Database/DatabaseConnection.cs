@@ -80,20 +80,53 @@ namespace DidiDerDenker.BirdsEyeView.Database
                             string name = Convert.ToString(reader["Video_Name"]);
                             DateTime date = Operations.Convert.ToDateTime(Convert.ToString(reader["Video_Date"]), 
                                                                                    Convert.ToString(reader["Video_Time"]));
-                            Uri url;
-                            Uri.TryCreate(Convert.ToString(reader["Video_URL"]), UriKind.RelativeOrAbsolute, out url);
+                            string url = Convert.ToString(reader["Video_URL"]);
 
                             Class c = Class.GetClassByName(Convert.ToString(reader["Class_Name"]));
                             Project project = Project.GetProjectByName(Convert.ToString(reader["Project_Name"]));
                             int mode = Convert.ToInt32(reader["Mode_ID"]);
                             string episode = Convert.ToString(reader["Video_Episode"]);
                             Video video = new Video(id, name, date, url, c, project, mode, episode);
+                        }
+                    }
+                }
+            }
+        }
+
+        public void AddVideo(Video video)
+        {
+            using (SqlConnection connection = new SqlConnection(this.ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("INSERT INTO [VIDEOS] (Video_Name, Video_Date, Video_Time, Video_URL, Class_ID, Project_ID, Mode_ID, Video_Episode) " +
+                    "V", connection))
+                {
+                    connection.Open();
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            int id = Convert.ToInt32(reader["Video_ID"]);
+                            string name = Convert.ToString(reader["Video_Name"]);
+                            DateTime date = Operations.Convert.ToDateTime(Convert.ToString(reader["Video_Date"]),
+                                                                                   Convert.ToString(reader["Video_Time"]));
+                            string url = Convert.ToString(reader["Video_URL"]);
+
+                            Class c = Class.GetClassByName(Convert.ToString(reader["Class_Name"]));
+                            Project project = Project.GetProjectByName(Convert.ToString(reader["Project_Name"]));
+                            int mode = Convert.ToInt32(reader["Mode_ID"]);
+                            string episode = Convert.ToString(reader["Video_Episode"]);
+                            //Video video = new Video(id, name, date, url, c, project, mode, episode);
                             //collection.Add( new Video(id, name, date, url, classname, project, mode, episode));
                         }
                     }
                 }
             }
-            //return collection;
+        }
+
+        public void UpdateVideo(Video video)
+        {
+
         }
 
         public void GetAllProjects()

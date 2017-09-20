@@ -1,5 +1,7 @@
 ﻿using DidiDerDenker.BirdsEyeView.Client.ViewModels;
 using DidiDerDenker.BirdsEyeView.Client.Views;
+using DidiDerDenker.BirdsEyeView.Objects;
+using Syncfusion.UI.Xaml.Schedule;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -74,6 +76,38 @@ namespace DidiDerDenker.BirdsEyeView.Client
             this.Window.DataContext = vm;
 
             return this.Window.ShowDialog();
+        }
+
+        public void ShowVideoEditDialog(Video video)
+        {
+            VideoEditDialog dialog = new VideoEditDialog();
+
+            Video x = new Video(); x.Update(video); 
+
+            VideoEditDialogViewModel vm = new VideoEditDialogViewModel(video ?? new Video());
+
+            dialog.DataContext = vm;
+
+            bool? result = dialog.ShowDialog();
+
+            if (null != video)
+            {
+                if (result.GetValueOrDefault())
+                {
+                    video = x;
+                }
+            }
+            else
+            {
+                if (result.GetValueOrDefault())
+                {
+                    Video.Videos.Add(vm.SelectedVideo);
+                }
+            }
+
+            ((Views.BirdsEyeView)this.Window).Schedule.ItemsSource = null;
+            ((Views.BirdsEyeView)this.Window).Schedule.ItemsSource = Video.Videos;
+            
         }
         #endregion
     }

@@ -17,7 +17,7 @@ namespace DidiDerDenker.BirdsEyeView.Objects
         private string name;
         private DateTime date;
         private DateTime endDate;
-        private Uri url;
+        private string url;
         private Class c;
         private Project project;
         private int mode;
@@ -26,22 +26,12 @@ namespace DidiDerDenker.BirdsEyeView.Objects
 
         #region Constructor
         public Video()
-            : this(0, null, new DateTime(), new Uri(null), null, null, 0, null) { }
-
-        public Video(int id,
-                     string name,
-                     DateTime date,
-                     string url,
-                     Class c,
-                     Project project,
-                     int mode,
-                     string episode)
-            :this(id, name, date, new Uri(url), c, project, mode, episode) { }
+            : this(0, null, new DateTime(), null, null, null, 0, null) { }
 
         public Video(int id, 
                      string name, 
                      DateTime date,
-                     Uri url, 
+                     string url, 
                      Class c, 
                      Project project,
                      int mode,
@@ -102,7 +92,7 @@ namespace DidiDerDenker.BirdsEyeView.Objects
             }
         }
 
-        public Uri URL
+        public string URL
         {
             get { return this.url; }
             set
@@ -134,7 +124,7 @@ namespace DidiDerDenker.BirdsEyeView.Objects
         public int Mode
         {
             get { return this.mode; }
-            private set
+            set
             {
                 this.mode = value;
                 OnPropertyChanged();
@@ -143,7 +133,7 @@ namespace DidiDerDenker.BirdsEyeView.Objects
         public string Episode
         {
             get { return this.episode; }
-            private set
+            set
             {
                 this.episode = value;
                 OnPropertyChanged();
@@ -154,7 +144,12 @@ namespace DidiDerDenker.BirdsEyeView.Objects
         {
             get
             {
-                return this.Class.Color;
+                if(null != this.Class)
+                {
+                    return this.Class.Color;
+                }
+
+                return null;
             }
         }
 
@@ -162,14 +157,19 @@ namespace DidiDerDenker.BirdsEyeView.Objects
         {
             get
             {
-                if (String.IsNullOrEmpty(this.Project.ScheduleFormat))
+                if(null != this.Project && null != this.Class)
                 {
-                    return this.GetFormat(this.Class.ScheduleFormat);
+                    if (String.IsNullOrEmpty(this.Project.ScheduleFormat))
+                    {
+                        return this.GetFormat(this.Class.ScheduleFormat);
+                    }
+                    else
+                    {
+                        return this.GetFormat(this.Project.ScheduleFormat);
+                    }
                 }
-                else
-                {
-                    return this.GetFormat(this.Project.ScheduleFormat);
-                }
+
+                return null;
             }
         }
 
@@ -209,7 +209,6 @@ namespace DidiDerDenker.BirdsEyeView.Objects
 
         public override string ToString()
         {
-            //ToDo: Only for LetsPlays!
             if (String.IsNullOrEmpty(this.Project.Format))
             {
                 return this.GetFormat(this.Class.Format);
@@ -218,6 +217,11 @@ namespace DidiDerDenker.BirdsEyeView.Objects
             {
                 return this.GetFormat(this.Project.Format);
             }
+        }
+
+        public static Video GetVideoBySubjectAndDate(string name, DateTime date)
+        {
+            return Videos.Where(v => v.Subject.Equals(name) && v.Date.Equals(date)).FirstOrDefault();
         }
         #endregion
     }

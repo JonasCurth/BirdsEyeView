@@ -124,7 +124,10 @@
                                    TimeLineViewRowCount="-1" 
                                ItemsSource="{Binding Videos}"
                                    FirstDayOfWeek="Monday" 
-                                   NonWorkingDays="" HeaderBackground="{x:Null}" MajorTickTimeFormat="HH:mm">
+                                   NonWorkingDays="" HeaderBackground="{x:Null}" MajorTickTimeFormat="HH:mm"
+                               AppointmentEditorOpening="OnAppointmentEditorOpening"
+                               
+                               >
                 <shared:SfSchedule.AppointmentMapping>
                     <schedule:ScheduleAppointmentMapping
                         SubjectMapping="Subject"
