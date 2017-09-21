@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Data;
 using System.Windows.Input;
+using System.Collections.Specialized;
 
 namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
 {
@@ -58,6 +59,8 @@ namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
             {
                 project.PropertyChanged += this.OnFilterChanged;
             }
+
+            Video.Videos.CollectionChanged += OnCollectionChanged;
 
         }
         #endregion
@@ -160,5 +163,18 @@ namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
         }
         #endregion
 
+        #region Event
+
+        private void OnCollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
+        {
+            if(e.Action == NotifyCollectionChangedAction.Remove)
+            {
+                if(e.OldItems.Count >= 1)
+                {
+                    DatabaseConnection.Default.DeleteVideo(e.OldItems[0] as Video);
+                }
+            }
+        }
+        #endregion
     }
 }

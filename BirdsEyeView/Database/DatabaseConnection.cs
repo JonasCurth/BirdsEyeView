@@ -139,6 +139,20 @@ namespace DidiDerDenker.BirdsEyeView.Database
             }
         }
 
+        public void DeleteVideo(Video video)
+        {
+            using (SqlConnection connection = new SqlConnection(this.ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("DELETE FROM Videos WHERE Video_ID = @Video_ID", connection))
+                {
+                    cmd.Parameters.AddWithValue("@Video_ID", video.Id);
+
+                    connection.Open();
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
         public void GetAllProjects()
         {
             using (SqlConnection connection = new SqlConnection(this.ConnectionString))
