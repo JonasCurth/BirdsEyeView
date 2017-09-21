@@ -105,13 +105,13 @@ namespace DidiDerDenker.BirdsEyeView.Client
                 }
                 else
                 {
-                    if (x.Id == -1)
+                    if (vm.SelectedVideo.Id == -1)
                     {
-                        Database.DatabaseConnection.Default.AddVideo(x);
+                        Database.DatabaseConnection.Default.AddVideo(vm.SelectedVideo);
                     }
                     else
                     {
-                        Database.DatabaseConnection.Default.UpdateVideo(x);
+                        Database.DatabaseConnection.Default.UpdateVideo(vm.SelectedVideo);
                     }
                 }
             }

@@ -134,7 +134,7 @@ namespace DidiDerDenker.BirdsEyeView.Database
                     cmd.Parameters.AddWithValue("@Video_Episode", video.Episode);
 
                     connection.Open();
-                    cmd.ExecuteNonQuery();
+                    int x = cmd.ExecuteNonQuery();
                 }
             }
         }
