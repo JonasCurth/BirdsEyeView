@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -20,13 +21,16 @@ namespace DidiDerDenker.BirdsEyeView.Objects
         private string url;
         private Class c;
         private Project project;
-        private int mode;
+        private Task mode;
         private string episode;
         #endregion
 
         #region Constructor
         public Video()
-            : this(0, null, new DateTime(), null, null, null, 0, null) { }
+            : this(-1, null, new DateTime(), null, null, null, 0, null) { }
+
+        public Video(DateTime selectedDate)
+            : this(-1, null, selectedDate, null, null, null, 0, null) { }
 
         public Video(int id, 
                      string name, 
@@ -34,7 +38,7 @@ namespace DidiDerDenker.BirdsEyeView.Objects
                      string url, 
                      Class c, 
                      Project project,
-                     int mode,
+                     Task mode,
                      string episode)
         {
             this.Id = id;
@@ -47,7 +51,12 @@ namespace DidiDerDenker.BirdsEyeView.Objects
             this.Mode = mode;
             this.Episode = episode;
             
-            Videos.Add(this);
+            if(this.Name != null &&
+               this.Class != null &&
+               this.Project != null)
+            {
+                Videos.Add(this);
+            }
         }
         #endregion
 
@@ -121,7 +130,7 @@ namespace DidiDerDenker.BirdsEyeView.Objects
                 OnPropertyChanged();
             }
         }
-        public int Mode
+        public Task Mode
         {
             get { return this.mode; }
             set
@@ -183,23 +192,25 @@ namespace DidiDerDenker.BirdsEyeView.Objects
         #region private and protected methods
         private string GetFormat(string format)
         {
-            return format.Replace(FormatKey.ID, this.Id.ToString()).
-                    Replace(FormatKey.NAME, this.Name.ToString()).
-                    Replace(FormatKey.DATE, this.Date.ToString()).
-                    Replace(FormatKey.ENDDATE, this.EndDate.ToString()).
-                    Replace(FormatKey.URL, this.URL.ToString()).
-                    Replace(FormatKey.CLASS, this.Class.ToString()).
-                    Replace(FormatKey.PROJECT, this.Project.ToString()).
-                    Replace(FormatKey.MODE, this.Mode.ToString()).
-                    Replace(FormatKey.EPISODE, this.Episode.ToString());
+            return format.Replace(FormatKey.ID, this.Id.ToString() ?? String.Empty).
+                    Replace(FormatKey.NAME, this.Name ?? String.Empty).
+                    Replace(FormatKey.DATE, this.Date.ToString() ?? String.Empty).
+                    Replace(FormatKey.ENDDATE, this.EndDate.ToString() ?? String.Empty).
+                    Replace(FormatKey.URL, this.URL ?? String.Empty).
+                    Replace(FormatKey.CLASS, this.Class.ToString() ?? String.Empty).
+                    Replace(FormatKey.PROJECT, this.Project.ToString() ?? String.Empty).
+                    Replace(FormatKey.MODE, this.Mode.ToString() ?? String.Empty).
+                    Replace(FormatKey.EPISODE, this.Episode ?? String.Empty);
         }
         #endregion
 
         #region public methods
         public void Update(Video newVideo)
         {
+            this.Id = newVideo.Id;
             this.Name = newVideo.Name;
             this.Date = newVideo.Date;
+            this.EndDate = newVideo.EndDate;
             this.URL = newVideo.URL;
             this.Class = newVideo.Class;
             this.Project = newVideo.Project;

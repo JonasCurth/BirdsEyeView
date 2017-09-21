@@ -106,6 +106,20 @@ namespace DidiDerDenker.BirdsEyeView.Objects
             return null;
         }
 
+        public static Class GetClassById(string id)
+        {
+
+            foreach (Class c in Classes)
+            {
+                if (c.Id == id)
+                {
+                    return c;
+                }
+            }
+
+            return null;
+        }
+
         public override string ToString()
         {
             return this.Name;

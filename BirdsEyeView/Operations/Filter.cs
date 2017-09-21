@@ -12,7 +12,7 @@ namespace DidiDerDenker.BirdsEyeView.Operations
     {
         public static bool IsTask(Video video, Task task)
         {
-            return video.Mode == (int)task;
+            return video.Mode == task;
         }
 
         public static bool IsProject(Video video, ObservableCollection<Project> projectCollection)

@@ -78,13 +78,19 @@ namespace DidiDerDenker.BirdsEyeView.Client
             return this.Window.ShowDialog();
         }
 
-        public void ShowVideoEditDialog(Video video)
+        public void ShowVideoEditDialog(Video video, DateTime selectedTime)
         {
             VideoEditDialog dialog = new VideoEditDialog();
+            dialog.Owner = this.Window;
 
-            Video x = new Video(); x.Update(video); 
+            Video x = new Video();
 
-            VideoEditDialogViewModel vm = new VideoEditDialogViewModel(video ?? new Video());
+            if (null != video)
+            {
+                x.Update(video);
+            }
+
+            VideoEditDialogViewModel vm = new VideoEditDialogViewModel(video ?? new Video(selectedTime));
 
             dialog.DataContext = vm;
 
@@ -92,9 +98,21 @@ namespace DidiDerDenker.BirdsEyeView.Client
 
             if (null != video)
             {
-                if (result.GetValueOrDefault())
+                if (!result.GetValueOrDefault())
                 {
-                    video = x;
+                    Video.Videos.Remove(video);
+                    Video.Videos.Add(x);
+                }
+                else
+                {
+                    if (x.Id == -1)
+                    {
+                        Database.DatabaseConnection.Default.AddVideo(x);
+                    }
+                    else
+                    {
+                        Database.DatabaseConnection.Default.UpdateVideo(x);
+                    }
                 }
             }
             else
@@ -102,8 +120,12 @@ namespace DidiDerDenker.BirdsEyeView.Client
                 if (result.GetValueOrDefault())
                 {
                     Video.Videos.Add(vm.SelectedVideo);
+
+                    Database.DatabaseConnection.Default.AddVideo(vm.SelectedVideo);
                 }
             }
+
+            ((BirdsEyeViewInterfaceViewModel)this.Window.DataContext).RefreshView();
 
             ((Views.BirdsEyeView)this.Window).Schedule.ItemsSource = null;
             ((Views.BirdsEyeView)this.Window).Schedule.ItemsSource = Video.Videos;

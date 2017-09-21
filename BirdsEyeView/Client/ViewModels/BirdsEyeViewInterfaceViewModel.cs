@@ -32,7 +32,6 @@ namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
         #region constructor
         public BirdsEyeViewInterfaceViewModel()
         {
-            //this.SelectedDate = DateTime.Now;
             DatabaseConnection.Default.GetAllClasses();
             DatabaseConnection.Default.GetAllProjects();
             DatabaseConnection.Default.GetAllVideos();
@@ -45,10 +44,15 @@ namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
             this.RenderedList = new CollectionViewSource { Source = this.Videos }.View;
             this.UploadedList = new CollectionViewSource { Source = this.Videos }.View;
 
-            this.ScheduledList.Filter = new Predicate<object>(x => ((Video)x).Mode == (int)Task.Capture);
-            this.CapturedList.Filter = new Predicate<object>(x => ((Video)x).Mode == (int)Task.Render);
-            this.RenderedList.Filter = new Predicate<object>(x => ((Video)x).Mode == (int)Task.Upload);
-            this.UploadedList.Filter = new Predicate<object>(x => ((Video)x).Mode == (int)Task.Release);
+            this.ScheduledList.Filter = new Predicate<object>(x => ((Video)x).Mode == Task.Capture);
+            this.CapturedList.Filter = new Predicate<object>(x => ((Video)x).Mode == Task.Render);
+            this.RenderedList.Filter = new Predicate<object>(x => ((Video)x).Mode == Task.Upload);
+            this.UploadedList.Filter = new Predicate<object>(x => ((Video)x).Mode == Task.Release);
+
+            this.ScheduledList.SortDescriptions.Add(new SortDescription("Date", ListSortDirection.Ascending));
+            this.CapturedList.SortDescriptions.Add(new SortDescription("Date", ListSortDirection.Ascending));
+            this.RenderedList.SortDescriptions.Add(new SortDescription("Date", ListSortDirection.Ascending));
+            this.UploadedList.SortDescriptions.Add(new SortDescription("Date", ListSortDirection.Ascending));
 
             foreach (Project project in this.Projects)
             {
@@ -134,7 +138,13 @@ namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
         #endregion
 
         #region public methods
-
+        public void RefreshView()
+        {
+            this.ScheduledList.Refresh();
+            this.CapturedList.Refresh();
+            this.RenderedList.Refresh();
+            this.UploadedList.Refresh();
+        }
         #endregion
 
         #region events
@@ -142,7 +152,6 @@ namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
         {
             if (e.PropertyName.Equals("IsFilter"))
             {
-                this.Videos.Add(new Video(1, "Test", DateTime.Today, "http://youtube.com", Class.Classes.First(), Project.Projects.First(), 1, "001"));
                 this.ScheduledList.Filter = new Predicate<object>(x => Filter.SetFilter((Video)x, Task.Capture, this.Projects));
                 this.CapturedList.Filter = new Predicate<object>(x => Filter.SetFilter((Video)x, Task.Render, this.Projects));
                 this.RenderedList.Filter = new Predicate<object>(x => Filter.SetFilter((Video)x, Task.Upload, this.Projects));

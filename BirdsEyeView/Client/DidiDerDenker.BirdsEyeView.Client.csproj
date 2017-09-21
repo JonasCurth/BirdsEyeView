@@ -70,7 +70,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Syncfusion\Syncfusion.Schedule.Wpf.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.SfChart.WPF, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
     <Reference Include="Syncfusion.SfInput.WPF, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Syncfusion\Syncfusion.SfInput.WPF.dll</HintPath>

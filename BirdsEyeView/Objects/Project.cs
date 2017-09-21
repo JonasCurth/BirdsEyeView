@@ -13,6 +13,7 @@ namespace DidiDerDenker.BirdsEyeView.Objects
     {
         private string id;
         private string name;
+        private Class c;
         string format;
         string scheduleFormat;
 
@@ -20,12 +21,13 @@ namespace DidiDerDenker.BirdsEyeView.Objects
         private bool isFilter;
 
         public Project()
-        :this(null, null, null, null) { }
+        :this(null, null, null, null, null) { }
 
-        public Project(string id, string name, string format, string scheduleFormat)
+        public Project(string id, string name, Class c, string format, string scheduleFormat)
         {
             this.Id = id;
             this.Name = name;
+            this.Class = c;
             this.Format = format;
             this.ScheduleFormat = scheduleFormat;
             
@@ -42,6 +44,12 @@ namespace DidiDerDenker.BirdsEyeView.Objects
         {
             get { return this.name; }
             private set { this.name = value; }
+        }
+
+        public Class Class
+        {
+            get { return this.c; }
+            private set { this.c = value; }
         }
         public bool IsFilter
         {

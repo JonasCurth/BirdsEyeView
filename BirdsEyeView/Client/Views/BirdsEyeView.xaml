@@ -126,14 +126,17 @@
                                    FirstDayOfWeek="Monday" 
                                    NonWorkingDays="" HeaderBackground="{x:Null}" MajorTickTimeFormat="HH:mm"
                                AppointmentEditorOpening="OnAppointmentEditorOpening"
-                               
-                               >
+                               AppointmentDragging="OnAppointmentDragging"
+                               AppointmentStartResizing="OnAppointmentResizing"
+                               ContextMenuOpening="OnContextMenuOpen"
+                               AllowEditing="False">
                 <shared:SfSchedule.AppointmentMapping>
                     <schedule:ScheduleAppointmentMapping
                         SubjectMapping="Subject"
                         AppointmentBackgroundMapping="Color"
                         StartTimeMapping="Date"
                         EndTimeMapping="EndDate"
+                        
                         />
                 </shared:SfSchedule.AppointmentMapping>
             </shared:SfSchedule>

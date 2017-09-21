@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Data;
+using System.ComponentModel;
+using Syncfusion.Linq;
 
 namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
 {
@@ -12,12 +14,22 @@ namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
     {
         #region fields
         private Video selectedVideo;
+        private ListCollectionView projects;
+        private ListCollectionView classes;
         #endregion
 
         #region constructor
         public VideoEditDialogViewModel(Video selectedVideo)
         {
             this.SelectedVideo = selectedVideo;
+
+            this.Projects = (ListCollectionView)new CollectionViewSource { Source = Project.Projects }.View;
+            this.Classes = (ListCollectionView)new CollectionViewSource { Source = Class.Classes }.View;
+
+            this.SelectedVideo.PropertyChanged += this.OnSelectedVideoPropertyChanged;
+
+            this.Tasks = new ObservableCollection<Task>(Enum.GetValues(typeof(Task)).ToList<Task>());
+            this.Tasks.Remove(Task.Unknow);
         }
         #endregion
 
@@ -28,14 +40,29 @@ namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
             private set { this.selectedVideo = value; }
         }
 
-        public ObservableCollection<Project> Projects
+        public ObservableCollection<Task> Tasks
         {
-            get { return Project.Projects; }
+            get; 
         }
 
-        public ObservableCollection<Class> Classes
+        public ListCollectionView Projects
         {
-            get { return Class.Classes; }
+            get { return this.projects; }
+            set
+            {
+                this.projects = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public ListCollectionView Classes
+        {
+            get { return this.classes; }
+            set
+            {
+                this.classes = value;
+                OnPropertyChanged();
+            }
         }
 
         public DateTime Time
@@ -72,7 +99,17 @@ namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
         #endregion
 
         #region private and protected methods
-
+        private void OnSelectedVideoPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName.Equals("Class"))
+            {
+                this.Projects.Filter = new Predicate<object>(x => ((Project)x).Class == this.SelectedVideo.Class);
+            }
+            if (e.PropertyName.Equals("Date"))
+            {
+                this.SelectedVideo.EndDate = this.SelectedVideo.Date.AddHours(1);
+            }
+        }
         #endregion
 
         #region public methods

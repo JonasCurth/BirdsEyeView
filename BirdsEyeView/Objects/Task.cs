@@ -12,6 +12,8 @@ namespace DidiDerDenker.BirdsEyeView.Objects
         Render = 2,
         Upload = 3,
         Release = 4,
-        Done = 5
+        Done = 5,
+        Unknow = 0
+
     }
 }

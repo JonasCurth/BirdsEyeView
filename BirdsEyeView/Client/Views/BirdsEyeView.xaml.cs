@@ -30,6 +30,7 @@ namespace DidiDerDenker.BirdsEyeView.Client.Views
         public BirdsEyeView()
         {
             InitializeComponent();
+            
         }
 
         private void PropertyChanged(object sender, PropertyChangedEventArgs e)
@@ -57,8 +58,23 @@ namespace DidiDerDenker.BirdsEyeView.Client.Views
         private void OnAppointmentEditorOpening(object sender, Syncfusion.UI.Xaml.Schedule.AppointmentEditorOpeningEventArgs e)
         {
             e.Cancel = true;
+            
+            App.AppClient.ShowVideoEditDialog((Video)e.Appointment, e.StartTime);
+        }
 
-            App.AppClient.ShowVideoEditDialog((ScheduleAppointment)e.Appointment);
+        private void OnAppointmentDragging(object sender, Syncfusion.UI.Xaml.Schedule.AppointmentDraggingEventArgs e)
+        {
+            e.Cancel = true;
+        }
+
+        private void OnAppointmentResizing(object sender, Syncfusion.UI.Xaml.Schedule.AppointmentStartResizingEventArgs e)
+        {
+            e.Cancel = true;
+        }
+
+        private void OnContextMenuOpen(object sender, Syncfusion.UI.Xaml.Schedule.ContextMenuOpeningEventArgs e)
+        {
+            e.Cancel = true;
         }
     }
 }
