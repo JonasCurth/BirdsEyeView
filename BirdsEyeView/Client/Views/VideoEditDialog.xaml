@@ -100,7 +100,7 @@
                       ItemsSource="{Binding Projects}"
                       SelectedItem="{Binding SelectedVideo.Project}"/>
 
-            <TextBlock Text="Folge "
+            <TextBlock Text="Folge*"
                        HorizontalAlignment="Right"
                        VerticalAlignment="Center"
                        Grid.Row="2"
