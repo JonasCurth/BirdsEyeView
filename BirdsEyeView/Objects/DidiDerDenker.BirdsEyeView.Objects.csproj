@@ -54,6 +54,8 @@
     <Compile Include="Class.cs" />
     <Compile Include="Collections\ProjectCollection.cs" />
     <Compile Include="Collections\VideoCollection.cs" />
+    <Compile Include="Configuration.cs" />
+    <Compile Include="ConfigurationManager.cs" />
     <Compile Include="DatabaseObject.cs" />
     <Compile Include="FormatKey.cs" />
     <Compile Include="Language.cs" />

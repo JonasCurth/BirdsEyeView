@@ -234,6 +234,11 @@ namespace DidiDerDenker.BirdsEyeView.Objects
         {
             return Videos.Where(v => v.Subject.Equals(name) && v.Date.Equals(date)).FirstOrDefault();
         }
+
+        public static Video GetVideoById(int id)
+        {
+            return Videos.Where(v => v.Id.Equals(id)).FirstOrDefault();
+        }
         #endregion
     }
 }

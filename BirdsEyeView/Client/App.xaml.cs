@@ -100,8 +100,7 @@ namespace DidiDerDenker.BirdsEyeView.Client
             {
                 if (!result.GetValueOrDefault())
                 {
-                    Video.Videos.Remove(video);
-                    Video.Videos.Add(x);
+                    Video.GetVideoById(video.Id).Update(x);
                 }
                 else
                 {

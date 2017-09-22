@@ -30,6 +30,37 @@ namespace DidiDerDenker.BirdsEyeView.Database
                 throw new Exception("Can not connect to Server.");
             }
         }
+
+        public DatabaseConnection(string servername, string username, string password, string database)
+        {
+            SqlConnectionStringBuilder connectionString = new SqlConnectionStringBuilder();
+            connectionString.DataSource = servername;
+            connectionString.UserID = username;
+            connectionString.Password = password;
+            connectionString.InitialCatalog = database;
+
+            this.ConnectionString = connectionString.ToString();
+
+            if (!this.TestConnection())
+            {
+                throw new Exception("Can not connect to Server.");
+            }
+        }
+
+        public DatabaseConnection(string servername, string database, bool integratedauthentification)
+        {
+            SqlConnectionStringBuilder connectionString = new SqlConnectionStringBuilder();
+            connectionString.DataSource = servername;
+            connectionString.InitialCatalog = database;
+            connectionString.IntegratedSecurity = true;
+
+            this.ConnectionString = connectionString.ToString();
+
+            if (!this.TestConnection())
+            {
+                throw new Exception("Can not connect to Server.");
+            }
+        }
         #endregion
 
         #region public properties
@@ -39,14 +70,19 @@ namespace DidiDerDenker.BirdsEyeView.Database
             {
                 if (null == defaultInstance)
                 {
+#if DEBUG
+                    defaultInstance = new DatabaseConnection(@".\SQLEXPRESS", "DD_DATABASE", true);
+#else
                     defaultInstance = new DatabaseConnection();
+#endif
+
                 }
                 return defaultInstance;
             }
         }
-        #endregion
+#endregion
 
-        #region private/protected methods
+#region private/protected methods
         private bool TestConnection()
         {
             bool success = false;
@@ -60,9 +96,9 @@ namespace DidiDerDenker.BirdsEyeView.Database
 
             return success;
         }
-        #endregion
+#endregion
 
-        #region public methods
+#region public methods
         public void GetAllVideos()
         {
             using (SqlConnection connection = new SqlConnection(this.ConnectionString))
@@ -110,7 +146,7 @@ namespace DidiDerDenker.BirdsEyeView.Database
                     cmd.Parameters.AddWithValue("@Video_Episode", video.Episode);
 
                     connection.Open();
-                    cmd.ExecuteNonQuery();
+                   video.Id = (int)cmd.ExecuteScalar();
                 }
             }
         }
@@ -134,7 +170,7 @@ namespace DidiDerDenker.BirdsEyeView.Database
                     cmd.Parameters.AddWithValue("@Video_Episode", video.Episode);
 
                     connection.Open();
-                    int x = cmd.ExecuteNonQuery();
+                    cmd.ExecuteNonQuery();
                 }
             }
         }
@@ -202,6 +238,6 @@ namespace DidiDerDenker.BirdsEyeView.Database
             }
         }
 
-        #endregion
+#endregion
     }
 }
