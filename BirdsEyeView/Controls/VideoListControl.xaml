@@ -44,7 +44,15 @@
                      Foreground="Black"
                      IsSynchronizedWithCurrentItem="True"
                      ScrollViewer.HorizontalScrollBarVisibility="Disabled"
-                     Grid.Row="1"/>
+                     Grid.Row="1">
+                <ListBox.ItemContainerStyle>
+                    <Style TargetType="{x:Type ListBoxItem}"
+                           BasedOn="{StaticResource {x:Type ListBoxItem}}">
+                        <EventSetter Event="MouseDoubleClick" Handler="OnMouseDoubleClick"/>
+                    </Style>
+                </ListBox.ItemContainerStyle>
+            </ListBox>
+                     
 
         </Border>
 

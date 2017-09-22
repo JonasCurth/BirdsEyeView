@@ -25,6 +25,8 @@ namespace DidiDerDenker.BirdsEyeView.Controls
         public static DependencyProperty FilteredListProperty =
             DependencyProperty.Register("FilteredList", typeof(ListCollectionView), typeof(VideoListControl));
 
+        public event MouseButtonEventHandler LeftMouseButtonDoubleClick;
+
 
         public VideoListControl()
         {
@@ -41,6 +43,13 @@ namespace DidiDerDenker.BirdsEyeView.Controls
         {
             get { return (ListCollectionView)this.GetValue(FilteredListProperty); }
             set { this.SetValue(FilteredListProperty, value); }
+        }
+        private void OnMouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if(e.ChangedButton == MouseButton.Left)
+            {
+                LeftMouseButtonDoubleClick?.Invoke(sender, e);
+            }
         }
     }
 }

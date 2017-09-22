@@ -29,8 +29,8 @@ namespace DidiDerDenker.BirdsEyeView.Objects
         public Video()
             : this(-1, null, new DateTime(), null, null, null, 0, null) { }
 
-        public Video(DateTime selectedDate)
-            : this(-1, null, selectedDate, null, null, null, 0, null) { }
+        public Video(DateTime selectedDate, Task task)
+            : this(-1, null, selectedDate, null, null, null, task, null) { }
 
         public Video(int id, 
                      string name, 
