@@ -55,6 +55,9 @@
   <PropertyGroup>
     <StartupObject>DidiDerDenker.BirdsEyeView.Client.App</StartupObject>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="PresentationFramework.Luna" />
     <Reference Include="ReachFramework" />
@@ -217,4 +220,8 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
 </Project>
