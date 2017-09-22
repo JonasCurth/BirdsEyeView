@@ -28,6 +28,15 @@ namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
 
             this.SelectedVideo.PropertyChanged += this.OnSelectedVideoPropertyChanged;
 
+            this.Classes.SortDescriptions.Add(new SortDescription("Name", ListSortDirection.Ascending));
+            this.Projects.SortDescriptions.Add(new SortDescription("Name", ListSortDirection.Ascending));
+
+            if(this.SelectedVideo.Class == null)
+            {
+                this.SelectedVideo.Class = Class.Classes.OrderBy(c => c.Name).LastOrDefault();
+                this.SelectedVideo.Project = Project.Projects.Where(c => c.Class == this.SelectedVideo.Class).OrderBy(c => c.Name).FirstOrDefault();
+            }
+
             this.Tasks = new ObservableCollection<Task>(Enum.GetValues(typeof(Task)).ToList<Task>());
             this.Tasks.Remove(Task.Unknow);
         }

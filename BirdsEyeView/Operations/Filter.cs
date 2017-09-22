@@ -17,8 +17,8 @@ namespace DidiDerDenker.BirdsEyeView.Operations
 
         public static bool IsProject(Video video, ObservableCollection<Project> projectCollection)
         {
-            return projectCollection.Any(p => video.Project.Equals(p.Name) && p.IsFilter) 
-                || projectCollection.All(p => !p.IsFilter);
+            return projectCollection.Any(p => video.Project == p && p.IsFilter) || 
+                    projectCollection.All(p => !p.IsFilter);
         }
         
         public static bool SetFilter(Video video, Task task, ObservableCollection<Project> projectCollection)
