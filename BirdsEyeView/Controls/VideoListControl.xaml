@@ -38,13 +38,20 @@
                 BorderBrush="#b2b2b2"
                 Grid.Row="1">
 
-            <ListBox Background="Transparent"
+            <ListBox x:Name="listbox"
+                     Background="Transparent"
                      ItemsSource="{Binding FilteredList, RelativeSource={RelativeSource AncestorType=UserControl}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                      BorderThickness="0"
                      Foreground="Black"
                      IsSynchronizedWithCurrentItem="True"
                      ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                      Grid.Row="1">
+                <ListBox.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Video Kopieren" Click="OnCopyClick"/>
+                        <MenuItem Header="Video löschen" Click="OnDeleteClick"/>
+                    </ContextMenu>
+                </ListBox.ContextMenu>
                 <ListBox.ItemContainerStyle>
                     <Style TargetType="{x:Type ListBoxItem}"
                            BasedOn="{StaticResource {x:Type ListBoxItem}}">

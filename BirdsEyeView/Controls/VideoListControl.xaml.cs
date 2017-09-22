@@ -51,5 +51,19 @@ namespace DidiDerDenker.BirdsEyeView.Controls
                 LeftMouseButtonDoubleClick?.Invoke(sender, e);
             }
         }
+
+        private void OnCopyClick(object sender, RoutedEventArgs e)
+        {
+            Video video = (Video)this.listbox.SelectedItem;
+
+            Clipboard.SetText(video.ToString());
+        }
+
+        private void OnDeleteClick(object sender, RoutedEventArgs e)
+        {
+            Video video = (Video)this.listbox.SelectedItem;
+
+            Video.Videos.Remove(video);
+        }
     }
 }
