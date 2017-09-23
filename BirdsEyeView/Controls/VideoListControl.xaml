@@ -8,7 +8,8 @@
              xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Luna" 
              xmlns:Converter="clr-namespace:DidiDerDenker.BirdsEyeView.Converter;assembly=DidiDerDenker.BirdsEyeView.Converter"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="300" d:DesignWidth="300"
+             LostFocus="FocusLost">
 
     <DockPanel>
         
@@ -48,8 +49,18 @@
                      Grid.Row="1">
                 <ListBox.ContextMenu>
                     <ContextMenu>
-                        <MenuItem Header="Video Kopieren" Click="OnCopyClick"/>
-                        <MenuItem Header="Video löschen" Click="OnDeleteClick"/>
+                        <MenuItem Header="Video planen" Command="{Binding PlanVideoCommand}"/>
+                        <MenuItem Header="Video bearbeiten" Command="{Binding EditVideoCommand}"
+                                  CommandParameter="{Binding RelativeSource={RelativeSource AncestorType={x:Type ContextMenu}},
+                                                             Path=PlacementTarget.SelectedItem}"/>
+                        <MenuItem Header="Video kopieren" 
+                                  Command="{Binding CopyVideoCommand}" 
+                                  CommandParameter="{Binding RelativeSource={RelativeSource AncestorType={x:Type ContextMenu}},
+                                                            Path=PlacementTarget.SelectedItem}"/>
+                        <MenuItem Header="Video löschen" 
+                                  Command="{Binding DeleteVideoCommand}" 
+                                  CommandParameter="{Binding RelativeSource={RelativeSource AncestorType={x:Type ContextMenu}},
+                                                             Path=PlacementTarget.SelectedItem}"/>
                     </ContextMenu>
                 </ListBox.ContextMenu>
                 <ListBox.ItemContainerStyle>
@@ -58,7 +69,7 @@
                         <EventSetter Event="MouseDoubleClick" Handler="OnMouseDoubleClick"/>
                     </Style>
                 </ListBox.ItemContainerStyle>
-            </ListBox>
+             </ListBox>
                      
 
         </Border>

@@ -12,6 +12,7 @@ using System.Text;
 using System.Windows.Data;
 using System.Windows.Input;
 using System.Collections.Specialized;
+using System.Windows;
 
 namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
 {
@@ -28,6 +29,11 @@ namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
         private ICollectionView capturedList;
         private ICollectionView renderedList;
         private ICollectionView uploadedList;
+
+        private DelegateCommand<Video> copyVideoCommand;
+        private DelegateCommand<Video> editVideoCommand;
+        private DelegateCommand<Video> deleteVideoCommand;
+        private DelegateCommand planVideoCommand;
         #endregion
 
         #region constructor
@@ -60,7 +66,7 @@ namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
                 project.PropertyChanged += this.OnFilterChanged;
             }
 
-            Video.Videos.CollectionChanged += OnCollectionChanged;
+            Video.Videos.CollectionChanged += this.OnCollectionChanged;
 
         }
         #endregion
@@ -137,7 +143,90 @@ namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
         }
         #endregion
 
+        #region commands
+        public ICommand CopyVideoCommand
+        {
+            get
+            {
+                if(null == this.copyVideoCommand)
+                {
+                    this.copyVideoCommand = new DelegateCommand<Video>(this.CopyVideo, this.ParameterIsVideo);
+                }
+
+                return this.copyVideoCommand;
+            }
+        }
+
+        public ICommand PlanVideoCommand
+        {
+            get
+            {
+                if (null == this.planVideoCommand)
+                {
+                    this.planVideoCommand = new DelegateCommand(this.PlanVideo);
+                }
+
+                return this.planVideoCommand;
+            }
+        }
+
+        public ICommand EditVideoCommand
+        {
+            get
+            {
+                if (null == this.editVideoCommand)
+                {
+                    this.editVideoCommand = new DelegateCommand<Video>(this.EditVideo, this.ParameterIsVideo);
+                }
+
+                return this.editVideoCommand;
+            }
+        }
+
+        
+
+        public ICommand DeleteVideoCommand
+        {
+            get
+            {
+                if (null == this.deleteVideoCommand)
+                {
+                    this.deleteVideoCommand = new DelegateCommand<Video>(this.DeleteVideo, this.ParameterIsVideo);
+                }
+
+                return this.deleteVideoCommand;
+            }
+        }
+
+        
+        #endregion
+
         #region private methods
+
+        private bool ParameterIsVideo(Video video)
+        {
+            return null != video;
+        }
+
+        private void CopyVideo(Video video)
+        {
+            Clipboard.SetText(video.ToString());
+        }
+
+        private void PlanVideo()
+        {
+            App.AppClient.ShowVideoEditDialog(null, DateTime.Now);
+        }
+
+        private void EditVideo(Video video)
+        {
+            App.AppClient.ShowVideoEditDialog(video, video.Date);
+        }
+
+        private void DeleteVideo(Video video)
+        {
+            this.Videos.Remove(video);
+        }
         #endregion
 
         #region public methods

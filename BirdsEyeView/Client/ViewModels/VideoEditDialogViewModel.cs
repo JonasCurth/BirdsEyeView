@@ -28,13 +28,12 @@ namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
 
             this.SelectedVideo.PropertyChanged += this.OnSelectedVideoPropertyChanged;
 
-            this.Classes.SortDescriptions.Add(new SortDescription("Name", ListSortDirection.Ascending));
+            this.Classes.SortDescriptions.Add(new SortDescription("Name", ListSortDirection.Descending));
             this.Projects.SortDescriptions.Add(new SortDescription("Name", ListSortDirection.Ascending));
 
             if(this.SelectedVideo.Class == null)
             {
                 this.SelectedVideo.Class = Class.Classes.OrderBy(c => c.Name).LastOrDefault();
-                this.SelectedVideo.Project = Project.Projects.Where(c => c.Class == this.SelectedVideo.Class).OrderBy(c => c.Name).FirstOrDefault();
             }
 
             this.Tasks = new ObservableCollection<Task>(Enum.GetValues(typeof(Task)).ToList<Task>());
@@ -74,17 +73,17 @@ namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
             }
         }
 
-        public DateTime Time
+        public TimeSpan Time
         {
-            get { return this.SelectedVideo.Date; }
+            get { return new TimeSpan(this.SelectedVideo.Date.Hour, this.SelectedVideo.Date.Minute, 0); }
             set
             {
                 this.SelectedVideo.Date = new DateTime(this.SelectedVideo.Date.Year,
                                                         this.SelectedVideo.Date.Month,
                                                         this.SelectedVideo.Date.Day,
-                                                        value.Hour,
-                                                        value.Minute,
-                                                        value.Second);
+                                                        value.Hours,
+                                                        value.Minutes,
+                                                        value.Seconds);
 
                 OnPropertyChanged();
             }

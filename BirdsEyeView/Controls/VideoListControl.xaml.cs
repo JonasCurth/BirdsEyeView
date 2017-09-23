@@ -52,18 +52,9 @@ namespace DidiDerDenker.BirdsEyeView.Controls
             }
         }
 
-        private void OnCopyClick(object sender, RoutedEventArgs e)
+        private void FocusLost(object sender, RoutedEventArgs e)
         {
-            Video video = (Video)this.listbox.SelectedItem;
-
-            Clipboard.SetText(video.ToString());
-        }
-
-        private void OnDeleteClick(object sender, RoutedEventArgs e)
-        {
-            Video video = (Video)this.listbox.SelectedItem;
-
-            Video.Videos.Remove(video);
+            this.listbox.UnselectAll();
         }
     }
 }

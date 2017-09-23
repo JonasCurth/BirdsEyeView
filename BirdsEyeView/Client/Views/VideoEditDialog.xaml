@@ -146,7 +146,7 @@
                                      Format="hh:mm" 
                                      MinValue="00:00" 
                                      MaxValue="23:59:0"
-                                     Text="{Binding Time, Converter={StaticResource String2DateTimeConverter}}"/>
+                                     Value="{Binding Time, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
             </Grid>
 
             <TextBlock Text="Status*"

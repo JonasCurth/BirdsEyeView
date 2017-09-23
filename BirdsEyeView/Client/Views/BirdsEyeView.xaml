@@ -28,7 +28,8 @@
                          FontFamily="{DynamicResource StandardFontFamily}"
                          FontSize="{DynamicResource StandardFontSize}"
                          FontWeight="{DynamicResource StandardFontWeight}"
-                         Loaded="OnLoaded">
+                         Loaded="OnLoaded"
+                         WindowState="Maximized">
 
     <!--<shared:ChromelessWindow.DataContext>
         <StaticResource ResourceKey="BirdsEyeViewInterfaceViewModel"/>

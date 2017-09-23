@@ -77,7 +77,7 @@ namespace DidiDerDenker.BirdsEyeView.Client.Views
             e.Cancel = true;
         }
 
-        private void OnItemDoubleClick(object sender, MouseButtonEventArgs e)
+        private void OnItemDoubleClick(object sender, RoutedEventArgs e)
         {
             Video video = (Video)((ListBoxItem)sender).Content;
 
