@@ -28,7 +28,8 @@
 
         <converter:StringToDateTimeConverter x:Key="String2DateTimeConverter"/>
         <converter:LanguageConverter x:Key="LanguageConverter"/>
-        
+        <BooleanToVisibilityConverter x:Key="Bool2VisibilityConverter"/>
+
         <Style TargetType="TextBox">
             <Style.Setters>
                 <Setter Property="Height" Value="22"/>
@@ -49,6 +50,12 @@
                     Width="100"
                     Margin="5"
                     Click="OnCancelClick"/>
+            <Button Content="Löschen"
+                    Command="{Binding DeleteCommand}"
+                    Width="100"
+                    Margin="5"
+                    Visibility="{Binding IsEditmode, Converter={StaticResource Bool2VisibilityConverter}}"
+                    Click="OnDeleteClick"/>
             <Button Content="Speichern"
                     Width="100"
                     Margin="5" 

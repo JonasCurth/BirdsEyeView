@@ -98,11 +98,11 @@ namespace DidiDerDenker.BirdsEyeView.Client
 
             if (null != video)
             {
-                if (!result.GetValueOrDefault())
+                if (result == true)
                 {
                     Video.GetVideoById(video.Id).Update(x);
                 }
-                else
+                else if(result == false)
                 {
                     if (vm.SelectedVideo.Id == -1)
                     {

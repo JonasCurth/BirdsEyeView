@@ -38,5 +38,11 @@ namespace DidiDerDenker.BirdsEyeView.Client.Views
 
             this.Close();
         }
+
+        private void OnDeleteClick(object sender, RoutedEventArgs e)
+        {
+            this.DialogResult = false;
+            this.Close();
+        }
     }
 }

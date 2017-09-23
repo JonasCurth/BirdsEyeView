@@ -117,11 +117,9 @@
                                TimeInterval="OneHour"
                                    WorkStartHour="15"
                                    WorkEndHour="24"
-                                   ScheduleType="Week" 
-                                   ShowNonWorkingHours="True"
+                                   ScheduleType="Week"
                                    TimeMode="TwentyFourHours" 
                                    IsHighLightWorkingHours="True" 
-                                   ShowAllDay="False" 
                                    TimeLineViewRowCount="-1" 
                                ItemsSource="{Binding Videos}"
                                    FirstDayOfWeek="Monday" 
@@ -130,7 +128,10 @@
                                AppointmentDragging="OnAppointmentDragging"
                                AppointmentStartResizing="OnAppointmentResizing"
                                ContextMenuOpening="OnContextMenuOpen"
-                               AllowEditing="False">
+                               AllowEditing="False" 
+                               CurrentTimeIndicatorVisibility="Visible" 
+                               HeaderDateFormat="ddd. dd.MM" 
+                               ShowAllDay="False">
                 <shared:SfSchedule.AppointmentMapping>
                     <schedule:ScheduleAppointmentMapping
                         SubjectMapping="Subject"

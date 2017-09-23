@@ -7,6 +7,8 @@ using System.Text;
 using System.Windows.Data;
 using System.ComponentModel;
 using Syncfusion.Linq;
+using DidiDerDenker.BirdsEyeView.Command;
+using System.Windows.Input;
 
 namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
 {
@@ -16,12 +18,17 @@ namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
         private Video selectedVideo;
         private ListCollectionView projects;
         private ListCollectionView classes;
+
+        private DelegateCommand deleteCommand;
+        
         #endregion
 
         #region constructor
         public VideoEditDialogViewModel(Video selectedVideo)
         {
             this.SelectedVideo = selectedVideo;
+
+            this.IsEditmode = this.SelectedVideo.Class != null && this.SelectedVideo.Project != null;
 
             this.Projects = (ListCollectionView)new CollectionViewSource { Source = Project.Projects }.View;
             this.Classes = (ListCollectionView)new CollectionViewSource { Source = Class.Classes }.View;
@@ -46,6 +53,12 @@ namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
         {
             get { return this.selectedVideo; }
             private set { this.selectedVideo = value; }
+        }
+
+        public bool IsEditmode
+        {
+            get;
+            set;
         }
 
         public ObservableCollection<Task> Tasks
@@ -104,6 +117,19 @@ namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
                 OnPropertyChanged();
             }
         }
+
+        public ICommand DeleteCommand
+        {
+            get
+            {
+                if(null == this.deleteCommand)
+                {
+                    this.deleteCommand = new DelegateCommand(this.Delete, this.CanDelete);
+                }
+
+                return this.deleteCommand;
+            }
+        }
         #endregion
 
         #region private and protected methods
@@ -117,6 +143,16 @@ namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
             {
                 this.SelectedVideo.EndDate = this.SelectedVideo.Date.AddHours(1);
             }
+        }
+
+        private bool CanDelete()
+        {
+            return this.IsEditmode;
+        }
+
+        public void Delete()
+        {
+            Video.Videos.Remove(this.SelectedVideo);
         }
         #endregion
 

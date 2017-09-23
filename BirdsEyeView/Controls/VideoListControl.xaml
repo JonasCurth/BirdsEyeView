@@ -67,6 +67,16 @@
                     <Style TargetType="{x:Type ListBoxItem}"
                            BasedOn="{StaticResource {x:Type ListBoxItem}}">
                         <EventSetter Event="MouseDoubleClick" Handler="OnMouseDoubleClick"/>
+                        <Setter Property="ToolTip">
+                            <Setter.Value>
+                                <ToolTip>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding Date, StringFormat=dd.MM.yyyy:}" Margin="0 0 3 0"/>
+                                        <TextBlock Text="{Binding}"/>
+                                    </StackPanel>
+                                </ToolTip>
+                            </Setter.Value>
+                        </Setter>
                     </Style>
                 </ListBox.ItemContainerStyle>
              </ListBox>
