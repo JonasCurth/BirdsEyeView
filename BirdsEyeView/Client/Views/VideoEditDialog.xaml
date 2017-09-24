@@ -166,8 +166,13 @@
                       Margin="5"
                       Grid.Row="5"
                       Grid.Column="2"
-                      ItemsSource="{Binding Tasks, Mode=OneWay}"
-                      SelectedItem="{Binding SelectedVideo.Mode}">
+                      ItemsSource="{Binding Tasks, Converter={StaticResource LanguageConverter}}"
+                      SelectedItem="{Binding SelectedVideo.Mode, Converter={StaticResource LanguageConverter}}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Value}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
             </ComboBox>
 
             <TextBlock Text="Link "

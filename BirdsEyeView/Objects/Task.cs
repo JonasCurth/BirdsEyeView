@@ -8,11 +8,11 @@ namespace DidiDerDenker.BirdsEyeView.Objects
 {
     public enum Task
     {
-        Capture = 1,
-        Render = 2,
-        Upload = 3,
-        Release = 4,
-        Done = 5,
+        Scheduled = 1,
+        Captured = 2,
+        Rendered = 3,
+        Uploaded = 4,
+        Released = 5,
         Unknow = 0
 
     }

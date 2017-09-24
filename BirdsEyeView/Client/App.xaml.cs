@@ -90,7 +90,7 @@ namespace DidiDerDenker.BirdsEyeView.Client
                 x.Update(video);
             }
 
-            VideoEditDialogViewModel vm = new VideoEditDialogViewModel(video ?? new Video(selectedTime, Objects.Task.Capture));
+            VideoEditDialogViewModel vm = new VideoEditDialogViewModel(video ?? new Video(selectedTime, Objects.Task.Scheduled));
 
             dialog.DataContext = vm;
 

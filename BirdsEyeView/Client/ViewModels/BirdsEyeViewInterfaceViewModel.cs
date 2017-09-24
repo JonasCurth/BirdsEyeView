@@ -51,10 +51,10 @@ namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
             this.RenderedList = new CollectionViewSource { Source = this.Videos }.View;
             this.UploadedList = new CollectionViewSource { Source = this.Videos }.View;
 
-            this.ScheduledList.Filter = new Predicate<object>(x => ((Video)x).Mode == Task.Capture);
-            this.CapturedList.Filter = new Predicate<object>(x => ((Video)x).Mode == Task.Render);
-            this.RenderedList.Filter = new Predicate<object>(x => ((Video)x).Mode == Task.Upload);
-            this.UploadedList.Filter = new Predicate<object>(x => ((Video)x).Mode == Task.Release);
+            this.ScheduledList.Filter = new Predicate<object>(x => ((Video)x).Mode == Task.Scheduled);
+            this.CapturedList.Filter = new Predicate<object>(x => ((Video)x).Mode == Task.Captured);
+            this.RenderedList.Filter = new Predicate<object>(x => ((Video)x).Mode == Task.Rendered);
+            this.UploadedList.Filter = new Predicate<object>(x => ((Video)x).Mode == Task.Uploaded);
 
             this.ScheduledList.SortDescriptions.Add(new SortDescription("Date", ListSortDirection.Ascending));
             this.CapturedList.SortDescriptions.Add(new SortDescription("Date", ListSortDirection.Ascending));
@@ -244,10 +244,10 @@ namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
         {
             if (e.PropertyName.Equals("IsFilter"))
             {
-                this.ScheduledList.Filter = new Predicate<object>(x => Filter.SetFilter((Video)x, Task.Capture, this.Projects));
-                this.CapturedList.Filter = new Predicate<object>(x => Filter.SetFilter((Video)x, Task.Render, this.Projects));
-                this.RenderedList.Filter = new Predicate<object>(x => Filter.SetFilter((Video)x, Task.Upload, this.Projects));
-                this.UploadedList.Filter = new Predicate<object>(x => Filter.SetFilter((Video)x, Task.Release, this.Projects));
+                this.ScheduledList.Filter = new Predicate<object>(x => Filter.SetFilter((Video)x, Task.Scheduled, this.Projects));
+                this.CapturedList.Filter = new Predicate<object>(x => Filter.SetFilter((Video)x, Task.Captured, this.Projects));
+                this.RenderedList.Filter = new Predicate<object>(x => Filter.SetFilter((Video)x, Task.Rendered, this.Projects));
+                this.UploadedList.Filter = new Predicate<object>(x => Filter.SetFilter((Video)x, Task.Uploaded, this.Projects));
             }
         }
         #endregion

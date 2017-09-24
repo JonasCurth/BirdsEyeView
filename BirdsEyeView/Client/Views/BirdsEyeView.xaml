@@ -159,22 +159,22 @@
                 
                 <controls:VideoListControl Grid.Column="1"
                                            Margin="10" 
-                                           Task="{DynamicResource Task_Capture}"
+                                           Task="{DynamicResource Task_Scheduled}"
                                            FilteredList="{Binding ScheduledList}"
                                            LeftMouseButtonDoubleClick="OnItemDoubleClick"/>
                 <controls:VideoListControl Grid.Column="2"
                                            Margin="10"
-                                           Task="{DynamicResource Task_Render}"
+                                           Task="{DynamicResource Task_Captured}"
                                            FilteredList="{Binding CapturedList}"
                                            LeftMouseButtonDoubleClick="OnItemDoubleClick"/>
                 <controls:VideoListControl Grid.Column="3"
                                            Margin="10"
-                                           Task="{DynamicResource Task_Upload}"
+                                           Task="{DynamicResource Task_Rendered}"
                                            FilteredList="{Binding RenderedList}"
                                            LeftMouseButtonDoubleClick="OnItemDoubleClick"/>
                 <controls:VideoListControl Grid.Column="4"
                                            Margin="10"
-                                           Task="{DynamicResource Task_Release}"
+                                           Task="{DynamicResource Task_Uploaded}"
                                            FilteredList="{Binding UploadedList}"
                                            LeftMouseButtonDoubleClick="OnItemDoubleClick"/>
                 

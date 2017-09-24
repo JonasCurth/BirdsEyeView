@@ -63,7 +63,8 @@ namespace DidiDerDenker.BirdsEyeView.Client.ViewModels
 
         public ObservableCollection<Task> Tasks
         {
-            get; 
+            get;
+            set;
         }
 
         public ListCollectionView Projects

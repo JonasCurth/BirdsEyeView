@@ -13,26 +13,26 @@
                    x:Key="PlanVideo">Video planen</system:String>
     
     <!-- Tasks-->
+    <system:String x:Uid="Task_Scheduled_past"
+                   x:Key="Task_Scheduled_past">Geplant</system:String>
     <system:String x:Uid="Task_Scheduled"
-                   x:Key="Task_Scheduled">Geplant</system:String>
-    <system:String x:Uid="Task_Capture"
-                   x:Key="Task_Capture">Aufnehmen</system:String>
+                   x:Key="Task_Scheduled">Aufnehmen</system:String>
+    <system:String x:Uid="Task_Captured_past"
+                   x:Key="Task_Captured_past">Aufgenommen</system:String>
     <system:String x:Uid="Task_Captured"
-                   x:Key="Task_Captured">Aufgenommen</system:String>
-    <system:String x:Uid="Task_Render"
-                   x:Key="Task_Render">Rendern</system:String>
+                   x:Key="Task_Captured">Rendern</system:String>
+    <system:String x:Uid="Task_Rendered_past"
+                   x:Key="Task_Rendered_past">Gerendert</system:String>
     <system:String x:Uid="Task_Rendered"
-                   x:Key="Task_Rendered">Gerendert</system:String>
-    <system:String x:Uid="Task_Upload"
-                   x:Key="Task_Upload">Hochladen</system:String>
+                   x:Key="Task_Rendered">Hochladen</system:String>
+    <system:String x:Uid="Task_Uploaded_past"
+                   x:Key="Task_Uploaded_past">Hochgeladen</system:String>
     <system:String x:Uid="Task_Uploaded"
-                   x:Key="Task_Uploaded">Hochgeladen</system:String>
-    <system:String x:Uid="Task_Release"
-                   x:Key="Task_Release">Veröffentlichen</system:String>
+                   x:Key="Task_Uploaded">Veröffentlichen</system:String>
+    <system:String x:Uid="Task_Released_past"
+                   x:Key="Task_Released_past">Veröffentlicht</system:String>
     <system:String x:Uid="Task_Released"
-                   x:Key="Task_Released">Veröffentlicht</system:String>
-    <system:String x:Uid="Task_Done"
-                   x:Key="Task_Done">Abgeschlossen</system:String>
+                   x:Key="Task_Released">Abgeschlossen</system:String>
     
     
     <!-- Classes-->
