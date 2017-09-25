@@ -11,6 +11,8 @@
                    x:Key="UploadPlan">Upload-Plan</system:String>
     <system:String x:Uid="PlanVideo"
                    x:Key="PlanVideo">Video planen</system:String>
+    <system:String x:Uid="ServerSelection"
+                   x:Key="ServerSelection">Server auswählen</system:String>
     
     <!-- Tasks-->
     <system:String x:Uid="Task_Scheduled_past"

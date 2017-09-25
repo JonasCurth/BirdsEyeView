@@ -124,6 +124,9 @@
     </ApplicationDefinition>
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\BirdsEyeViewInterfaceViewModel.cs" />
+    <Compile Include="Views\ServerSelectionDialog.xaml.cs">
+      <DependentUpon>ServerSelectionDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\VideoEditDialog.xaml.cs">
       <DependentUpon>VideoEditDialog.xaml</DependentUpon>
     </Compile>
@@ -140,6 +143,10 @@
       <DependentUpon>BirdsEyeView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\ServerSelectionDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\VideoEditDialog.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

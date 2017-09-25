@@ -1,0 +1,92 @@
+﻿<shared:ChromelessWindow x:Class="DidiDerDenker.BirdsEyeView.Client.Views.ServerSelectionDialog"
+                         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                         xmlns:local="clr-namespace:DidiDerDenker.BirdsEyeView.Client.Views"
+                         xmlns:shared="http://schemas.syncfusion.com/wpf"
+                         mc:Ignorable="d"
+                         Title="{DynamicResource ServerSelection}" 
+                         TitleBarBackground="{DynamicResource SolidGreenDDD}"
+                         TitleBarForeground="{DynamicResource ApplicationForeground}"
+                         Background="{DynamicResource DialogBackground}"
+                         Foreground="{DynamicResource DialogForeground}"
+                         ResizeBorderBrush="{DynamicResource SolidGreenDDD}"
+                         FontFamily="{DynamicResource StandardFontFamily}"
+                         FontSize="{DynamicResource StandardFontSize}"
+                         FontWeight="{DynamicResource StandardFontWeight}"
+                         CloseButtonTemplate="{DynamicResource CloseIcon}"
+                         TitleFontSize="14"
+                         UseNativeChrome="True"
+                         SizeToContent="Height"
+                         Width="400"
+                         ResizeMode="NoResize"
+                         WindowStartupLocation="CenterScreen" Icon="/Vogelperspektive;component/appicon.ico">
+    <shared:ChromelessWindow.Resources>
+
+        <BooleanToVisibilityConverter x:Key="Bool2VisibilityConverter"/>
+
+        <Style TargetType="TextBox">
+            <Style.Setters>
+                <Setter Property="Height" Value="22"/>
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="VerticalContentAlignment" Value="Center"/>
+            </Style.Setters>
+        </Style>
+    </shared:ChromelessWindow.Resources>
+
+    <DockPanel>
+        <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Right"
+                        DockPanel.Dock="Bottom"
+                        Margin="10 10 0 0">
+
+            <Button Content="Abbrechen"
+                        Width="100"
+                        Margin="5"/>
+            <Button Content="Verbinden"
+                        Width="100"
+                        Margin="5" />
+
+        </StackPanel>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="10"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Margin="0 20"
+                        Grid.Column="1">
+                <TextBlock Text="Server:"/>
+                <TextBox/>
+
+                <Button Content="Verbindung Testen"
+                        Margin="0 5 0 0"/>
+
+                <TextBlock Text="Datenbank:" 
+                           Margin="0 5 0 0"/>
+                <TextBox/>
+
+                <CheckBox x:Name="SQLAuthentification" 
+                          Content="SQL-Authentifizierung nutzen?"
+                          Margin="0 5 0 0"/>
+
+                <StackPanel Visibility="{Binding IsChecked, 
+                                                 ElementName=SQLAuthentification, 
+                                                 Converter={StaticResource Bool2VisibilityConverter}}">
+                    <TextBlock Text="Nutzername:" 
+                           Margin="0 5 0 0"/>
+                    <TextBox/>
+                    
+                    <TextBlock Text="Passwort:" 
+                           Margin="0 5 0 0"/>
+                    <TextBox/>
+                </StackPanel>
+
+            </StackPanel>
+
+        </Grid>
+        
+    </DockPanel>
+</shared:ChromelessWindow>

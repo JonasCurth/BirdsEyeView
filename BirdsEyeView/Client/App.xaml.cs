@@ -21,6 +21,10 @@ namespace DidiDerDenker.BirdsEyeView.Client
 
         private void OnStartup(object sender, StartupEventArgs e)
         {
+            ServerSelectionDialog serverSelection = new ServerSelectionDialog();
+
+            serverSelection.ShowDialog();
+
             Views.BirdsEyeView view = new Views.BirdsEyeView();
             Current.MainWindow = view;
 
@@ -98,11 +102,11 @@ namespace DidiDerDenker.BirdsEyeView.Client
 
             if (null != video)
             {
-                if (result == true)
+                if (result == false)
                 {
                     Video.GetVideoById(video.Id).Update(x);
                 }
-                else if(result == false)
+                else if(result == true)
                 {
                     if (vm.SelectedVideo.Id == -1)
                     {
