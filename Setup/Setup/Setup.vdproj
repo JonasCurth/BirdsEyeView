@@ -15,80 +15,32 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_05B0DAE8A4C54B1FA36FD6BA329F2DAD"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_0BA443A74B5B4CA28F1428CDB9F3DA88"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_1E736934D46DF2AF80804573CD6A4085"
-        "OwnerKey" = "8:_C98BB50C0AE54AE4BF87EE8091AE22B4"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_26580F815CE94BE4A1598B94BABBB47E"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_3249D9A1CADE4BBF9BED42B258790CF2"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_2C8FBCD59EB2E4FC9ED73F774B00CB88"
+        "OwnerKey" = "8:_2EFDACDD09D0120B139D64FCB0BA47F5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_376E00BDFA5BE38A6468EDECF56C8E55"
-        "OwnerKey" = "8:_4FC89534F0BF4F4180166E1DFD421EB9"
+        "MsmKey" = "8:_2C8FBCD59EB2E4FC9ED73F774B00CB88"
+        "OwnerKey" = "8:_59F1A08231E44DE084E01BBADC33B934"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_376E00BDFA5BE38A6468EDECF56C8E55"
-        "OwnerKey" = "8:_C98BB50C0AE54AE4BF87EE8091AE22B4"
+        "MsmKey" = "8:_2C8FBCD59EB2E4FC9ED73F774B00CB88"
+        "OwnerKey" = "8:_F9C681822B616D9F3E0CF2E8EF7CFF22"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_376E00BDFA5BE38A6468EDECF56C8E55"
-        "OwnerKey" = "8:_1E736934D46DF2AF80804573CD6A4085"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_383DAD6ADFBD1D3D83D6A186C81EEB29"
-        "OwnerKey" = "8:_C98BB50C0AE54AE4BF87EE8091AE22B4"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_429159CF2141FD0504F96102BB57A9BD"
-        "OwnerKey" = "8:_5EDCF025E26245759C18EC3930250C0B"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_43447BBA9A3A42058304092B28D8660D"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_4FC89534F0BF4F4180166E1DFD421EB9"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_56AEA774FD9824A71AE8C6ACAA4F6F42"
-        "OwnerKey" = "8:_3249D9A1CADE4BBF9BED42B258790CF2"
+        "MsmKey" = "8:_2EFDACDD09D0120B139D64FCB0BA47F5"
+        "OwnerKey" = "8:_59F1A08231E44DE084E01BBADC33B934"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -99,8 +51,8 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_5A42A11C64E3D1E823076DFB24F46C01"
-        "OwnerKey" = "8:_5FDB560B440742FD99B38AC2AC953C75"
+        "MsmKey" = "8:_59F1A08231E44DE084E01BBADC33B934"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -111,98 +63,14 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_5A42A11C64E3D1E823076DFB24F46C01"
-        "OwnerKey" = "8:_43447BBA9A3A42058304092B28D8660D"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_5EDCF025E26245759C18EC3930250C0B"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_5FDB560B440742FD99B38AC2AC953C75"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_64CFC48FD501407B814DF1C6456144B5"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_6D8715DAF3AFCFBDAD3954F05AAA5127"
-        "OwnerKey" = "8:_0BA443A74B5B4CA28F1428CDB9F3DA88"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_6D8715DAF3AFCFBDAD3954F05AAA5127"
-        "OwnerKey" = "8:_C98BB50C0AE54AE4BF87EE8091AE22B4"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_6D8715DAF3AFCFBDAD3954F05AAA5127"
-        "OwnerKey" = "8:_1E736934D46DF2AF80804573CD6A4085"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_6D8715DAF3AFCFBDAD3954F05AAA5127"
-        "OwnerKey" = "8:_80E10575A6DF4683AADB7910DF1284C3"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_6D8715DAF3AFCFBDAD3954F05AAA5127"
-        "OwnerKey" = "8:_376E00BDFA5BE38A6468EDECF56C8E55"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_6D8715DAF3AFCFBDAD3954F05AAA5127"
-        "OwnerKey" = "8:_4FC89534F0BF4F4180166E1DFD421EB9"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_80E10575A6DF4683AADB7910DF1284C3"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_86F51394740C4507934EED4A44AFFB11"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_900828451F2EE4C07DDD570FD40E3D91"
-        "OwnerKey" = "8:_C98BB50C0AE54AE4BF87EE8091AE22B4"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_9139F9FE80E248BAB3E2CC8BF5755C99"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_5ECB38B45560D1BF338891AAD9BD9741"
+        "OwnerKey" = "8:_59F1A08231E44DE084E01BBADC33B934"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_917DCF23B8A6E5B87AB42F9CD16E2F24"
-        "OwnerKey" = "8:_F568E699F1724AE19B2C68E50AA723F7"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_917DCF23B8A6E5B87AB42F9CD16E2F24"
-        "OwnerKey" = "8:_C98BB50C0AE54AE4BF87EE8091AE22B4"
+        "OwnerKey" = "8:_59F1A08231E44DE084E01BBADC33B934"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -213,42 +81,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_A653022D26FA403DA06E411C56471A60"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_B79B201D0AB69ADE346C2860E52F2002"
-        "OwnerKey" = "8:_05B0DAE8A4C54B1FA36FD6BA329F2DAD"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_B79B201D0AB69ADE346C2860E52F2002"
-        "OwnerKey" = "8:_429159CF2141FD0504F96102BB57A9BD"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_BAEE06BBEAB14637BDD41FE94C102095"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_C0592A19E3C7D0749FE9A33358A2744A"
-        "OwnerKey" = "8:_05B0DAE8A4C54B1FA36FD6BA329F2DAD"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_C0592A19E3C7D0749FE9A33358A2744A"
-        "OwnerKey" = "8:_C98BB50C0AE54AE4BF87EE8091AE22B4"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_C0592A19E3C7D0749FE9A33358A2744A"
         "OwnerKey" = "8:_C5131919B14C4B644B96C1ABCAC56327"
         "MsmSig" = "8:_UNDEFINED"
@@ -256,187 +88,49 @@
         "Entry"
         {
         "MsmKey" = "8:_C0592A19E3C7D0749FE9A33358A2744A"
-        "OwnerKey" = "8:_E81ABC716EB547A0815FD93E99F9A220"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_C0592A19E3C7D0749FE9A33358A2744A"
-        "OwnerKey" = "8:_5EDCF025E26245759C18EC3930250C0B"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_C0592A19E3C7D0749FE9A33358A2744A"
-        "OwnerKey" = "8:_429159CF2141FD0504F96102BB57A9BD"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_C0592A19E3C7D0749FE9A33358A2744A"
-        "OwnerKey" = "8:_3249D9A1CADE4BBF9BED42B258790CF2"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_C0592A19E3C7D0749FE9A33358A2744A"
-        "OwnerKey" = "8:_B79B201D0AB69ADE346C2860E52F2002"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_C345EC2A3A2E4FF58FBC3F1EB5F122BA"
-        "OwnerKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_59F1A08231E44DE084E01BBADC33B934"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_C5131919B14C4B644B96C1ABCAC56327"
-        "OwnerKey" = "8:_C98BB50C0AE54AE4BF87EE8091AE22B4"
+        "OwnerKey" = "8:_59F1A08231E44DE084E01BBADC33B934"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_C98BB50C0AE54AE4BF87EE8091AE22B4"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_D1941DD1DBFC8788E3C29BC404E8607D"
+        "OwnerKey" = "8:_59F1A08231E44DE084E01BBADC33B934"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_CD297DB9F9D24AD6A2EB7795983FC05F"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_F9C681822B616D9F3E0CF2E8EF7CFF22"
+        "OwnerKey" = "8:_2EFDACDD09D0120B139D64FCB0BA47F5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_E81ABC716EB547A0815FD93E99F9A220"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_F568E699F1724AE19B2C68E50AA723F7"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_F9C681822B616D9F3E0CF2E8EF7CFF22"
+        "OwnerKey" = "8:_59F1A08231E44DE084E01BBADC33B934"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_86F51394740C4507934EED4A44AFFB11"
+        "OwnerKey" = "8:_D1941DD1DBFC8788E3C29BC404E8607D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_C98BB50C0AE54AE4BF87EE8091AE22B4"
+        "OwnerKey" = "8:_59F1A08231E44DE084E01BBADC33B934"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_C5131919B14C4B644B96C1ABCAC56327"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_1E736934D46DF2AF80804573CD6A4085"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_900828451F2EE4C07DDD570FD40E3D91"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_383DAD6ADFBD1D3D83D6A186C81EEB29"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_E81ABC716EB547A0815FD93E99F9A220"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_64CFC48FD501407B814DF1C6456144B5"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_5EDCF025E26245759C18EC3930250C0B"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_429159CF2141FD0504F96102BB57A9BD"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_CD297DB9F9D24AD6A2EB7795983FC05F"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_3249D9A1CADE4BBF9BED42B258790CF2"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_56AEA774FD9824A71AE8C6ACAA4F6F42"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_43447BBA9A3A42058304092B28D8660D"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_5FDB560B440742FD99B38AC2AC953C75"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_5A42A11C64E3D1E823076DFB24F46C01"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_F568E699F1724AE19B2C68E50AA723F7"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_917DCF23B8A6E5B87AB42F9CD16E2F24"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_05B0DAE8A4C54B1FA36FD6BA329F2DAD"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_B79B201D0AB69ADE346C2860E52F2002"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -448,55 +142,43 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_BAEE06BBEAB14637BDD41FE94C102095"
+        "OwnerKey" = "8:_56AEA774FD9824A71AE8C6ACAA4F6F42"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_C345EC2A3A2E4FF58FBC3F1EB5F122BA"
+        "OwnerKey" = "8:_5A42A11C64E3D1E823076DFB24F46C01"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_80E10575A6DF4683AADB7910DF1284C3"
+        "OwnerKey" = "8:_917DCF23B8A6E5B87AB42F9CD16E2F24"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_9139F9FE80E248BAB3E2CC8BF5755C99"
+        "OwnerKey" = "8:_2EFDACDD09D0120B139D64FCB0BA47F5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_4FC89534F0BF4F4180166E1DFD421EB9"
+        "OwnerKey" = "8:_F9C681822B616D9F3E0CF2E8EF7CFF22"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_376E00BDFA5BE38A6468EDECF56C8E55"
+        "OwnerKey" = "8:_2C8FBCD59EB2E4FC9ED73F774B00CB88"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_0BA443A74B5B4CA28F1428CDB9F3DA88"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_6D8715DAF3AFCFBDAD3954F05AAA5127"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_A653022D26FA403DA06E411C56471A60"
+        "OwnerKey" = "8:_5ECB38B45560D1BF338891AAD9BD9741"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -594,21 +276,10 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_05B0DAE8A4C54B1FA36FD6BA329F2DAD"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_26580F815CE94BE4A1598B94BABBB47E"
             {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Syncfusion.PropertyGrid.Wpf, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_05B0DAE8A4C54B1FA36FD6BA329F2DAD"
-                    {
-                    "Name" = "8:Syncfusion.PropertyGrid.Wpf.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Binaries\\Syncfusion.PropertyGrid.Wpf.dll"
-            "TargetName" = "8:"
+            "SourcePath" = "8:appicon.ico"
+            "TargetName" = "8:appicon.ico"
             "Tag" = "8:"
             "Folder" = "8:_53D350C69C334309BB2F225AC2D619D6"
             "Condition" = "8:"
@@ -625,20 +296,20 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_0BA443A74B5B4CA28F1428CDB9F3DA88"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_2C8FBCD59EB2E4FC9ED73F774B00CB88"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:DidiDerDenker.BirdsEyeView.Converter, Version=1.0.6477.15617, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:DidiDerDenker.BirdsEyeView.Objects, Version=1.0.6477.15617, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_0BA443A74B5B4CA28F1428CDB9F3DA88"
+                    "_2C8FBCD59EB2E4FC9ED73F774B00CB88"
                     {
-                    "Name" = "8:DidiDerDenker.BirdsEyeView.Converter.dll"
+                    "Name" = "8:DidiDerDenker.BirdsEyeView.Objects.DLL"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:Binaries\\DidiDerDenker.BirdsEyeView.Converter.dll"
+            "SourcePath" = "8:DidiDerDenker.BirdsEyeView.Objects.DLL"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_53D350C69C334309BB2F225AC2D619D6"
@@ -653,17 +324,17 @@
             "PackageAs" = "3:1"
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_1E736934D46DF2AF80804573CD6A4085"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_2EFDACDD09D0120B139D64FCB0BA47F5"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:DidiDerDenker.BirdsEyeView.Database, Version=1.0.6477.15617, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:DidiDerDenker.BirdsEyeView.Database, Version=1.0.6477.22399, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_1E736934D46DF2AF80804573CD6A4085"
+                    "_2EFDACDD09D0120B139D64FCB0BA47F5"
                     {
                     "Name" = "8:DidiDerDenker.BirdsEyeView.Database.DLL"
                     "Attributes" = "3:512"
@@ -685,212 +356,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_26580F815CE94BE4A1598B94BABBB47E"
-            {
-            "SourcePath" = "8:appicon.ico"
-            "TargetName" = "8:appicon.ico"
-            "Tag" = "8:"
-            "Folder" = "8:_53D350C69C334309BB2F225AC2D619D6"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_3249D9A1CADE4BBF9BED42B258790CF2"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Syncfusion.SfSchedule.WPF, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_3249D9A1CADE4BBF9BED42B258790CF2"
-                    {
-                    "Name" = "8:Syncfusion.SfSchedule.WPF.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Binaries\\Syncfusion.SfSchedule.WPF.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_53D350C69C334309BB2F225AC2D619D6"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_376E00BDFA5BE38A6468EDECF56C8E55"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:DidiDerDenker.BirdsEyeView.Operations, Version=1.0.6477.15617, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_376E00BDFA5BE38A6468EDECF56C8E55"
-                    {
-                    "Name" = "8:DidiDerDenker.BirdsEyeView.Operations.DLL"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:DidiDerDenker.BirdsEyeView.Operations.DLL"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_53D350C69C334309BB2F225AC2D619D6"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_383DAD6ADFBD1D3D83D6A186C81EEB29"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:DidiDerDenker.BirdsEyeView.Command, Version=1.0.6477.15617, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_383DAD6ADFBD1D3D83D6A186C81EEB29"
-                    {
-                    "Name" = "8:DidiDerDenker.BirdsEyeView.Command.DLL"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:DidiDerDenker.BirdsEyeView.Command.DLL"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_53D350C69C334309BB2F225AC2D619D6"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_429159CF2141FD0504F96102BB57A9BD"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:TRUE"
-            "AssemblyAsmDisplayName" = "8:Syncfusion.PropertyGrid.Wpf, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_429159CF2141FD0504F96102BB57A9BD"
-                    {
-                    "Name" = "8:Syncfusion.PropertyGrid.Wpf.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Syncfusion.PropertyGrid.Wpf.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_53D350C69C334309BB2F225AC2D619D6"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_43447BBA9A3A42058304092B28D8660D"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Syncfusion.SfRadialMenu.Wpf, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_43447BBA9A3A42058304092B28D8660D"
-                    {
-                    "Name" = "8:Syncfusion.SfRadialMenu.WPF.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Binaries\\Syncfusion.SfRadialMenu.WPF.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_53D350C69C334309BB2F225AC2D619D6"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_4FC89534F0BF4F4180166E1DFD421EB9"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:DidiDerDenker.BirdsEyeView.Database, Version=1.0.6477.15617, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_4FC89534F0BF4F4180166E1DFD421EB9"
-                    {
-                    "Name" = "8:DidiDerDenker.BirdsEyeView.Database.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Binaries\\DidiDerDenker.BirdsEyeView.Database.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_53D350C69C334309BB2F225AC2D619D6"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_56AEA774FD9824A71AE8C6ACAA4F6F42"
@@ -924,6 +389,37 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_59F1A08231E44DE084E01BBADC33B934"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Vogelperspektive, Version=1.0.6477.23026, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_59F1A08231E44DE084E01BBADC33B934"
+                    {
+                    "Name" = "8:Vogelperspektive.exe"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\..\\BirdsEyeView\\Client\\bin\\Release\\Vogelperspektive.exe"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_53D350C69C334309BB2F225AC2D619D6"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_5A42A11C64E3D1E823076DFB24F46C01"
             {
             "AssemblyRegister" = "3:1"
@@ -955,200 +451,14 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_5EDCF025E26245759C18EC3930250C0B"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_5ECB38B45560D1BF338891AAD9BD9741"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Syncfusion.Shared.MVVM.WPF, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:DidiDerDenker.BirdsEyeView.Controls, Version=1.0.6477.22399, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_5EDCF025E26245759C18EC3930250C0B"
-                    {
-                    "Name" = "8:Syncfusion.Shared.MVVM.WPF.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Binaries\\Syncfusion.Shared.MVVM.WPF.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_53D350C69C334309BB2F225AC2D619D6"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_5FDB560B440742FD99B38AC2AC953C75"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Syncfusion.SfInput.Wpf, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_5FDB560B440742FD99B38AC2AC953C75"
-                    {
-                    "Name" = "8:Syncfusion.SfInput.WPF.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Binaries\\Syncfusion.SfInput.WPF.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_53D350C69C334309BB2F225AC2D619D6"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_64CFC48FD501407B814DF1C6456144B5"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Syncfusion.Shared.Wpf, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_64CFC48FD501407B814DF1C6456144B5"
-                    {
-                    "Name" = "8:Syncfusion.Shared.Wpf.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Binaries\\Syncfusion.Shared.Wpf.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_53D350C69C334309BB2F225AC2D619D6"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6D8715DAF3AFCFBDAD3954F05AAA5127"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:DidiDerDenker.BirdsEyeView.Objects, Version=1.0.6477.15617, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_6D8715DAF3AFCFBDAD3954F05AAA5127"
-                    {
-                    "Name" = "8:DidiDerDenker.BirdsEyeView.Objects.DLL"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:DidiDerDenker.BirdsEyeView.Objects.DLL"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_53D350C69C334309BB2F225AC2D619D6"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_80E10575A6DF4683AADB7910DF1284C3"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:DidiDerDenker.BirdsEyeView.Operations, Version=1.0.6477.15617, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_80E10575A6DF4683AADB7910DF1284C3"
-                    {
-                    "Name" = "8:DidiDerDenker.BirdsEyeView.Operations.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Binaries\\DidiDerDenker.BirdsEyeView.Operations.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_53D350C69C334309BB2F225AC2D619D6"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_86F51394740C4507934EED4A44AFFB11"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:DidiDerDenker.BirdsEyeView.Command, Version=1.0.6477.15617, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_86F51394740C4507934EED4A44AFFB11"
-                    {
-                    "Name" = "8:DidiDerDenker.BirdsEyeView.Command.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Binaries\\DidiDerDenker.BirdsEyeView.Command.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_53D350C69C334309BB2F225AC2D619D6"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_900828451F2EE4C07DDD570FD40E3D91"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:DidiDerDenker.BirdsEyeView.Controls, Version=1.0.6477.15617, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_900828451F2EE4C07DDD570FD40E3D91"
+                    "_5ECB38B45560D1BF338891AAD9BD9741"
                     {
                     "Name" = "8:DidiDerDenker.BirdsEyeView.Controls.DLL"
                     "Attributes" = "3:512"
@@ -1170,37 +480,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9139F9FE80E248BAB3E2CC8BF5755C99"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:DidiDerDenker.BirdsEyeView.Objects, Version=1.0.6477.15617, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_9139F9FE80E248BAB3E2CC8BF5755C99"
-                    {
-                    "Name" = "8:DidiDerDenker.BirdsEyeView.Objects.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Binaries\\DidiDerDenker.BirdsEyeView.Objects.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_53D350C69C334309BB2F225AC2D619D6"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_917DCF23B8A6E5B87AB42F9CD16E2F24"
@@ -1254,99 +533,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A653022D26FA403DA06E411C56471A60"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:DidiDerDenker.BirdsEyeView.Controls, Version=1.0.6477.15617, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_A653022D26FA403DA06E411C56471A60"
-                    {
-                    "Name" = "8:DidiDerDenker.BirdsEyeView.Controls.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Binaries\\DidiDerDenker.BirdsEyeView.Controls.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_53D350C69C334309BB2F225AC2D619D6"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B79B201D0AB69ADE346C2860E52F2002"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:TRUE"
-            "AssemblyAsmDisplayName" = "8:Syncfusion.Tools.Wpf, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_B79B201D0AB69ADE346C2860E52F2002"
-                    {
-                    "Name" = "8:Syncfusion.Tools.Wpf.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Syncfusion.Tools.Wpf.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_53D350C69C334309BB2F225AC2D619D6"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_BAEE06BBEAB14637BDD41FE94C102095"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Syncfusion.Linq.Base, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_BAEE06BBEAB14637BDD41FE94C102095"
-                    {
-                    "Name" = "8:Syncfusion.Linq.Base.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Binaries\\Syncfusion.Linq.Base.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_53D350C69C334309BB2F225AC2D619D6"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C0592A19E3C7D0749FE9A33358A2744A"
             {
             "AssemblyRegister" = "3:1"
@@ -1376,37 +562,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C345EC2A3A2E4FF58FBC3F1EB5F122BA"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:DidiDerDenker.BirdsEyeView.Resources, Version=1.0.6477.15617, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_C345EC2A3A2E4FF58FBC3F1EB5F122BA"
-                    {
-                    "Name" = "8:DidiDerDenker.BirdsEyeView.Resources.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Binaries\\DidiDerDenker.BirdsEyeView.Resources.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_53D350C69C334309BB2F225AC2D619D6"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C5131919B14C4B644B96C1ABCAC56327"
@@ -1440,20 +595,20 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C98BB50C0AE54AE4BF87EE8091AE22B4"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D1941DD1DBFC8788E3C29BC404E8607D"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Vogelperspektive, Version=1.0.6477.15618, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:DidiDerDenker.BirdsEyeView.Command, Version=1.0.6477.15617, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_C98BB50C0AE54AE4BF87EE8091AE22B4"
+                    "_D1941DD1DBFC8788E3C29BC404E8607D"
                     {
-                    "Name" = "8:Vogelperspektive.exe"
+                    "Name" = "8:DidiDerDenker.BirdsEyeView.Command.DLL"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:Binaries\\Vogelperspektive.exe"
+            "SourcePath" = "8:DidiDerDenker.BirdsEyeView.Command.DLL"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_53D350C69C334309BB2F225AC2D619D6"
@@ -1468,23 +623,23 @@
             "PackageAs" = "3:1"
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_CD297DB9F9D24AD6A2EB7795983FC05F"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_F9C681822B616D9F3E0CF2E8EF7CFF22"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Syncfusion.SfShared.Wpf, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:DidiDerDenker.BirdsEyeView.Operations, Version=1.0.6477.22399, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_CD297DB9F9D24AD6A2EB7795983FC05F"
+                    "_F9C681822B616D9F3E0CF2E8EF7CFF22"
                     {
-                    "Name" = "8:Syncfusion.SfShared.Wpf.dll"
+                    "Name" = "8:DidiDerDenker.BirdsEyeView.Operations.DLL"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:Binaries\\Syncfusion.SfShared.Wpf.dll"
+            "SourcePath" = "8:DidiDerDenker.BirdsEyeView.Operations.DLL"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_53D350C69C334309BB2F225AC2D619D6"
@@ -1499,69 +654,7 @@
             "PackageAs" = "3:1"
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_E81ABC716EB547A0815FD93E99F9A220"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Syncfusion.Tools.Wpf, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_E81ABC716EB547A0815FD93E99F9A220"
-                    {
-                    "Name" = "8:Syncfusion.Tools.Wpf.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Binaries\\Syncfusion.Tools.Wpf.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_53D350C69C334309BB2F225AC2D619D6"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_F568E699F1724AE19B2C68E50AA723F7"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Syncfusion.Schedule.Wpf, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_F568E699F1724AE19B2C68E50AA723F7"
-                    {
-                    "Name" = "8:Syncfusion.Schedule.Wpf.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Binaries\\Syncfusion.Schedule.Wpf.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_53D350C69C334309BB2F225AC2D619D6"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
         }
@@ -1632,7 +725,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Vogelperspektive"
         "ProductCode" = "8:{D0FCD5C1-C8E8-4D1E-A781-0DB4072ECE44}"
-        "PackageCode" = "8:{D8B438FC-39EC-4E0C-8FC1-DD8D884018B4}"
+        "PackageCode" = "8:{75943F5F-F5BF-462C-8C86-45D2DC20BA2D}"
         "UpgradeCode" = "8:{DAB6E093-E943-4F28-9E56-62ECFA0FD6D4}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -1651,7 +744,7 @@
         "ARPURLINFOABOUT" = "8:DidiDerDenker.de"
         "ARPPRODUCTICON" = "8:_26580F815CE94BE4A1598B94BABBB47E"
         "ARPIconIndex" = "3:0"
-        "SearchPath" = "8:Binaries"
+        "SearchPath" = "8:..\\..\\BirdsEyeView\\Client\\bin\\Release"
         "UseSystemSearchPath" = "11:TRUE"
         "TargetPlatform" = "3:0"
         "PreBuildEvent" = "8:"
@@ -1760,7 +853,7 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_C98BB50C0AE54AE4BF87EE8091AE22B4"
+            "Target" = "8:_59F1A08231E44DE084E01BBADC33B934"
             "Folder" = "8:_6285A522B5F44B88963DCC08948BEC3A"
             "WorkingFolder" = "8:_53D350C69C334309BB2F225AC2D619D6"
             "Icon" = "8:_26580F815CE94BE4A1598B94BABBB47E"
@@ -1774,7 +867,7 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_C98BB50C0AE54AE4BF87EE8091AE22B4"
+            "Target" = "8:_59F1A08231E44DE084E01BBADC33B934"
             "Folder" = "8:_1A8F65F360F340D3A68BBF3BCA55FA5D"
             "WorkingFolder" = "8:_53D350C69C334309BB2F225AC2D619D6"
             "Icon" = "8:_26580F815CE94BE4A1598B94BABBB47E"

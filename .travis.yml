@@ -1,0 +1,4 @@
+language: csharp
+script:
+    - xbuild /p:Configuration=Release BirdsEyeView/BirdsEyeView.sln
+    - xbuild /p:Configuration=Release Setup/Setup.sln
